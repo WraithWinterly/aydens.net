@@ -1,3 +1,25 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+  h1 {
+    @apply text-6xl font-bold py-6;
+  }
+  h2 {
+    @apply text-5xl font-bold py-4;
+  }
+  h3 {
+    @apply text-4xl font-bold py-2;
+  }
+  h4 {
+    @apply text-3xl font-bold py-1;
+  }
+  p {
+    @apply text-2xl;
+  }
+}
+
 html,
 body {
   padding: 0;
