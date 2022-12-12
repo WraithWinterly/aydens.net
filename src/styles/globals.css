@@ -4,16 +4,16 @@
 
 @layer components {
   h1 {
-    @apply text-6xl font-bold py-6;
+    @apply py-6 text-6xl font-bold;
   }
   h2 {
-    @apply text-5xl font-bold py-4;
+    @apply py-4 text-5xl font-bold;
   }
   h3 {
-    @apply text-4xl font-bold py-2;
+    @apply py-2 text-4xl font-bold;
   }
   h4 {
-    @apply text-3xl font-bold py-1;
+    @apply py-1 text-3xl font-bold;
   }
   p {
     @apply text-2xl;
