@@ -6,7 +6,7 @@ export default function Footer() {
       <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noreferrer">
         Powered by{" "}
         <span className="h-16 w-12 dark:invert dark:filter">
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
