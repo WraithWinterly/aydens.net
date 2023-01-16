@@ -1,7 +1,9 @@
 import Link from "next/link";
-import Router from "next/router";
+import { useRouter } from "next/router";
+import { BiArrowBack } from "react-icons/bi";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <>
       <header className="relative flex w-full justify-between py-4 px-8 text-center backdrop-blur-md">
@@ -13,20 +15,37 @@ export default function Header() {
               {process.env.NEXT_PUBLIC_URL}
             </a>
           </div>
-          <ul className="flex gap-2">
-            <li className="header-link" onClick={() => Router.push("/about")}>
-              About
+          <ul className="flex shrink-0 items-center gap-2">
+            {router.pathname != "/" && (
+              <Link
+                href={"/"}
+                className="animate-in fade-in slide-in-from-right-10 duration-300">
+                <BiArrowBack
+                  size={30}
+                  className="header-link h-full w-full px-6"
+                />
+              </Link>
+            )}
+
+            <li className="header-link">
+              <Link href={"/about"} className="text-inherit">
+                About
+              </Link>
             </li>
-            <li className="header-link" onClick={() => Router.push("/contact")}>
-              Contact
+            <li className="header-link">
+              <Link href={"/contact"} className="text-inherit">
+                Contact
+              </Link>
             </li>
-            <li
-              className="header-link"
-              onClick={() => Router.push("/projects")}>
-              Projects
+            <li className="header-link">
+              <Link href={"/projects"} className="text-inherit">
+                Projects
+              </Link>
             </li>
-            <li className="header-link" onClick={() => Router.push("/games")}>
-              Games
+            <li className="header-link">
+              <Link href={"/games"} className="text-inherit">
+                Games
+              </Link>
             </li>
           </ul>
         </div>
