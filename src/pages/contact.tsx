@@ -16,7 +16,7 @@ export default function Contact() {
     langColor,
   }: GithubCardProps) => {
     return (
-      <div className="h-full w-full rounded-lg border border-gray-700 py-4 px-4">
+      <div className="h-full w-full rounded-lg border border-gray-700 bg-gray-800 py-4 px-4">
         <div className="mb-1 flex items-center gap-4">
           <a
             href={href}
@@ -39,35 +39,58 @@ export default function Contact() {
     );
   };
   return (
-    <div className="animate-in fade-in slide-in-from-top-10 duration-700">
-      <h1>Contact</h1>
-      <p>I am happy you have taken the time to reach out!</p>
-      <p>
-        Open communication and friendliness are a huge value for me, and your
-        input is important to me!
-      </p>
-      <p>
-        Here are all the various methods to contact me or view all of my social
-        media or links. I look forward to connecting with you soon!
-      </p>
+    <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-top-10 duration-700">
+      <div>
+        <h1>Contact</h1>
+        <p>I am happy you have taken the time to reach out!</p>
+        <p>
+          Open communication and friendliness are a huge value for me, and your
+          input is important to me!
+        </p>
+        <p>
+          Here are all the various methods to contact me or view all of my
+          social media or links. I look forward to connecting with you soon!
+        </p>
+      </div>
+
       <div className="flex justify-center">
         <ul className="flex w-fit justify-between gap-2 py-4">
           <li className="w-52 animate-in slide-in-from-left duration-700">
-            <button className="btn">View Github</button>
+            <a
+              href="https://github.com/WraithWinterly"
+              target="_blank"
+              rel="noreferrer">
+              <button className="btn">View Github</button>
+            </a>
           </li>
           <li className="w-52 animate-in slide-in-from-left duration-700">
-            <button className="btn">View Twitter</button>
+            <a
+              href="https://twitter.com/WraithWinterly"
+              target="_blank"
+              rel="noreferrer">
+              <button className="btn">View Twitter</button>
+            </a>
           </li>
-          <li className="w-52 animate-in slide-in-from-right duration-700">
-            <button className="btn">Contact Form</button>
+          <li className="w-52 animate-in slide-in-from-left duration-700">
+            <a
+              href="https://www.linkedin.com/in/ayden-springer"
+              target="_blank"
+              rel="noreferrer">
+              <button className="btn">View LinkedIn</button>
+            </a>
           </li>
-          <li className="w-52 animate-in slide-in-from-right duration-700">
-            <button className="btn">View 2022 Site</button>
+          <li className="w-52 animate-in slide-in-from-left duration-700">
+            <a
+              href="https://wraithwinterly.github.io/"
+              target="_blank"
+              rel="noreferrer">
+              <button className="btn">View 2022 Site</button>
+            </a>
           </li>
         </ul>
       </div>
       {/* Github Section */}
-      <div className="">
+      <div className="rounded-lg bg-slate-900 px-8 py-4">
         <h2>Github</h2>
         {/* Github Box */}
         <div className="flex gap-6 rounded-lg border-solid border-gray-500 border-opacity-50 px-4 py-4">
@@ -82,7 +105,9 @@ export default function Contact() {
             />
             <h3 className="pb-0">Ayden Springer</h3>
             <h4 className="pt-0 font-normal text-gray-500">WraithWinterly</h4>
-            <button className="btn bg-[#6e5494]">View Github</button>
+            <button className="btn bg-[#6e5494] py-4 text-xl">
+              View Github
+            </button>
           </div>
           {/* Github Project Cards */}
           <div className="grid h-48 grid-cols-2 gap-2">

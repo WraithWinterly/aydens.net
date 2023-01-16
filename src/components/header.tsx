@@ -10,12 +10,12 @@ export default function Header() {
         <div className="flex w-full items-center justify-between gap-4">
           <div className="items-center">
             <a
-              href={process.env.NEXT_PUBLIC_URL}
+              href={`https://${process.env.NEXT_PUBLIC_URL}`}
               className="rounded-full bg-blue-600/30 py-3 px-8 pt-2 text-3xl text-slate-200 transition-colors hover:bg-blue-600/80 hover:text-white">
               {process.env.NEXT_PUBLIC_URL}
             </a>
           </div>
-          <ul className="flex shrink-0 items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             {router.pathname != "/" && (
               <Link
                 href={"/"}
@@ -27,27 +27,22 @@ export default function Header() {
               </Link>
             )}
 
-            <li className="header-link">
-              <Link href={"/about"} className="text-inherit">
-                About
-              </Link>
-            </li>
-            <li className="header-link">
-              <Link href={"/contact"} className="text-inherit">
-                Contact
-              </Link>
-            </li>
-            <li className="header-link">
-              <Link href={"/projects"} className="text-inherit">
-                Projects
-              </Link>
-            </li>
-            <li className="header-link">
-              <Link href={"/games"} className="text-inherit">
-                Games
-              </Link>
-            </li>
-          </ul>
+            <Link href={"/about"} className="header-link">
+              About
+            </Link>
+
+            <Link href={"/contact"} className="header-link">
+              Contact
+            </Link>
+
+            <Link href={"/projects"} className="header-link">
+              Projects
+            </Link>
+
+            <Link href={"/games"} className="header-link">
+              Games
+            </Link>
+          </div>
         </div>
       </header>
     </>
