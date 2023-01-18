@@ -9,7 +9,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="relative flex flex-col items-center bg-gradient-to-br from-blue-900 to-pink-900">
       <Header />
-      <div className="h-full min-h-screen">{children}</div>
+      <div className="h-full min-h-screen pb-12">{children}</div>
       <Footer />
     </div>
   );

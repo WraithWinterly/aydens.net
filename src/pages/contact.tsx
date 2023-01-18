@@ -1,5 +1,6 @@
 import Image from "next/image";
-
+import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { IoRefreshCircleOutline } from "react-icons/io5";
 export default function Contact() {
   interface GithubCardProps {
     name: string;
@@ -16,8 +17,8 @@ export default function Contact() {
     langColor,
   }: GithubCardProps) => {
     return (
-      <div className="h-full w-full rounded-lg border border-gray-700 bg-gray-800 py-4 px-4">
-        <div className="mb-1 flex items-center gap-4">
+      <div className="h-full w-full rounded-lg border border-gray-700 bg-gray-800 py-4 px-4 backdrop-blur-md">
+        <div className="mb-1 flex items-center gap-2">
           <a
             href={href}
             target="_blank"
@@ -53,44 +54,63 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="flex justify-center">
-        <ul className="flex w-fit justify-between gap-2 py-4">
-          <li className="w-52 animate-in slide-in-from-left duration-700">
+      <div className="flex justify-center gap-4">
+        <div className="flex flex-col">
+          <div className="w-52 animate-in slide-in-from-left duration-700">
             <a
               href="https://github.com/WraithWinterly"
               target="_blank"
               rel="noreferrer">
-              <button className="btn">View Github</button>
+              <button className="btn w-full">
+                <span className="flex items-center gap-3">
+                  <SiGithub size={22} /> <span>View Github</span>
+                </span>
+              </button>
             </a>
-          </li>
-          <li className="w-52 animate-in slide-in-from-left duration-700">
-            <a
-              href="https://twitter.com/WraithWinterly"
-              target="_blank"
-              rel="noreferrer">
-              <button className="btn">View Twitter</button>
-            </a>
-          </li>
-          <li className="w-52 animate-in slide-in-from-left duration-700">
+          </div>
+          <div className="w-52 animate-in slide-in-from-left duration-700">
             <a
               href="https://www.linkedin.com/in/ayden-springer"
               target="_blank"
               rel="noreferrer">
-              <button className="btn">View LinkedIn</button>
+              <button className="btn w-full">
+                <span className="flex items-center gap-3">
+                  <SiLinkedin size={22} /> <span>View LinkedIn</span>
+                </span>
+              </button>
             </a>
-          </li>
-          <li className="w-52 animate-in slide-in-from-left duration-700">
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <div className="w-52 animate-in slide-in-from-left duration-700">
+            <a
+              href="https://twitter.com/WraithWinterly"
+              target="_blank"
+              rel="noreferrer">
+              <button className="btn w-full">
+                <span className="flex items-center gap-3">
+                  <SiTwitter size={22} /> <span>View Twitter</span>
+                </span>
+              </button>
+            </a>
+          </div>
+          <div className="w-52 animate-in slide-in-from-left duration-700">
             <a
               href="https://wraithwinterly.github.io/"
               target="_blank"
               rel="noreferrer">
-              <button className="btn">View 2022 Site</button>
+              <button className="btn w-full">
+                <span className="flex items-center gap-3">
+                  <IoRefreshCircleOutline size={22} />
+                  <span>View 2022 Site</span>
+                </span>
+              </button>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
       {/* Github Section */}
-      <div className="rounded-lg bg-slate-900 px-8 py-4">
+      <div className="rounded-lg bg-slate-900/70 px-8 py-4 backdrop-blur-md">
         <h2>Github</h2>
         {/* Github Box */}
         <div className="flex gap-6 rounded-lg border-solid border-gray-500 border-opacity-50 px-4 py-4">
@@ -105,7 +125,7 @@ export default function Contact() {
             />
             <h3 className="pb-0">Ayden Springer</h3>
             <h4 className="pt-0 font-normal text-gray-500">WraithWinterly</h4>
-            <button className="btn bg-[#6e5494] py-4 text-xl">
+            <button className="btn bg-[#6e5494] py-4 text-xl hover:bg-[#8767b6]">
               View Github
             </button>
           </div>
