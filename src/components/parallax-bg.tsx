@@ -11,25 +11,25 @@ export default function SpaceParallax({ offsetY }: { offsetY: number }) {
       <ParallaxLayer
         offsetY={offsetY}
         img={stars.src}
-        speed={0.5}
+        speed={0.2}
         addOffset={offsetY}
       />
       <ParallaxLayer
         offsetY={offsetY}
         img={nebulae.src}
-        speed={1.75}
+        speed={0.5}
         addOffset={offsetY}
       />
       <ParallaxLayer
         offsetY={offsetY}
         img={dust.src}
-        speed={2}
+        speed={1.1}
         addOffset={offsetY}
       />
       <ParallaxLayer
         offsetY={offsetY}
         img={planets.src}
-        speed={2.25}
+        speed={1.5}
         addOffset={offsetY}
       />
     </div>

@@ -6,7 +6,7 @@ export default function Header() {
   const router = useRouter();
   return (
     <>
-      <header className="relative flex w-full justify-between py-4 px-8 text-center backdrop-blur-md">
+      <header className="relative flex w-full justify-between py-4 px-8 text-center ">
         <div className="flex w-full items-center justify-between gap-4">
           <div className="items-center">
             <a
