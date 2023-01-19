@@ -1,0 +1,18 @@
+.parallaxLayer {
+  background-position: center;
+  background-size: calc(100vh + 300px);
+  background-repeat: repeat;
+  width: 100%;
+  height: max(130vh, 800px);
+  image-rendering: auto;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  position: fixed;
+  top: 0;
+  transition: transform 0.5s;
+  transition-timing-function: ease-out;
+}
