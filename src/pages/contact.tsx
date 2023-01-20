@@ -132,9 +132,9 @@ export default function Contact() {
           {/* Github Project Cards */}
           <div className="grid h-48 grid-cols-2 gap-2">
             <GithubCard
-              name="aydens.us"
+              name="aydens.net"
               description="This website!"
-              href="https://github.com/WraithWinterly/aydens.us"
+              href="https://github.com/WraithWinterly/aydens.net"
               lang="Typescript"
               langColor="bg-blue-400"
             />

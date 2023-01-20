@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <>
       <div className="flex w-full items-center justify-center gap-2 text-center text-2xl">
-        <IoWarningOutline size={20} />{" "}
+        <IoWarningOutline size={20} />
         <span>This website is under construction. </span>
         <a
           href="https://wraithwinterly.github.io"
