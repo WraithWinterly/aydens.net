@@ -1,11 +1,22 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { BiArrowBack } from "react-icons/bi";
+import { IoWarningOutline } from "react-icons/io5";
 
 export default function Header() {
   const router = useRouter();
   return (
     <>
+      <div className="flex w-full items-center justify-center gap-2 text-center text-2xl">
+        <IoWarningOutline size={20} />{" "}
+        <span>This website is under construction. </span>
+        <a
+          href="https://wraithwinterly.github.io"
+          target="_blank"
+          rel="noreferrer">
+          View 2022 Website
+        </a>
+      </div>
       <header className="relative flex w-full justify-between py-4 px-8 text-center ">
         <div className="flex w-full items-center justify-between gap-4">
           <div className="items-center">

@@ -29,7 +29,7 @@ export default function Layout({ children }: LayoutProps) {
     } else {
       setUseAltBg(false);
     }
-  });
+  }, [router.pathname]);
 
   return (
     <div

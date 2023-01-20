@@ -1,6 +1,8 @@
+import { useId } from "react";
 import { SiGithub } from "react-icons/si";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { IoWarningOutline } from "react-icons/io5";
+
 const projects: Project[] = [
   {
     title: "Life Planner",
@@ -59,12 +61,17 @@ interface Project {
 }
 
 export default function Projects() {
+  const id = useId();
   return (
     <div className="animate-in fade-in duration-500">
       <h1>Projects</h1>
       <div className="flex flex-col gap-4">
         {projects.map((project, i) => (
-          <ProjectCard project={project} isEven={i % 2 == 0} />
+          <ProjectCard
+            key={`${id}${i}`}
+            project={project}
+            isEven={i % 2 == 0}
+          />
         ))}
       </div>
     </div>
