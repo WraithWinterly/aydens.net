@@ -34,7 +34,7 @@ export default function Games() {
           <div className="flex flex-col gap-0">
             <a
               className="w-full"
-              href="https://github.com/WraithWinterly/aydens.us"
+              href="https://github.com/WraithWinterly/Everplast"
               target="_blank"
               rel="noreferrer">
               <button className="btn btn-github flex h-12 w-full items-center gap-4">
@@ -66,13 +66,19 @@ export default function Games() {
               coming.
             </p>
             <div className="mx-auto flex w-full justify-center gap-2 pb-24">
-              <a>
+              <a
+                href="https://wraithwinterly.itch.io/blockhit"
+                target="_blank"
+                rel="noreferrer">
                 <button className="btn flex w-44 gap-2">
                   <FaGamepad size={24} />
                   <span>View Game</span>
                 </button>
               </a>
-              <a href="">
+              <a
+                href="https://github.com/WraithWinterly/BlockHit"
+                target="_blank"
+                rel="noreferrer">
                 <button className="btn btn-github flex w-44 gap-2">
                   <SiGithub size={24} />
                   <span>View Source</span>
@@ -96,11 +102,20 @@ export default function Games() {
             </div>
 
             <div className="mx-auto flex w-full justify-center gap-2 pb-24">
-              <button className="btn flex w-44 gap-2">
-                <FaGamepad size={24} />
-                <span>View Game</span>
-              </button>
-              <a href="">
+              <a
+                href="https://www.youtube.com/watch?v=fMNmn9NV5DE"
+                target="_blank"
+                rel="noreferrer">
+                <button className="btn flex w-44 gap-2">
+                  <FaGamepad size={24} />
+                  <span>View Game</span>
+                </button>
+              </a>
+
+              <a
+                href="https://github.com/WraithWinterly/Unity-FPS-RTS-System"
+                target="_blank"
+                rel="noreferrer">
                 <button className="btn btn-github flex w-44 gap-2">
                   <SiGithub size={24} />
                   <span>View Source</span>
