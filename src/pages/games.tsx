@@ -1,6 +1,6 @@
 import w3l9 from "@assets/games/w3l9.png";
 import { useState } from "react";
-import { SiGamejolt, SiGithub, SiSteam } from "react-icons/si";
+import { SiGithub, SiSteam } from "react-icons/si";
 import { FaGamepad } from "react-icons/fa";
 import Image from "next/image";
 
