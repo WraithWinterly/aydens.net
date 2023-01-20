@@ -39,7 +39,9 @@ export default function Layout({ children }: LayoutProps) {
       {useAltBg && <SpaceParallax offsetY={offsetY} />}
 
       <Header />
-      <div className="relative h-full min-h-screen pb-12">{children}</div>
+      <div className="relative flex h-full min-h-screen w-full flex-col items-center pb-12">
+        {children}
+      </div>
       <Footer />
     </div>
   );
