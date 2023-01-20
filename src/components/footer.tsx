@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="flex w-full justify-center border-t-[1px] border-solid border-slate-400 py-4 dark:border-slate-500">
+    <footer className="relative flex w-full justify-center border-t-[1px] border-solid border-slate-400 py-4 dark:border-slate-500">
       <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         target="_blank"
