@@ -1,7 +1,7 @@
-import stars from "@assets/parallax/stars.png";
-import nebulae from "@assets/parallax/nebulae.png";
-import dust from "@assets/parallax/dust.png";
-import planets from "@assets/parallax/planets.png";
+import stars from "@assets/games/parallax/stars.png";
+import nebulae from "@assets/games/parallax/nebulae.png";
+import dust from "@assets/games/parallax/dust.png";
+import planets from "@assets/games/parallax/planets.png";
 import ParallaxLayer from "./parallax-layer";
 
 export default function SpaceParallax({ offsetY }: { offsetY: number }) {
