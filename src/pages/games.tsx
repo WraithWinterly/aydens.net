@@ -26,11 +26,11 @@ export default function Games() {
         onMouseLeave={() => setHoveringImage(false)}>
         <div className="mx-auto flex h-full w-fit flex-col justify-between py-4">
           <Image
-            width={1280 / 3}
-            height={720 / 3}
+            width={everplastLogo.width / 3}
+            height={everplastLogo.height / 3}
             alt="everplast logo"
             src={everplastLogo.src}
-            className="rounded-2xl bg-black/70 px-4 pb-4 pt-2 backdrop-blur-md"></Image>
+            className="rounded-2xl bg-black/70 px-4 pb-4 pt-2 backdrop-blur-md animate-in fade-in duration-500"></Image>
           <div className="flex flex-col gap-0">
             <a
               className="w-full"

@@ -7,15 +7,20 @@ export default function Header() {
   const router = useRouter();
   return (
     <>
-      <div className="flex w-full items-center justify-center gap-2 text-center text-2xl">
-        <IoWarningOutline size={20} />
-        <span>This website is under construction. </span>
-        <a
-          href="https://wraithwinterly.github.io"
-          target="_blank"
-          rel="noreferrer">
-          View 2022 Website
-        </a>
+      <div className="relative flex w-full items-center justify-center gap-2 text-center text-2xl">
+        <div className="mt-2 flex gap-2 rounded-full bg-black/50 px-3 py-1">
+          <div className="flex shrink-0 items-center gap-1">
+            <IoWarningOutline size={20} />
+            <span>This website is under construction. </span>
+          </div>
+
+          <a
+            href="https://wraithwinterly.github.io"
+            target="_blank"
+            rel="noreferrer">
+            View 2022 Website
+          </a>
+        </div>
       </div>
       <header className="relative flex w-full justify-between py-4 px-8 text-center ">
         <div className="flex w-full items-center justify-between gap-4">
