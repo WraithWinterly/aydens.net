@@ -64,7 +64,7 @@ export default function Projects() {
   const id = useId();
   return (
     <div className="animate-in fade-in duration-500">
-      <h1>Projects</h1>
+      <h1 className="text-center">Projects</h1>
       <div className="flex flex-col gap-4">
         {projects.map((project, i) => (
           <ProjectCard

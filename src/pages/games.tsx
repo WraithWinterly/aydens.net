@@ -12,7 +12,7 @@ export default function Games() {
   const [hoveringImage, setHoveringImage] = useState<boolean>(false);
   return (
     <div className="flex flex-col items-center gap-4">
-      <h1>Games</h1>
+      <h1 className="text-center">Games</h1>
       {/* Everplast */}
       <div
         className="h-[350px] w-[980px] rounded-lg bg-center bg-no-repeat transition-all animate-in fade-in zoom-in-50 duration-500"

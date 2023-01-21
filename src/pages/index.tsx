@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main className="flex h-full min-h-screen flex-col items-center">
-        <h1 className="animate-in fade-in slide-in-from-top-10 duration-700 ">
+        <h1 className="w-fit px-4 text-center animate-in fade-in slide-in-from-top-10 duration-700 ">
           Welcome to Ayden{"'"}s Site!
         </h1>
         <p className="w-96 text-center font-bold animate-in fade-in slide-in-from-left-80 duration-700">

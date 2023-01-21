@@ -42,7 +42,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-top-10 duration-700">
       <div>
-        <h1>Contact</h1>
+        <h1 className="text-center">Contact</h1>
         <p>I am happy you have taken the time to reach out!</p>
         <p>
           Open communication and friendliness are a huge value for me, and your

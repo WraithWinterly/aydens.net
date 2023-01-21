@@ -39,7 +39,8 @@ export default function Layout({ children }: LayoutProps) {
       {useAltBg && <SpaceParallax offsetY={offsetY} />}
 
       <Header />
-      <div className="relative flex h-full min-h-screen w-full flex-col items-center pb-12">
+      <div
+        className={`relative flex h-full min-h-screen w-full max-w-[${window.innerWidth}px] flex-col items-center pb-12`}>
         {children}
       </div>
       <Footer />
