@@ -18,21 +18,6 @@ export default function Header() {
           <Links setMenuOpen={setMenuOpen} />
         </div>
       </Modal>
-      <div className="relative flex w-full items-center justify-center gap-2 text-center text-2xl">
-        <div className="mt-2 flex flex-col rounded-full bg-black/50 px-4 py-2 md:flex-row md:gap-2">
-          <div className="flex shrink-0 flex-row items-center gap-1">
-            <IoWarningOutline size={20} />
-            <span>This website is under construction.</span>
-          </div>
-
-          <a
-            href="https://wraithwinterly.github.io"
-            target="_blank"
-            rel="noreferrer">
-            View 2022 Website
-          </a>
-        </div>
-      </div>
       <header className="relative flex w-full justify-between py-4 px-4 text-center lg:px-8 ">
         <div className="flex w-full items-center justify-between gap-4">
           <div className="items-center">
