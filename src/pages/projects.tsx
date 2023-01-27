@@ -64,8 +64,8 @@ export default function Projects() {
   const id = useId();
   return (
     <div className="animate-in fade-in duration-500">
-      <h1>Projects</h1>
-      <div className="flex flex-col gap-4">
+      <h1 className="text-center">Projects</h1>
+      <div className="flex flex-col gap-4 px-1">
         {projects.map((project, i) => (
           <ProjectCard
             key={`${id}${i}`}
@@ -88,12 +88,13 @@ function ProjectCard({
   return (
     <div
       className={`flex gap-4 rounded-2xl bg-black/20 px-8 py-8 animate-in fade-in duration-500 ${
-        isEven ? "slide-in-from-left-20" : "slide-in-from-right-20"
+        isEven ? "md:slide-in-from-left-20" : "md:slide-in-from-right-20"
       }`}>
       <div className="flex w-fit flex-col gap-4">
         <div className="flex flex-col gap-4">
-          <h2 className="flex items-center gap-4">
-            {project.title}
+          <div className="flex items-center gap-4 text-center md:text-start">
+            <h2 className="text-start">{project.title}</h2>
+
             {!!project.preview && (
               <div className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-sm font-bold italic text-gray-400">
                 <div className="flex items-center gap-1">
@@ -101,13 +102,16 @@ function ProjectCard({
                 </div>
               </div>
             )}
-          </h2>
+          </div>
+          <div className="block md:hidden">
+            <ProjectImage project={project} />
+          </div>
           <p className="max-w-[400px] pl-2">{project.description}</p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col items-center gap-4 md:flex-row">
           {!!project.liveLink && (
             <a href={project.liveLink} target="_blank" rel="noreferrer">
-              <button className="btn flex h-14 w-44 items-center gap-2">
+              <button className="btn flex h-14 w-56 items-center gap-2 md:w-44">
                 <HiOutlineSquares2X2 size={28} />
                 <span>View Project</span>
               </button>
@@ -115,22 +119,30 @@ function ProjectCard({
           )}
 
           <a href={project.githubLink}>
-            <button className="btn btn-github flex h-14 w-44 items-center gap-3">
+            <button className="btn btn-github flex h-14 w-56 items-center gap-3 md:w-44">
               <SiGithub size={24} />
               <span>View Source</span>
             </button>
           </a>
         </div>
       </div>
-      {!!project.image && (
-        <div className="flex flex-col gap-4">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-80 w-80 rounded-3xl"
-          />
-        </div>
-      )}
+      <div className="hidden md:block">
+        <ProjectImage project={project} />
+      </div>
     </div>
+  );
+}
+
+function ProjectImage({ project }: { project: Project }) {
+  return !!project.image ? (
+    <div className="flex shrink-0 flex-col gap-4">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="mx-auto h-52 w-52 rounded-3xl md:h-64 md:w-64 lg:h-80 lg:w-80"
+      />
+    </div>
+  ) : (
+    <></>
   );
 }

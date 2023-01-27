@@ -31,6 +31,14 @@ export default function Layout({ children }: LayoutProps) {
     }
   }, [router.pathname]);
 
+  const [windowWidth, setWindowWidth] = useState<number>();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
+
   return (
     <div
       className={`relative flex flex-col items-center ${
@@ -39,7 +47,8 @@ export default function Layout({ children }: LayoutProps) {
       {useAltBg && <SpaceParallax offsetY={offsetY} />}
 
       <Header />
-      <div className="relative flex h-full min-h-screen w-full flex-col items-center pb-12">
+      <div
+        className={`relative flex h-full min-h-screen w-full max-w-[${windowWidth}px] flex-col items-center px-1 pb-12 md:px-4`}>
         {children}
       </div>
       <Footer />
