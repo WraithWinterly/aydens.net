@@ -110,7 +110,7 @@ export default function Contact() {
         </div>
       </div>
       {/* Github Section */}
-      <div className="h-full rounded-lg bg-slate-900/70 py-4 backdrop-blur-md md:px-4">
+      <div className="mx-auto h-full w-full rounded-lg bg-slate-900/70 pt-4 pb-20 backdrop-blur-md md:py-4 md:px-8 lg:max-w-[1200px]">
         <h2 className="text-center lg:text-start">Github</h2>
         {/* Github Box */}
         <div className="flex h-full flex-col gap-6 rounded-lg border-solid border-gray-500 border-opacity-50 py-4 md:flex-row">
@@ -130,7 +130,7 @@ export default function Contact() {
             </button>
           </div>
           {/* Github Project Cards */}
-          <div className="mb-12 flex h-full flex-col items-center gap-4">
+          <div className="flex h-full flex-col items-center gap-4 lg:w-full">
             <p>
               Example Projects -{" "}
               <Link href="/projects">
