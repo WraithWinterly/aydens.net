@@ -92,8 +92,9 @@ function ProjectCard({
       }`}>
       <div className="flex w-fit flex-col gap-4">
         <div className="flex flex-col gap-4">
-          <h2 className="flex items-center gap-4">
+          <h2 className="flex items-center gap-4 text-center md:text-start">
             {project.title}
+
             {!!project.preview && (
               <div className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-sm font-bold italic text-gray-400">
                 <div className="flex items-center gap-1">
@@ -102,6 +103,9 @@ function ProjectCard({
               </div>
             )}
           </h2>
+          <div className="block md:hidden">
+            <ProjectImage project={project} />
+          </div>
           <p className="max-w-[400px] pl-2">{project.description}</p>
         </div>
         <div className="flex gap-4">
@@ -122,15 +126,23 @@ function ProjectCard({
           </a>
         </div>
       </div>
-      {!!project.image && (
-        <div className="flex flex-col gap-4">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-80 w-80 rounded-3xl"
-          />
-        </div>
-      )}
+      <div className="hidden md:block">
+        <ProjectImage project={project} />
+      </div>
     </div>
+  );
+}
+
+function ProjectImage({ project }: { project: Project }) {
+  return !!project.image ? (
+    <div className="flex shrink-0 flex-col gap-4">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="mx-auto h-52 w-52 rounded-3xl md:h-64 md:w-64 lg:h-80 lg:w-80"
+      />
+    </div>
+  ) : (
+    <></>
   );
 }
