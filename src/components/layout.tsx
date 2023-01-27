@@ -31,6 +31,14 @@ export default function Layout({ children }: LayoutProps) {
     }
   }, [router.pathname]);
 
+  const [windowWidth, setWindowWidth] = useState<number>();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
+
   return (
     <div
       className={`relative flex flex-col items-center ${
@@ -40,7 +48,7 @@ export default function Layout({ children }: LayoutProps) {
 
       <Header />
       <div
-        className={`relative flex h-full min-h-screen w-full max-w-[${window.innerWidth}px] flex-col items-center pb-12`}>
+        className={`relative flex h-full min-h-screen w-full max-w-[${windowWidth}px] flex-col items-center pb-12`}>
         {children}
       </div>
       <Footer />
