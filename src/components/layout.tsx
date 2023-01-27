@@ -48,7 +48,7 @@ export default function Layout({ children }: LayoutProps) {
 
       <Header />
       <div
-        className={`relative flex h-full min-h-screen w-full max-w-[${windowWidth}px] flex-col items-center pb-12`}>
+        className={`relative flex h-full min-h-screen w-full max-w-[${windowWidth}px] flex-col items-center px-4 pb-12`}>
         {children}
       </div>
       <Footer />

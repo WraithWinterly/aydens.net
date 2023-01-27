@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
 import { IoRefreshCircleOutline } from "react-icons/io5";
+import Link from "next/link";
+
 export default function Contact() {
   interface GithubCardProps {
     name: string;
@@ -18,7 +20,7 @@ export default function Contact() {
   }: GithubCardProps) => {
     return (
       <div className="h-full w-full rounded-lg border border-gray-700 bg-gray-800 py-4 px-4 backdrop-blur-md">
-        <div className="mb-1 flex items-center gap-2">
+        <div className="mb-1 flex w-fit items-center gap-2">
           <a
             href={href}
             target="_blank"
@@ -41,16 +43,14 @@ export default function Contact() {
   };
   return (
     <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-top-10 duration-700">
-      <div>
-        <h1 className="text-center">Contact</h1>
+      <div className="mx-auto max-w-2xl text-center">
+        <h1>Contact</h1>
         <p>I am happy you have taken the time to reach out!</p>
         <p>
           Open communication and friendliness are a huge value for me, and your
-          input is important to me!
-        </p>
-        <p>
-          Here are all the various methods to contact me or view all of my
-          social media or links. I look forward to connecting with you soon!
+          input is important to me! Here are all the various methods to contact
+          me or view all of my social media or links. I look forward to
+          connecting with you soon!
         </p>
       </div>
 
@@ -110,12 +110,12 @@ export default function Contact() {
         </div>
       </div>
       {/* Github Section */}
-      <div className="rounded-lg bg-slate-900/70 px-8 py-4 backdrop-blur-md">
-        <h2>Github</h2>
+      <div className="h-fit rounded-lg bg-slate-900/70 px-8 py-4 backdrop-blur-md">
+        <h2 className="text-center lg:text-start">Github</h2>
         {/* Github Box */}
-        <div className="flex gap-6 rounded-lg border-solid border-gray-500 border-opacity-50 px-4 py-4">
+        <div className="flex h-fit flex-col gap-6 rounded-lg border-solid border-gray-500 border-opacity-50 py-4 md:flex-row">
           {/* Github Personal Section */}
-          <div className="flex w-72 flex-col gap-2">
+          <div className="flex w-full flex-col  items-center gap-2 md:items-start lg:w-72">
             <Image
               src="/github-pfp.png"
               className="rounded-full"
@@ -125,41 +125,49 @@ export default function Contact() {
             />
             <h3 className="pb-0">Ayden Springer</h3>
             <h4 className="pt-0 font-normal text-gray-500">WraithWinterly</h4>
-            <button className="btn bg-[#6e5494] py-4 text-xl hover:bg-[#8767b6]">
+            <button className="btn ml-0 bg-[#6e5494] py-4 text-xl hover:bg-[#8767b6]">
               View Github
             </button>
           </div>
           {/* Github Project Cards */}
-          <div className="grid h-48 grid-cols-2 gap-2">
-            <GithubCard
-              name="aydens.net"
-              description="This website!"
-              href="https://github.com/WraithWinterly/aydens.net"
-              lang="Typescript"
-              langColor="bg-blue-400"
-            />
-            <GithubCard
-              name="wraithwinterly.github.io"
-              description="2022 Website"
-              href="https://github.com/WraithWinterly/wraithwinterly.github.io"
-              lang="Javascript"
-              langColor="bg-yellow-300"
-            />
+          <div className="flex flex-col items-center gap-4">
+            <p>
+              Example Projects -{" "}
+              <Link href="/projects">
+                <i>See All Projects</i>
+              </Link>
+            </p>
+            <div className="grid h-fit justify-center gap-2 lg:grid-cols-2">
+              <GithubCard
+                name="aydens.net"
+                description="This website!"
+                href="https://github.com/WraithWinterly/aydens.net"
+                lang="Typescript"
+                langColor="bg-blue-400"
+              />
+              <GithubCard
+                name="wraithwinterly.github.io"
+                description="2022 Website"
+                href="https://github.com/WraithWinterly/wraithwinterly.github.io"
+                lang="Javascript"
+                langColor="bg-yellow-300"
+              />
 
-            <GithubCard
-              name="Everplast"
-              description="Platforming game with Godot Engine"
-              href="https://github.com/WraithWinterly/Everplast"
-              lang="GDScript"
-              langColor="bg-slate-500"
-            />
-            <GithubCard
-              name="next-life-planner"
-              description=""
-              href="https://github.com/WraithWinterly/next-life-planner"
-              lang="Typescript"
-              langColor="bg-blue-400"
-            />
+              <GithubCard
+                name="Everplast"
+                description="Platforming game with Godot Engine"
+                href="https://github.com/WraithWinterly/Everplast"
+                lang="GDScript"
+                langColor="bg-slate-500"
+              />
+              <GithubCard
+                name="next-life-planner"
+                description=""
+                href="https://github.com/WraithWinterly/next-life-planner"
+                lang="Typescript"
+                langColor="bg-blue-400"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="w-fit px-12 animate-in fade-in duration-500 md:max-w-4xl">
+    <div className="w-fit animate-in fade-in duration-500 md:max-w-4xl">
       <h1 className="w-full text-center animate-in slide-in-from-top-5 duration-500">
         About
       </h1>
