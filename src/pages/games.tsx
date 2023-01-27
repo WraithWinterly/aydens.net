@@ -55,7 +55,7 @@ export default function Games() {
       <div className="flex h-full w-full flex-col justify-between gap-4 md:flex-row">
         {/* Blockhit */}
         <div
-          className="h-[320px] w-[320px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in slide-in-from-left duration-500 lg:h-[450px] lg:w-[450px]"
+          className="h-[320px] w-[320px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in duration-500 md:slide-in-from-left lg:h-[450px] lg:w-[450px]"
           style={{
             backgroundImage: `url(${blockhit.src})`,
           }}>
@@ -88,7 +88,7 @@ export default function Games() {
         </div>
         {/* WraithFPS */}
         <div
-          className="h-[320px] w-[320px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in slide-in-from-right duration-500 lg:h-[450px] lg:w-[450px]"
+          className="h-[320px] w-[320px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in duration-500 md:slide-in-from-right lg:h-[450px] lg:w-[450px]"
           style={{
             backgroundImage: `url(${wraithfps.src})`,
           }}>

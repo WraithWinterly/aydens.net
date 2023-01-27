@@ -46,11 +46,10 @@ export default function Header() {
             {router.pathname != "/" && (
               <Link
                 href={"/"}
-                className="animate-in fade-in slide-in-from-right-10 duration-300">
-                <BiArrowBack
-                  size={30}
-                  className="header-link h-full w-full px-6"
-                />
+                className="animate-in fade-in duration-300 md:slide-in-from-right-10">
+                <button className="header-link">
+                  <BiArrowBack size={30} />
+                </button>
               </Link>
             )}
 

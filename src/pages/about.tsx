@@ -1,10 +1,10 @@
 export default function About() {
   return (
     <div className="w-fit animate-in fade-in duration-500 md:max-w-4xl">
-      <h1 className="w-full text-center animate-in slide-in-from-top-5 duration-500">
+      <h1 className="w-full text-center animate-in duration-500 md:slide-in-from-top-5">
         About
       </h1>
-      <p className="animate-in slide-in-from-left-5 duration-500">
+      <p className="px-2 text-center animate-in duration-500 md:slide-in-from-left-5">
         I am specialized in web and game development with over 2 years of
         experience as a game developer, using engines such as Unreal Engine,
         Godot and Unity, having released my solo developed first game{" "}

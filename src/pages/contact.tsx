@@ -42,8 +42,8 @@ export default function Contact() {
     );
   };
   return (
-    <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-top-10 duration-700">
-      <div className="mx-auto max-w-2xl text-center">
+    <div className="flex w-full flex-col gap-4 animate-in fade-in duration-700 md:slide-in-from-top-10">
+      <div className="mx-auto max-w-2xl px-2 text-center">
         <h1>Contact</h1>
         <p>I am happy you have taken the time to reach out!</p>
         <p>
@@ -54,9 +54,9 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="flex justify-center gap-4">
+      <div className="flex flex-col items-center justify-center md:flex-row md:gap-4">
         <div className="flex flex-col">
-          <div className="w-52 animate-in slide-in-from-left duration-700">
+          <div className="w-52 animate-in duration-700 md:slide-in-from-left">
             <a
               href="https://github.com/WraithWinterly"
               target="_blank"
@@ -68,7 +68,7 @@ export default function Contact() {
               </button>
             </a>
           </div>
-          <div className="w-52 animate-in slide-in-from-left duration-700">
+          <div className="w-52 animate-in duration-700 md:slide-in-from-left">
             <a
               href="https://www.linkedin.com/in/ayden-springer"
               target="_blank"
@@ -82,7 +82,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex flex-col">
-          <div className="w-52 animate-in slide-in-from-left duration-700">
+          <div className="w-52 animate-in duration-700 md:slide-in-from-left">
             <a
               href="https://twitter.com/WraithWinterly"
               target="_blank"
@@ -94,7 +94,7 @@ export default function Contact() {
               </button>
             </a>
           </div>
-          <div className="w-52 animate-in slide-in-from-left duration-700">
+          <div className="w-52 animate-in duration-700 md:slide-in-from-left">
             <a
               href="https://wraithwinterly.github.io/"
               target="_blank"
@@ -110,12 +110,12 @@ export default function Contact() {
         </div>
       </div>
       {/* Github Section */}
-      <div className="h-fit rounded-lg bg-slate-900/70 px-8 py-4 backdrop-blur-md">
+      <div className="h-full rounded-lg bg-slate-900/70 py-4 backdrop-blur-md md:px-4">
         <h2 className="text-center lg:text-start">Github</h2>
         {/* Github Box */}
-        <div className="flex h-fit flex-col gap-6 rounded-lg border-solid border-gray-500 border-opacity-50 py-4 md:flex-row">
+        <div className="flex h-full flex-col gap-6 rounded-lg border-solid border-gray-500 border-opacity-50 py-4 md:flex-row">
           {/* Github Personal Section */}
-          <div className="flex w-full flex-col  items-center gap-2 md:items-start lg:w-72">
+          <div className="flex w-full flex-col items-center gap-2 md:items-start lg:w-72">
             <Image
               src="/github-pfp.png"
               className="rounded-full"
@@ -130,7 +130,7 @@ export default function Contact() {
             </button>
           </div>
           {/* Github Project Cards */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="mb-12 flex h-full flex-col items-center gap-4">
             <p>
               Example Projects -{" "}
               <Link href="/projects">
