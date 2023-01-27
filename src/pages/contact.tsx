@@ -4,43 +4,6 @@ import { IoRefreshCircleOutline } from "react-icons/io5";
 import Link from "next/link";
 
 export default function Contact() {
-  interface GithubCardProps {
-    name: string;
-    description: string;
-    href: string;
-    lang: string;
-    langColor: string;
-  }
-  const GithubCard = ({
-    name,
-    description,
-    href,
-    lang,
-    langColor,
-  }: GithubCardProps) => {
-    return (
-      <div className="h-full w-full rounded-lg border border-gray-700 bg-gray-800 py-4 px-4 backdrop-blur-md">
-        <div className="mb-1 flex w-fit items-center gap-2">
-          <a
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            className="text-xl font-bold text-sky-500">
-            {name}
-          </a>
-          <div className="rounded-full border border-gray-700 font-bold text-gray-400">
-            <p className="px-2 text-sm font-medium">Public</p>
-          </div>
-        </div>
-
-        <p className="text-xl font-normal text-gray-400">{description}</p>
-        <div className="mt-1 flex items-center gap-2">
-          <div className={"h-3 w-3 rounded-full " + langColor}></div>
-          <p className="text-lg text-gray-400">{lang}</p>
-        </div>
-      </div>
-    );
-  };
   return (
     <div className="flex w-full flex-col gap-4 animate-in fade-in duration-700 md:slide-in-from-top-10">
       <div className="mx-auto max-w-2xl px-2 text-center">
@@ -170,6 +133,44 @@ export default function Contact() {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+interface GithubCardProps {
+  name: string;
+  description: string;
+  href: string;
+  lang: string;
+  langColor: string;
+}
+function GithubCard({
+  name,
+  description,
+  href,
+  lang,
+  langColor,
+}: GithubCardProps) {
+  return (
+    <div className="h-full w-full rounded-lg border border-gray-700 bg-gray-800 py-4 px-4 backdrop-blur-md">
+      <div className="mb-1 flex w-fit items-center gap-2">
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="text-xl font-bold text-sky-500">
+          {name}
+        </a>
+        <div className="rounded-full border border-gray-700 font-bold text-gray-400">
+          <p className="px-2 text-sm font-medium">Public</p>
+        </div>
+      </div>
+
+      <p className="text-xl font-normal text-gray-400">{description}</p>
+      <div className="mt-1 flex items-center gap-2">
+        <div className={"h-3 w-3 rounded-full " + langColor}></div>
+        <p className="text-lg text-gray-400">{lang}</p>
       </div>
     </div>
   );

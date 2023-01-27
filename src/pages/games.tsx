@@ -10,6 +10,7 @@ import wraithfps from "@assets/games/wraithfps.png";
 
 export default function Games() {
   const [hoveringImage, setHoveringImage] = useState<boolean>(false);
+
   return (
     <div className="flex flex-col items-center gap-4">
       <h1 className="text-center">Games</h1>
