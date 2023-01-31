@@ -21,7 +21,7 @@
   }
 
   a {
-    @apply cursor-pointer text-blue-500;
+    @apply cursor-pointer text-blue-100;
   }
 
   .absolute-center {

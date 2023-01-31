@@ -5,6 +5,7 @@ import { BiArrowBack } from "react-icons/bi";
 import { IoWarningOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Modal from "./ui/modal";
+import { MdOutlineDeveloperBoard } from "react-icons/md";
 
 export default function Header() {
   const router = useRouter();
@@ -21,10 +22,11 @@ export default function Header() {
       <header className="relative flex w-full justify-between py-4 px-4 text-center lg:px-8 ">
         <div className="flex w-full items-center justify-between gap-4">
           <div className="items-center">
-            <a
-              href={`https://${process.env.NEXT_PUBLIC_URL}`}
-              className="rounded-full bg-blue-600/30 py-4 px-6 text-2xl text-slate-200 transition-colors hover:bg-blue-600/80 hover:text-white">
-              {process.env.NEXT_PUBLIC_URL}
+            <a href={`https://${process.env.NEXT_PUBLIC_URL}`}>
+              <button className="flex w-full gap-2 rounded-2xl bg-blue-600/30 pb-3 pt-2.5 pl-6 pr-7 text-2xl text-slate-200 transition-colors hover:bg-blue-600/80 hover:text-white">
+                <MdOutlineDeveloperBoard size={30} className="pt-1" />
+                <span className="mb-0">{process.env.NEXT_PUBLIC_URL}</span>
+              </button>
             </a>
           </div>
           <div className="flex shrink-0 items-center gap-2">

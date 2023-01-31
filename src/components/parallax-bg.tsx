@@ -5,7 +5,6 @@ import planets from "@assets/games/parallax/planets.png";
 import ParallaxLayer from "./parallax-layer";
 
 export default function SpaceParallax({ offsetY }: { offsetY: number }) {
-  console.log(stars);
   return (
     <div className="relative h-full w-full animate-in fade-in slide-in-from-top-5 duration-500">
       <ParallaxLayer

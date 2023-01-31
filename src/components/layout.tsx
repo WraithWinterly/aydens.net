@@ -42,7 +42,13 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div
       className={`relative flex flex-col items-center ${
-        useAltBg ? "bg-black" : "bg-gradient-to-br from-blue-900 to-pink-900"
+        useAltBg
+          ? "bg-black"
+          : `bg-gradient-to-br ${
+              router.pathname === "/projects"
+                ? "from-rose-800 to-cyan-500"
+                : "from-blue-900 to-pink-900"
+            }`
       }`}>
       {useAltBg && <SpaceParallax offsetY={offsetY} />}
 

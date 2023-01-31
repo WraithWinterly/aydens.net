@@ -3,13 +3,20 @@ import { SiGithub } from "react-icons/si";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { IoWarningOutline } from "react-icons/io5";
 
+import lifePlanner from "@assets/proj-icons/life-planner.png";
+import unitconverter from "@assets/proj-icons/unit-converter.png";
+import calculator from "@assets/proj-icons/calculator.png";
+import tasksultra from "@assets/proj-icons/tasksultra.png";
+import rapidWraith from "@assets/proj-icons/rapid-wraith.png";
+import Head from "next/head";
+
 const projects: Project[] = [
   {
     title: "Life Planner",
     description:
       "Fullstack life planner with authentication that helps you keep track of your life for everyday.",
-    image: "",
-    liveLink: "",
+    image: lifePlanner.src,
+    liveLink: "https://life-planner.aydens.net",
     githubLink: "https://github.com/WraithWinterly/next-life-planner",
     preview: true,
   },
@@ -17,8 +24,7 @@ const projects: Project[] = [
     title: "Unit Converter",
     description:
       "Converts units of measurement, such as length, mass, and temperature, and data speed.",
-    image:
-      "https://raw.githubusercontent.com/WraithWinterly/wraithwinterly.github.io/fetch/project-photos/unit-converter.png",
+    image: unitconverter.src,
     liveLink: "https://wraithwinterly.github.io/unit-converter/",
     githubLink: "https://github.com/WraithWinterly/unit-converter",
   },
@@ -26,8 +32,7 @@ const projects: Project[] = [
     title: "Calculator",
     description:
       "Supporting advanced and simple arithmetic operations, this calculator is a must-have for every student.",
-    image:
-      "https://raw.githubusercontent.com/WraithWinterly/wraithwinterly.github.io/fetch/project-photos/calculator.png",
+    image: calculator.src,
     liveLink: "https://wraithwinterly.github.io/calculator/",
     githubLink: "https://github.com/WraithWinterly/calculator",
   },
@@ -35,8 +40,7 @@ const projects: Project[] = [
     title: "Tasks Ultra",
     description:
       "The ultimate task management app, plan your day with this app and never miss a deadline.",
-    image:
-      "https://raw.githubusercontent.com/WraithWinterly/wraithwinterly.github.io/fetch/project-photos/tasksultra.png",
+    image: tasksultra.src,
     liveLink: "https://tasksultra.netlify.app/",
     githubLink: "https://github.com/WraithWinterly/TasksUltra",
   },
@@ -44,8 +48,7 @@ const projects: Project[] = [
     title: "Rapid Wraith",
     description:
       "In this coffee shop, you can find your favorite coffee, you truly deserve it.",
-    image:
-      "https://raw.githubusercontent.com/WraithWinterly/wraithwinterly.github.io/fetch/project-photos/rapid-wraith.png",
+    image: rapidWraith.src,
     liveLink: "https://wraithwinterly.github.io/rapid-wraith/",
     githubLink: "https://github.com/WraithWinterly/rapid-wraith",
   },
@@ -54,7 +57,7 @@ const projects: Project[] = [
 interface Project {
   title: string;
   description: string;
-  image?: any;
+  image?: string;
   liveLink?: string;
   githubLink: string;
   preview?: boolean;
@@ -63,18 +66,27 @@ interface Project {
 export default function Projects() {
   const id = useId();
   return (
-    <div className="animate-in fade-in duration-500">
-      <h1 className="text-center">Projects</h1>
-      <div className="flex flex-col gap-4 px-1">
-        {projects.map((project, i) => (
-          <ProjectCard
-            key={`${id}${i}`}
-            project={project}
-            isEven={i % 2 == 0}
-          />
-        ))}
+    <>
+      <Head>
+        <title>Projects - Ayden&#39;s Site</title>
+        <meta
+          name="description"
+          content="View projects including Life Planner, Unit Converter, Calculator, etc."
+        />
+      </Head>
+      <div className="animate-in fade-in duration-500">
+        <h1 className="text-center">Projects</h1>
+        <div className="flex flex-col gap-4 px-1">
+          {projects.map((project, i) => (
+            <ProjectCard
+              key={`${id}${i}`}
+              project={project}
+              isEven={i % 2 == 0}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -139,7 +151,7 @@ function ProjectImage({ project }: { project: Project }) {
       <img
         src={project.image}
         alt={project.title}
-        className="mx-auto h-52 w-52 rounded-3xl md:h-64 md:w-64 lg:h-80 lg:w-80"
+        className="mx-auto h-52 w-52 rounded-3xl object-cover md:h-64 md:w-64 lg:h-80 lg:w-80"
       />
     </div>
   ) : (
