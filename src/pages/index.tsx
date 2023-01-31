@@ -4,8 +4,39 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ayden{"'"}s Site</title>
-        <meta name="description" content="Ayden's Site" />
+        <title>Ayden&#39;s Site</title>
+        <meta
+          name="description"
+          content="Aydens's Porfolio Website created with Next.Js! Includes games, projects, and more!"
+        />
+        <meta
+          name="keywords"
+          content="ayden, ayden springer, wraith, wraithwinterly, next, javascript, html, css, portfolio"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Ayden's Porfolio" />
+        <meta
+          property="twitter:description"
+          content="Aydens's Porfolio Website created with Next.Js! Includes games, projects, and more!"
+        />
+        <meta
+          property="twitter:image"
+          content="https://aydens.net/github-pfp.png"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wraithwinterly.github.io" />
+        <meta property="og:title" content="Ayden's Website" />
+        <meta
+          property="og:description"
+          content="Ayden Springer's Porfolio Website"
+        />
+        <meta property="og:image" content="https://aydens.net/github-pfp.png" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
