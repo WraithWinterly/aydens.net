@@ -19,7 +19,7 @@ export default function Header() {
           <Links setMenuOpen={setMenuOpen} />
         </div>
       </Modal>
-      <header className="relative flex w-full justify-between py-4 px-4 text-center lg:px-8 ">
+      <header className="absolute flex w-full justify-between py-4 px-4 text-center lg:px-8 ">
         <div className="flex w-full items-center justify-between gap-4">
           <div className="items-center">
             <a href={`https://${process.env.NEXT_PUBLIC_URL}`}>

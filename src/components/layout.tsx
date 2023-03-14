@@ -11,8 +11,8 @@ export default function Layout({ children }: LayoutProps) {
   const router = useRouter();
   const [offsetY, setOffsetY] = useState<number>(0);
 
-  const [useAltBg, setUseAltBg] = useState<boolean>(false);
-
+  const [useEmptyBg, setUseEmptyBg] = useState<boolean>(false);
+  const [useSpaceBg, setUseSpaceBg] = useState<boolean>(false);
   const handleScroll = () => setOffsetY(window.scrollY);
 
   // Scroll tracker
@@ -24,11 +24,18 @@ export default function Layout({ children }: LayoutProps) {
 
   // Background checker
   useEffect(() => {
-    if (router.pathname === "/games") {
-      setUseAltBg(true);
-    } else {
-      setUseAltBg(false);
+    if (router.pathname === "/") {
+      setUseEmptyBg(true);
+      setUseSpaceBg(false);
+      return;
     }
+    if (router.pathname.includes("/games")) {
+      setUseSpaceBg(true);
+      setUseEmptyBg(true);
+      return;
+    }
+    setUseEmptyBg(false);
+    setUseSpaceBg(false);
   }, [router.pathname]);
 
   const [windowWidth, setWindowWidth] = useState<number>();
@@ -42,21 +49,15 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div
       className={`relative flex flex-col items-center ${
-        useAltBg
-          ? "bg-black"
-          : `bg-gradient-to-br ${
-              router.pathname === "/projects"
-                ? "from-rose-800 to-cyan-500"
-                : "from-blue-900 to-pink-900"
-            }`
+        useEmptyBg ? "" : "bg-gradient-to-br from-blue-900 to-pink-900"
       }`}>
-      {useAltBg && <SpaceParallax offsetY={offsetY} />}
+      {useSpaceBg && <SpaceParallax offsetY={offsetY} />}
 
-      <Header />
       <div
-        className={`relative flex h-full min-h-screen w-full max-w-[${windowWidth}px] flex-col items-center px-1 pb-12 md:px-4`}>
+        className={`relative flex h-full min-h-screen w-full max-w-[${windowWidth}px] flex-col items-center`}>
         {children}
       </div>
+      <Header />
       <Footer />
     </div>
   );
