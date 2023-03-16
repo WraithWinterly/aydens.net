@@ -29,7 +29,7 @@ export default function Layout({ children }: LayoutProps) {
       setUseSpaceBg(false);
       return;
     }
-    if (router.pathname.includes("/games")) {
+    if (router.pathname.includes("/projects")) {
       setUseSpaceBg(true);
       setUseEmptyBg(true);
       return;

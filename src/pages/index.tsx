@@ -4,12 +4,20 @@ import { motion } from "framer-motion";
 import PageContent from "@/components/ui/pageContent";
 import ParticlesBG from "@/components/particlesBg";
 import HighlightingText from "@/components/ui/highlightingText";
+import useScrollPosition from "@/hooks/useScrollPosition";
+import { SiGithub, SiSteam } from "react-icons/si";
+import { useState } from "react";
+import w3l9 from "@assets/games/w3l9.png";
+import everplastLogo from "@assets/games/everplast-logo.png";
+import Image from "next/image";
 
 export default function Home() {
+  const scrollPos = useScrollPosition();
+
   return (
     <>
       <Head>
-        <title>Ayden{"'"}s Site</title>
+        <title>Aydens Site</title>
         <meta name="description" content="Ayden's Site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -44,7 +52,7 @@ export default function Home() {
                       initial={{
                         color: "#ffffff",
                       }}
-                      animate={{
+                      whileInView={{
                         color: "#dc2626",
                       }}
                       transition={{
@@ -58,7 +66,7 @@ export default function Home() {
                       initial={{
                         color: "#ffffff",
                       }}
-                      animate={{
+                      whileInView={{
                         color: "#a855f7",
                       }}
                       transition={{
@@ -80,8 +88,8 @@ export default function Home() {
 
           <motion.div
             initial={{
-              rotate: -5,
-              scale: 0.75,
+              rotate: 0,
+              scale: 0.95,
             }}
             whileInView={{
               rotate: 0,
@@ -91,7 +99,7 @@ export default function Home() {
               bounce: 0.5,
               duration: 0.5,
             }}>
-            <div className="flex max-w-5xl flex-wrap gap-3 pl-6 text-5xl leading-relaxed">
+            <div className="mb-24 flex max-w-5xl flex-wrap gap-3 pl-6 text-5xl leading-relaxed">
               My{" "}
               <HighlightingText
                 text="passion for technology"
@@ -117,18 +125,16 @@ export default function Home() {
           </motion.div>
           <motion.div
             initial={{
-              rotate: -4,
-              scale: 0.9,
+              x: "-30px",
             }}
             whileInView={{
-              rotate: 0,
-              scale: 1,
+              x: "0px",
             }}
             transition={{
               bounce: 1.5,
               duration: 0.5,
             }}>
-            <div className="my-32 flex max-w-5xl flex-wrap gap-3 pl-6 text-5xl leading-relaxed">
+            <div className="mb-20 flex max-w-5xl flex-wrap gap-3 pl-6 text-5xl leading-relaxed">
               I am tackling{" "}
               <HighlightingText
                 text="exciting"
@@ -142,14 +148,90 @@ export default function Home() {
               projects.
             </div>
           </motion.div>
-          <h1 className="bg-gradient-to-r from-purple-400 to-pink-800 bg-clip-text text-9xl font-extrabold text-transparent">
-            The Showcase
-          </h1>
-          <p className="pb-[4000px]"></p>
 
-          <ParticlesBG />
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: "100px",
+            }}
+            whileInView={{
+              opacity: 1,
+              y: "0px",
+            }}
+            transition={{
+              duration: 0.5,
+            }}>
+            <motion.div
+              initial={{
+                opacity: 0.5,
+                y: "0px",
+              }}
+              whileInView={{
+                opacity: 1,
+                y: "-50px",
+              }}>
+              <h1 className="w-full bg-gradient-to-r from-purple-400 to-pink-800 bg-clip-text pt-72 text-center text-9xl font-extrabold text-transparent">
+                The Showcase
+              </h1>
+            </motion.div>
+
+            <div className="flex flex-col items-center">
+              <EverplastCard />
+            </div>
+          </motion.div>
+
+          {/* <p className="pb-[4000px]"></p> */}
+          <h2 className="py-24 text-center">
+            This page is still under construction.
+          </h2>
+
+          {scrollPos < 2300 && <ParticlesBG />}
         </PageContent>
       </main>
     </>
+  );
+}
+
+function EverplastCard() {
+  const [hoveringImage, setHoveringImage] = useState(false);
+  return (
+    <div
+      className="h-[450px] w-[320px] rounded-lg bg-center bg-no-repeat transition-all animate-in fade-in zoom-in-50 duration-500 md:w-[680px] lg:w-[950px]"
+      style={{
+        backgroundImage: `url('${w3l9.src}')`,
+        backgroundSize: hoveringImage ? "980px" : "1080px",
+        filter: hoveringImage ? "brightness(0.8)" : "brightness(1)",
+        boxShadow: hoveringImage ? "inset 0 0 4px black" : "",
+      }}
+      onMouseEnter={() => setHoveringImage(true)}
+      onMouseLeave={() => setHoveringImage(false)}>
+      <div className="mx-auto flex h-full w-fit flex-col justify-between px-4 py-4">
+        <Image
+          width={everplastLogo.width}
+          height={everplastLogo.height}
+          alt="everplast logo"
+          src={everplastLogo.src}
+          className="rounded-2xl bg-black/70 px-4 pb-4 pt-2 backdrop-blur-md animate-in fade-in duration-500"></Image>
+        <div className="flex flex-col items-center gap-0">
+          <a
+            href="https://github.com/WraithWinterly/Everplast"
+            target="_blank"
+            rel="noreferrer">
+            <button className="btn btn-github flex h-12 items-center gap-4 md:w-72">
+              <SiGithub size={24} />
+              <span>View on Github</span>
+            </button>
+          </a>
+          <a
+            href="https://store.steampowered.com/app/1896630/Everplast/"
+            target="_blank"
+            rel="noreferrer">
+            <button className="btn flex h-12 items-center gap-4 bg-[#1b2838] hover:bg-[#25374d]  md:w-72">
+              <SiSteam size={24} /> <span>View on Steam</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }

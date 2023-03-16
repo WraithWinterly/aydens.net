@@ -42,6 +42,7 @@
   white-space: nowrap;
   user-select: none;
 }
+
 @layer components {
   h1 {
     @apply py-6 text-6xl font-bold;
@@ -74,10 +75,6 @@
 
   .btn-github {
     @apply bg-[#6E5494] hover:bg-[#7e60aa];
-  }
-
-  .header-link {
-    @apply w-full cursor-pointer rounded-full bg-pink-500/60 px-6 py-2 text-lg text-slate-200 transition-colors hover:bg-pink-500/40 hover:text-white;
   }
 }
 
