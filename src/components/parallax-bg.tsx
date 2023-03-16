@@ -10,7 +10,7 @@ export default function SpaceParallax({ offsetY }: { offsetY: number }) {
       <ParallaxLayer
         offsetY={offsetY}
         img={stars.src}
-        speed={0.2}
+        speed={0.4}
         addOffset={offsetY}
       />
       <ParallaxLayer

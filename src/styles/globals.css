@@ -2,6 +2,47 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+  --bg-color-hsl: 59, 3%, 94%;
+  --bg-color: hsl(var(--bg-color-hsl));
+  --bg-color-translucent: hsla(var(--bg-color-hsl), 0.95);
+  --bg-color-highlight: hsl(50, 60%, 50%);
+  --duration: 1.25s;
+  --ease: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.text-highlight {
+  all: unset;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: color calc(var(--duration) / 4) var(--ease),
+    background-color calc(var(--duration) / 4) var(--ease),
+    background-size var(--duration) var(--ease);
+
+  --line-size: 0.2em;
+  background-image: linear-gradient(
+    transparent calc(100% - var(--line-size)),
+    var(--bg-color-highlight) var(--line-size)
+  );
+}
+
+.text-highlight-active {
+  color: var(--color-text-highlight);
+  background-size: 100% 100%;
+}
+
+.text-highlight:before,
+.text-highlight::after {
+  position: absolute;
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+}
+
 @layer components {
   h1 {
     @apply py-6 text-6xl font-bold;
@@ -21,7 +62,7 @@
   }
 
   a {
-    @apply cursor-pointer text-blue-100;
+    @apply cursor-pointer text-blue-500;
   }
 
   .absolute-center {
@@ -35,18 +76,14 @@
   .btn-github {
     @apply bg-[#6E5494] hover:bg-[#7e60aa];
   }
-
-  .header-link {
-    @apply w-full cursor-pointer rounded-full bg-pink-500/60 px-6 py-2 text-lg text-slate-200 transition-colors hover:bg-pink-500/40 hover:text-white;
-  }
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 * {
