@@ -1,5 +1,5 @@
 import w3l9 from "@assets/games/w3l9.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SiGithub, SiSteam } from "react-icons/si";
 import { FaGamepad } from "react-icons/fa";
 import Image from "next/image";
@@ -17,7 +17,6 @@ import lifePlanner from "@assets/proj-icons/life-planner.png";
 import unitconverter from "@assets/proj-icons/unit-converter.png";
 import calculator from "@assets/proj-icons/calculator.png";
 import tasksultra from "@assets/proj-icons/tasksultra.png";
-import rapidWraith from "@assets/proj-icons/rapid-wraith.png";
 
 export default function Projects() {
   const [hoveringImage, setHoveringImage] = useState<boolean>(false);
@@ -31,11 +30,11 @@ export default function Projects() {
           content="View games such as Everplast, Blockhit and WraithFPS."
         />
       </Head>
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 pt-14">
         <h1 className="text-center">All Projects</h1>
         {/* Everplast */}
         <div
-          className="h-[450px] w-[320px] rounded-lg bg-center bg-no-repeat transition-all animate-in fade-in zoom-in-50 duration-500 md:w-[680px] lg:w-[950px]"
+          className="h-[450px] w-full rounded-lg bg-center bg-no-repeat transition-all animate-in fade-in zoom-in-50 duration-500 md:w-[680px] lg:w-[950px]"
           style={{
             backgroundImage: `url('${w3l9.src}')`,
             backgroundSize: hoveringImage ? "980px" : "1080px",
@@ -72,11 +71,11 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <ProjectsList />
-        <div className="flex h-full w-full flex-col justify-between gap-4 md:flex-row">
+        <ProjectsList useTop2={true} />
+        <div className="flex h-full flex-col justify-between gap-4 md:flex-row">
           {/* Blockhit */}
           <div
-            className="h-[320px] w-[320px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in duration-500 md:slide-in-from-left lg:h-[450px] lg:w-[450px]"
+            className="h-[360px] w-[360px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in duration-500 md:slide-in-from-left lg:h-[450px] lg:w-[450px]"
             style={{
               backgroundImage: `url(${blockhit.src})`,
             }}>
@@ -109,7 +108,7 @@ export default function Projects() {
           </div>
           {/* WraithFPS */}
           <div
-            className="h-[320px] w-[320px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in duration-500 md:slide-in-from-right lg:h-[450px] lg:w-[450px]"
+            className="h-[360px] w-[360px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in duration-500 md:slide-in-from-right lg:h-[450px] lg:w-[450px]"
             style={{
               backgroundImage: `url(${wraithfps.src})`,
             }}>
@@ -145,6 +144,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
+        <ProjectsList useTop2={false} />
       </div>
     </>
   );
@@ -184,14 +184,6 @@ const projects: Project[] = [
     liveLink: "https://tasksultra.netlify.app/",
     githubLink: "https://github.com/WraithWinterly/TasksUltra",
   },
-  {
-    title: "Rapid Wraith",
-    description:
-      "In this coffee shop, you can find your favorite coffee, you truly deserve it.",
-    image: rapidWraith.src,
-    liveLink: "https://wraithwinterly.github.io/rapid-wraith/",
-    githubLink: "https://github.com/WraithWinterly/rapid-wraith",
-  },
 ];
 
 interface Project {
@@ -203,13 +195,22 @@ interface Project {
   preview?: boolean;
 }
 
-export function ProjectsList() {
+export function ProjectsList({ useTop2 }: { useTop2: boolean }) {
   const id = useId();
+  const [displayedProjects, setDisplayedProjects] = useState<Project[]>([]);
+  useEffect(() => {
+    if (useTop2) {
+      setDisplayedProjects(projects.slice(0, 2));
+    } else {
+      setDisplayedProjects(projects.slice(2, projects.length));
+    }
+  }, []);
+
   return (
     <>
       <div className="w-full animate-in fade-in duration-500">
         <div className="flex w-full flex-col gap-4 px-1">
-          {projects.map((project, i) => (
+          {displayedProjects.map((project, i) => (
             <ProjectCard
               key={`${id}${i}`}
               project={project}

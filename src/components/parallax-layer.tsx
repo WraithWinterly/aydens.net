@@ -1,6 +1,6 @@
 import React from "react";
-
 import styles from "./parallax-layer.module.css";
+import { motion } from "framer-motion";
 
 interface ParallaxLayerProps {
   bgOnly?: boolean;
@@ -11,7 +11,6 @@ interface ParallaxLayerProps {
 }
 
 export default function ParallaxLayer({
-  bgOnly,
   offsetY,
   img,
   speed = 1,

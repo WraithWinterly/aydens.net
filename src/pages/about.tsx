@@ -7,10 +7,13 @@ export default function About() {
         <title>About - Ayden&#39;s Site</title>
         <meta name="description" content="About page for Ayden's site." />
       </Head>
-      <div className="w-fit animate-in fade-in duration-500 md:max-w-4xl">
+      <div className="w-fit pt-14 animate-in fade-in duration-500 md:max-w-4xl">
         <h1 className="w-full text-center animate-in duration-500 md:slide-in-from-top-5">
           About
         </h1>
+        <h3 className="text-center">
+          <i>This page will be updated soon.</i>
+        </h3>
         <p className="px-2 text-center animate-in duration-500 md:slide-in-from-left-5">
           I am specialized in web and game development with over 2 years of
           experience as a game developer, using engines such as Unreal Engine,

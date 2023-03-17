@@ -48,7 +48,7 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div
-      className={`relative flex flex-col items-center ${
+      className={`min-w-screen relative flex flex-col items-center ${
         useEmptyBg ? "" : "bg-gradient-to-br from-blue-900 to-pink-900"
       }`}>
       {useSpaceBg && <SpaceParallax offsetY={offsetY} />}
