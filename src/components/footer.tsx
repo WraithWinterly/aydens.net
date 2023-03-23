@@ -13,13 +13,22 @@ export default function Footer() {
           <span>by Ayden Springer.</span>
         </p>
         <div className="my-2 flex items-center gap-4">
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/ayden-springer-03a61824a/"
+            target="_blank"
+            rel="noreferrer">
             <FaLinkedin size={36} className="text-white" />
           </a>
-          <a href="">
+          <a
+            href="https://github.com/WraithWinterly"
+            target="_blank"
+            rel="noreferrer">
             <FaGithub size={36} className="text-white" />
           </a>
-          <a href="">
+          <a
+            href="https://twitter.com/WraithWinterly"
+            target="_blank"
+            rel="noreferrer">
             <FaTwitter size={32} className="text-white" />
           </a>
         </div>
