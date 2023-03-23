@@ -18,17 +18,17 @@ export default function Header() {
           <Links setMenuOpen={setMenuOpen} />
         </div>
       </Modal>
-      <header className="absolute flex w-full justify-between py-4 px-4 text-center lg:px-8 ">
+      <header className="fixed flex w-full justify-between px-4 py-1 pt-4 text-center lg:px-8">
         <div className="flex w-full items-center justify-between gap-4">
           <div className="items-center">
             <a href={`https://${process.env.NEXT_PUBLIC_URL}`}>
-              <button className="flex w-full gap-2 rounded-2xl pb-3 pt-2.5 pl-6 pr-7 text-2xl text-slate-200 transition-colors  hover:text-white">
+              <button className="flex w-full gap-2 rounded-2xl bg-black/30 py-1 px-2 pb-3 pt-2.5 pl-6 pr-7  text-2xl text-slate-200 backdrop-blur-sm transition-colors hover:text-white">
                 <MdOutlineDeveloperBoard size={30} className="pt-1" />
                 <span className="mb-0">{process.env.NEXT_PUBLIC_URL}</span>
               </button>
             </a>
           </div>
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2 rounded-3xl bg-black/30 py-1 px-2 backdrop-blur-md">
             {router.pathname != "/" && (
               <Link
                 href={"/"}
