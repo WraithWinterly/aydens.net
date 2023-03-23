@@ -237,7 +237,7 @@ function ShowcaseSection() {
         </h1>
       </motion.div>
 
-      <div className="flex flex-col items-center">
+      <div className="mx-auto flex w-fit flex-col items-center">
         <EverplastCard />
       </div>
     </motion.div>
