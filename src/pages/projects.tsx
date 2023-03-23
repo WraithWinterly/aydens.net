@@ -17,6 +17,8 @@ import lifePlanner from "@assets/proj-icons/life-planner.png";
 import unitconverter from "@assets/proj-icons/unit-converter.png";
 import calculator from "@assets/proj-icons/calculator.png";
 import tasksultra from "@assets/proj-icons/tasksultra.png";
+import EverplastCard from "@/components/ui/everplastCard";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const [hoveringImage, setHoveringImage] = useState<boolean>(false);
@@ -32,47 +34,10 @@ export default function Projects() {
       </Head>
       <div className="flex flex-col items-center gap-4 pt-14">
         <h1 className="text-center">All Projects</h1>
-        {/* Everplast */}
-        <div
-          className="h-[450px] w-full rounded-lg bg-center bg-no-repeat transition-all animate-in fade-in zoom-in-50 duration-500 md:w-[680px] lg:w-[950px]"
-          style={{
-            backgroundImage: `url('${w3l9.src}')`,
-            backgroundSize: hoveringImage ? "980px" : "1080px",
-            filter: hoveringImage ? "brightness(0.8)" : "brightness(1)",
-            boxShadow: hoveringImage ? "inset 0 0 4px black" : "",
-          }}
-          onMouseEnter={() => setHoveringImage(true)}
-          onMouseLeave={() => setHoveringImage(false)}>
-          <div className="mx-auto flex h-full w-fit flex-col justify-between px-4 py-4">
-            <Image
-              width={everplastLogo.width}
-              height={everplastLogo.height}
-              alt="everplast logo"
-              src={everplastLogo.src}
-              className="rounded-2xl bg-black/70 px-4 pb-4 pt-2 backdrop-blur-md animate-in fade-in duration-500"></Image>
-            <div className="flex flex-col items-center gap-0">
-              <a
-                href="https://github.com/WraithWinterly/Everplast"
-                target="_blank"
-                rel="noreferrer">
-                <button className="btn btn-github flex h-12 items-center gap-4 md:w-72">
-                  <SiGithub size={24} />
-                  <span>View on Github</span>
-                </button>
-              </a>
-              <a
-                href="https://store.steampowered.com/app/1896630/Everplast/"
-                target="_blank"
-                rel="noreferrer">
-                <button className="btn flex h-12 items-center gap-4 bg-[#1b2838] hover:bg-[#25374d]  md:w-72">
-                  <SiSteam size={24} /> <span>View on Steam</span>
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+
+        <EverplastCard />
         <ProjectsList useTop2={true} />
-        <div className="flex h-full flex-col justify-between gap-4 md:flex-row">
+        <div className="flex h-full w-full flex-col items-center justify-between gap-4 rounded-xl bg-gray-800/50 py-4 px-4 md:flex-row">
           {/* Blockhit */}
           <div
             className="h-[360px] w-[360px] rounded-lg bg-contain bg-center bg-no-repeat animate-in fade-in duration-500 md:slide-in-from-left lg:h-[450px] lg:w-[450px]"
@@ -231,50 +196,63 @@ function ProjectCard({
   isEven: boolean;
 }) {
   return (
-    <div
-      className={`flex w-full justify-center gap-4 rounded-2xl bg-purple-800/40 px-8 py-8 animate-in fade-in duration-500 ${
-        isEven ? "md:slide-in-from-left-20" : "md:slide-in-from-right-20"
-      }`}>
-      <div className="flex w-fit flex-col gap-4">
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-4 text-center md:text-start">
-            <h2 className="text-start">{project.title}</h2>
+    <motion.div
+      initial={{
+        x: isEven ? -100 : 100,
+      }}
+      whileInView={{
+        x: 0,
+      }}
+      transition={{
+        type: "spring",
+        duration: 0.5,
+        damping: 14,
+      }}>
+      <div
+        className={`flex w-full justify-center gap-4 rounded-2xl bg-purple-800/40 px-8 py-8 animate-in fade-in duration-500 ${
+          isEven ? "md:slide-in-from-left-20" : "md:slide-in-from-right-20"
+        }`}>
+        <div className="flex w-fit flex-col gap-4">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-4 text-center md:text-start">
+              <h2 className="text-start">{project.title}</h2>
 
-            {!!project.preview && (
-              <div className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-sm font-bold italic text-gray-400">
-                <div className="flex items-center gap-1">
-                  <IoWarningOutline size={16} /> <span>Preview</span>
+              {!!project.preview && (
+                <div className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-sm font-bold italic text-gray-400">
+                  <div className="flex items-center gap-1">
+                    <IoWarningOutline size={16} /> <span>Preview</span>
+                  </div>
                 </div>
-              </div>
+              )}
+            </div>
+            <div className="block md:hidden">
+              <ProjectImage project={project} />
+            </div>
+            <p className="max-w-[400px] pl-2">{project.description}</p>
+          </div>
+          <div className="flex flex-col items-center gap-4 md:flex-row">
+            {!!project.liveLink && (
+              <a href={project.liveLink} target="_blank" rel="noreferrer">
+                <button className="btn flex h-14 w-56 items-center gap-2 md:w-44">
+                  <HiOutlineSquares2X2 size={28} />
+                  <span>View Project</span>
+                </button>
+              </a>
             )}
-          </div>
-          <div className="block md:hidden">
-            <ProjectImage project={project} />
-          </div>
-          <p className="max-w-[400px] pl-2">{project.description}</p>
-        </div>
-        <div className="flex flex-col items-center gap-4 md:flex-row">
-          {!!project.liveLink && (
-            <a href={project.liveLink} target="_blank" rel="noreferrer">
-              <button className="btn flex h-14 w-56 items-center gap-2 md:w-44">
-                <HiOutlineSquares2X2 size={28} />
-                <span>View Project</span>
+
+            <a href={project.githubLink}>
+              <button className="btn btn-github flex h-14 w-56 items-center gap-3 md:w-44">
+                <SiGithub size={24} />
+                <span>View Source</span>
               </button>
             </a>
-          )}
-
-          <a href={project.githubLink}>
-            <button className="btn btn-github flex h-14 w-56 items-center gap-3 md:w-44">
-              <SiGithub size={24} />
-              <span>View Source</span>
-            </button>
-          </a>
+          </div>
+        </div>
+        <div className="hidden md:block">
+          <ProjectImage project={project} />
         </div>
       </div>
-      <div className="hidden md:block">
-        <ProjectImage project={project} />
-      </div>
-    </div>
+    </motion.div>
   );
 }
 

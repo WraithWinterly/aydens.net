@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function HighlightingText({
   text,
-  twClass,
+  className,
 }: {
   text: string;
-  twClass?: string;
+  className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(ref, -100);
@@ -21,14 +21,14 @@ export default function HighlightingText({
       whileHover={{
         scale: 1.02,
 
-        color: "#6366f1",
+        color: "#8b5cf6",
       }}
       transition={{
         power: 9.5,
         bounce: 4.5,
         duration: 0.2,
       }}>
-      <span className={twClass || ""}>
+      <span className={className || ""}>
         <span
           ref={ref}
           className={`text-highlight ${onScreen && "text-highlight-active"}`}>
