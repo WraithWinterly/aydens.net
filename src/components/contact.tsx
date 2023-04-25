@@ -1,73 +1,55 @@
-import { motion } from "framer-motion";
+import PageSection from "./layout/page-section";
 
 export default function ContactSection() {
   return (
-    <div className="flex w-full flex-col items-center px-2 text-start animate-in fade-in slide-in-from-top-10 duration-500">
-      <h2 className="bg-gradient-to-br from-cyan-300 to-blue-700 bg-clip-text text-4xl font-extrabold text-transparent md:text-7xl lg:text-8xl">
-        Contact
-      </h2>
-      <form
-        action="https://usebasin.com/f/5785003bca73"
-        method="POST"
-        className="flex w-full max-w-4xl flex-col gap-4 rounded-xl bg-purple-900/30 px-4 py-4 backdrop-blur-xl">
-        <div className="flex flex-col gap-1">
-          <label htmlFor="name">Name </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            className="rounded-xl bg-gray-500/50 px-4 py-4"
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <label htmlFor="email">Email </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            className="rounded-xl bg-gray-500/50 px-4 py-4"
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <label htmlFor="message">Message </label>
-          <textarea
-            id="message"
-            name="message"
-            rows={5}
-            cols={33}
-            required
-            className="resize-none rounded-xl bg-gray-500/50 px-4 py-4"
-          />
-        </div>
-        <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-            scale: 1,
-          }}
-          whileHover={{
-            scale: 1.1,
-            opacity: 1,
-          }}
-          transition={{
-            type: "spring",
-            damping: 14,
-            bounce: 0.5,
-            duration: 0.1,
-          }}
-          className="mx-auto w-full md:w-52">
+    <PageSection color="purple">
+      <div className="px-6 pb-12 pt-20">
+        <h2 className="mb-8 bg-gradient-to-br from-cyan-500 to-blue-800 bg-clip-text text-start text-3xl font-extrabold text-transparent md:text-5xl lg:text-6xl">
+          Contact me
+        </h2>
+        <form
+          action="https://usebasin.com/f/5785003bca73"
+          method="POST"
+          className="flex w-full max-w-4xl flex-col gap-8 text-xl text-gray-400">
+          <div className="flex flex-col gap-1">
+            <label htmlFor="name">Name </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              className="border-2 border-white/0 border-b-gray-400/60 bg-bgPurple px-4 py-4 outline-gray-400/70"
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <label htmlFor="email">Email </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              className="border-2 border-white/0 border-b-gray-400/60 bg-bgPurple px-4 py-4 outline-gray-400/70"
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <label htmlFor="message">Message </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={5}
+              cols={33}
+              required
+              className="resize-none rounded-md border-2 border-gray-400/60 bg-bgPurple px-4 py-4 outline-gray-400/70 ring-0 focus:border-gray-300"
+            />
+          </div>
+
           <button
             type="submit"
-            className="btn w-full bg-purple-700 py-4 md:w-52">
+            className="-ml-3 w-full cursor-pointer bg-opacity-0 px-4 py-4 text-start outline-gray-400/70 hover:underline md:w-52">
             Submit
           </button>
-        </motion.div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </PageSection>
   );
 }

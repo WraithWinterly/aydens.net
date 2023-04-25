@@ -1,4 +1,11 @@
+import AnimationBounceHover from "@/components/animations/animation-bounce-hover";
+import AnimationTextColor from "@/components/animations/animation-text-color";
+import HeroLayout from "@/components/layout/hero-layout";
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+
+import aydenSpringer from "@assets/images/ayden-springer.png";
 
 export default function About() {
   return (
@@ -7,27 +14,34 @@ export default function About() {
         <title>About - Ayden&#39;s Site</title>
         <meta name="description" content="About page for Ayden's site." />
       </Head>
-      <div className="w-fit pt-14 animate-in fade-in duration-500 md:max-w-4xl">
-        <h1 className="w-full text-center animate-in duration-500 md:slide-in-from-top-5">
-          About
-        </h1>
-        <h3 className="text-center">
-          <i>This page will be updated soon.</i>
-        </h3>
-        <p className="px-2 text-center animate-in duration-500 md:slide-in-from-left-5">
-          I am specialized in web and game development with over 2 years of
-          experience as a game developer, using engines such as Unreal Engine,
-          Godot and Unity, having released my solo developed first game{" "}
-          <a href="https://store.steampowered.com/app/1896630/Everplast/">
-            &quot;Everplast&quot; on Steam{" "}
-          </a>{" "}
-          which counts as my biggest achievement to the date. My first
-          experience in web3 was with{" "}
-          <a href="https://app.pigeondao.org/">Pigeon DAO</a>, where I was as an
-          advisor and web3 developer. I now moved to work on Mothora to build
-          the game systems and game web app user experience.
-        </p>
-      </div>
+      <HeroLayout>
+        <div className="flex flex-col">
+          <h1>
+            <span>Learn</span>{" "}
+            <AnimationTextColor from="#ffffff" to="#a855f7">
+              About{" "}
+            </AnimationTextColor>
+            <AnimationTextColor from="#ffffff" to="#56E2D6">
+              Me
+            </AnimationTextColor>
+            <span>.</span>
+          </h1>
+
+          <AnimationBounceHover>
+            <Link href="/contact" className="text-white">
+              <button className="mt-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4">
+                Contact Now!
+              </button>
+            </Link>
+          </AnimationBounceHover>
+        </div>
+      </HeroLayout>
+      <Image
+        src={aydenSpringer.src}
+        height={1200}
+        width={600}
+        alt="Ayden Springer"
+        className="object-contain"></Image>
     </>
   );
 }
