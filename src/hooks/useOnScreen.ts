@@ -6,6 +6,7 @@ export default function useOnScreen(
 ) {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [isOnScreen, setIsOnScreen] = useState(false);
+
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       ([entry]) => setIsOnScreen(entry.isIntersecting),

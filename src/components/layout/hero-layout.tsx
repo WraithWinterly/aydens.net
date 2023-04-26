@@ -1,5 +1,4 @@
 import { ReactNode, useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 import ParticlesBG from "../particles-bg";
 import { IoIosArrowDown } from "react-icons/io";

@@ -1,7 +1,5 @@
-import Image from "next/image";
 import { useId } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FiHeart } from "react-icons/fi";
 
 const Socials = [
   {

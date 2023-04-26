@@ -4,7 +4,6 @@ import HeroLayout from "@/components/layout/hero-layout";
 import ContactSection from "@/components/contact";
 import HighlightingText from "@/components/ui/highlightingText";
 
-import { motion } from "framer-motion";
 import PageSection from "@/components/layout/page-section";
 import AnimationHeroTwist from "@/components/animations/animation-hero-twist";
 import AnimationTextColor from "@/components/animations/animation-text-color";
