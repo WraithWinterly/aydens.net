@@ -33,11 +33,14 @@ export default function Footer() {
           </p>
           <div className="my-2 flex items-center gap-4">
             {Socials.map((social, i) => (
-              <a href={social.link} target="_blank" rel="noreferrer noopener">
+              <a
+                href={social.link}
+                target="_blank"
+                rel="noreferrer noopener"
+                key={`${id}-${i}`}>
                 <social.icon
                   size={36}
                   className="text-gray-300 transition-colors duration-500 hover:text-accent"
-                  key={`${id}-${i}`}
                 />
               </a>
             ))}

@@ -18,7 +18,7 @@ export default function HeroLayout({ children }: { children: ReactNode }) {
     } else {
       setFade(100 - (window.scrollY / h) * 100);
     }
-  }, [scrollY]);
+  }, [scrollY, h]);
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function HeroLayout({ children }: { children: ReactNode }) {
           style={{
             opacity: `${fade - 10}%`,
           }}>
-          <span>There's more to see</span>
+          <span>There&apos;s more to see</span>
           <IoIosArrowDown className="inline-block animate-bounce" />
         </div>
       </div>

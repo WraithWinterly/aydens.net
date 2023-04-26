@@ -28,7 +28,7 @@ export default function BaseTechIcon({
         className="relative w-fit"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}>
-        <img src={image} className="h-16 w-16" />
+        <img src={image} alt={text} className="h-16 w-16" />
         <motion.div
           initial={{
             opacity: 0,

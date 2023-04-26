@@ -11,7 +11,7 @@ export default function useOnScreen(
       ([entry]) => setIsOnScreen(entry.isIntersecting),
       { rootMargin: `${rootMargin}px` }
     );
-  }, []);
+  }, [rootMargin]);
 
   useEffect(() => {
     if (!!ref.current) {
