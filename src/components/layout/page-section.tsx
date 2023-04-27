@@ -11,7 +11,7 @@ export default function PageSection({
 }) {
   return (
     <div
-      className={`h-fit min-h-[calc(100vh+100px)] w-full px-2 md:px-8 ${
+      className={`h-fit min-h-[calc(100vh+100px)] w-full py-16 px-6 md:px-8 ${
         color === "blue" ? "bg-bgBlue" : "bg-bgPurple"
       } flex flex-col ${center ? "justify-center" : ""}`}>
       {children}

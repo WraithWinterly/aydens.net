@@ -3,8 +3,8 @@ import PageSection from "./layout/page-section";
 export default function ContactSection() {
   return (
     <PageSection color="purple">
-      <div className="px-6 pb-12 pt-20">
-        <h2 className="mb-8 bg-gradient-to-br from-cyan-500 to-blue-800 bg-clip-text text-start text-3xl font-extrabold text-transparent md:text-5xl lg:text-6xl">
+      <div className="pb-24 pt-4 md:px-8 md:pt-20">
+        <h2 className="mb-8 bg-gradient-to-br from-cyan-500 to-blue-800 bg-clip-text text-start text-6xl font-extrabold text-transparent md:text-5xl lg:text-6xl">
           Contact me
         </h2>
         <form

@@ -120,7 +120,7 @@ export default function ProjectCard({
             className={`relative flex flex-1 flex-col rounded-b-3xl px-6 pt-3 pb-6 text-start ${
               purple ? "bg-[#370C1E]" : "bg-[#10273d]"
             }`}>
-            <div className="flex w-full">
+            <div className="flex w-full flex-col md:flex-row">
               {/* Info */}
               <div className="flex flex-1 flex-col gap-4">
                 <h4 className="relative inline-block w-fit cursor-auto">
@@ -137,7 +137,7 @@ export default function ProjectCard({
                 </span>
               </div>
               {/* Buttons */}
-              <div className="flex w-full max-w-[250px] flex-col justify-center pt-2">
+              <div className="flex w-full flex-col justify-center pt-2 md:max-w-[250px]">
                 {project.liveLink && (
                   <Link
                     href={project.liveLink}
@@ -170,7 +170,7 @@ export default function ProjectCard({
                       <div
                         className={`btn ${
                           link.type === "github" ? "btn-github" : ""
-                        } flex items-center gap-2 py-1`}>
+                        } flex items-center gap-2 py-4 md:py-2`}>
                         {link.type === "github" ? (
                           <FaGithub size={28} className="flex-shrink-0" />
                         ) : (

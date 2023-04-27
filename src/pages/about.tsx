@@ -17,10 +17,10 @@ export default function About() {
         <meta name="description" content="About page for Ayden's site." />
       </Head>
       <HeroLayout>
-        <div className="flex w-full justify-between pl-14 pr-36">
+        <div className="flex w-full justify-center md:justify-between md:pl-0 md:pr-8 lg:pl-14 lg:pr-36">
           <div className="flex flex-col items-center justify-center">
             <AnimationHeroTwist>
-              <h1>
+              <h1 className="text-center">
                 <span>Learn</span>{" "}
                 <AnimationTextColor from="#ffffff" to="#a855f7">
                   About{" "}
@@ -34,7 +34,7 @@ export default function About() {
             <div className="w-fit">
               <AnimationBounceHover>
                 <Link href="/contact" className="text-white">
-                  <button className="mt-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4">
+                  <button className="mt-8 whitespace-nowrap rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4">
                     Contact Now!
                   </button>
                 </Link>
@@ -46,11 +46,11 @@ export default function About() {
             height={700}
             width={350}
             alt="Ayden Springer"
-            className="object-contain"></Image>
+            className="hidden object-contain md:block"></Image>
         </div>
       </HeroLayout>
       <PageSection color="blue" center>
-        <div className="flex flex-col gap-2 px-16">
+        <div className="flex flex-col gap-2 py-8 md:px-4">
           <h2 className="-mt-10">Who am I?</h2>
           <div className="leading-10">
             <p className="py-12 text-2xl leading-10">
@@ -84,14 +84,14 @@ export default function About() {
               {" "}
               I am a quick worker and I stick to my word.{" "}
             </p>
-            <div className="my-4 flex flex-col gap-3">
-              <i className="block text-xl">
-                “You are way better than most mid-level developers I know” -
+            <div className="my-4 flex flex-col gap-12">
+              <i className="block text-3xl">
+                “You are way better than most mid-level developers I know.” -
                 Rocky
               </i>
-              <i className="block text-xl">
+              <i className="block text-3xl">
                 “I love seeing your 5 insane progress development skills in a
-                day” - Watson
+                day.” - Watson
               </i>
             </div>
           </div>

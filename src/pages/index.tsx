@@ -45,7 +45,7 @@ function HeroSection() {
           <div className="flex w-fit flex-col flex-wrap px-8 text-left fade-in duration-700 md:leading-relaxed md:animate-in md:slide-in-from-top-10">
             <AnimationHeroTwist>
               <p className="pl-1 text-2xl text-gray-400">I am Ayden,</p>
-              <h1 className="w-full py-2 text-7xl md:max-w-2xl lg:max-w-4xl">
+              <h1 className="w-full py-2 text-5xl md:max-w-2xl md:py-4 md:text-7xl lg:max-w-4xl">
                 <AnimationTextColor from="#ffffff" to="#a855f7">
                   <span>Quality </span>
                 </AnimationTextColor>
@@ -89,26 +89,26 @@ function HighlightingTextSection() {
   return (
     <PageSection color="blue" center={true}>
       <AnimationFadeIn>
-        <div className="w-full max-w-5xl break-after-all pl-6 text-5xl leading-relaxed">
+        <div className="w-full max-w-5xl break-after-all text-4xl leading-relaxed md:text-5xl">
           <span>My </span>
           <HighlightingText
             text="passion for technology"
-            className="text-5xl leading-relaxed"
+            className="text-4xl leading-relaxed md:text-5xl md:leading-relaxed"
           />
           <span> is presented by my </span>
           <HighlightingText
             text="ambition"
-            className="text-5xl leading-relaxed"
+            className="text-4xl md:text-5xl md:leading-relaxed"
           />
           <span> as a </span>
           <HighlightingText
             text="Full Stack Developer"
-            className="text-5xl leading-relaxed"
+            className="text-4xl md:text-5xl md:leading-relaxed"
           />
           <span className="break-after-all">who seeks to create </span>
           <HighlightingText
             text="truly remarkable"
-            className="text-5xl leading-relaxed"
+            className="text-4xl md:text-5xl md:leading-relaxed"
           />
           <span>products.</span>
         </div>
@@ -117,16 +117,16 @@ function HighlightingTextSection() {
       <br />
       <br />
       <AnimationFadeIn>
-        <span className="max-w-5xl pl-6 text-5xl leading-relaxed">
+        <span className="max-w-5xl text-4xl leading-relaxed md:text-5xl md:leading-relaxed">
           I enjoy tackling{" "}
           <HighlightingText
             text="exciting"
-            className="text-5xl leading-relaxed"
+            className="text-4xl md:text-5xl md:leading-relaxed"
           />{" "}
           and{" "}
           <HighlightingText
             text="varied"
-            className="text-5xl leading-relaxed"
+            className="text-4xl md:text-5xl md:leading-relaxed"
           />{" "}
           projects.
         </span>
@@ -140,8 +140,8 @@ function PortfolioShowcase() {
   return (
     <PageSection color="purple">
       <AnimationTextShowUp>
-        <div className="py-16">
-          <h1 className="w-full bg-gradient-to-r from-purple-400 to-pink-800 bg-clip-text text-center text-xl font-extrabold text-transparent md:text-7xl lg:text-7xl">
+        <div className="md:py-2">
+          <h1 className="w-full bg-gradient-to-r from-purple-400 to-pink-800 bg-clip-text text-center text-6xl font-extrabold text-transparent md:text-7xl lg:text-7xl">
             Portfolio Showcase
           </h1>
           <div className="mx-auto grid w-full grid-cols-1 gap-12 py-8 md:grid-cols-2 lg:grid-cols-3">

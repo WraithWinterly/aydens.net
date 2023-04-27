@@ -21,10 +21,10 @@ export default function HeroLayout({ children }: { children: ReactNode }) {
 
   return (
     <>
-      <div className="relative flex h-[600px] min-h-screen w-full flex-col items-start justify-center px-4">
+      <div className="relative mb-12 flex h-[600px] min-h-screen w-full flex-col items-start justify-center px-1 md:mb-0 md:px-4">
         {children}
         <div
-          className={`absolute bottom-5 left-1/2 flex -translate-x-1/2 transform flex-col items-center gap-2`}
+          className={`absolute -bottom-10 left-1/2 flex -translate-x-1/2 transform flex-col items-center gap-2 md:bottom-5`}
           style={{
             opacity: `${fade - 10}%`,
           }}>
