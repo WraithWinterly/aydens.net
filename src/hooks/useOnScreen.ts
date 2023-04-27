@@ -6,12 +6,13 @@ export default function useOnScreen(
 ) {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [isOnScreen, setIsOnScreen] = useState(false);
+
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       ([entry]) => setIsOnScreen(entry.isIntersecting),
       { rootMargin: `${rootMargin}px` }
     );
-  }, []);
+  }, [rootMargin]);
 
   useEffect(() => {
     if (!!ref.current) {

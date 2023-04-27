@@ -4,6 +4,7 @@ const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     const updatePosition = () => {
       setScrollPosition(window.pageYOffset);
     };

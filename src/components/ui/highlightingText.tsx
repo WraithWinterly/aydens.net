@@ -21,7 +21,7 @@ export default function HighlightingText({
       whileHover={{
         scale: 1.02,
 
-        color: "#8b5cf6",
+        color: "#a855f7",
       }}
       transition={{
         power: 9.5,
