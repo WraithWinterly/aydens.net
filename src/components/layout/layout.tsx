@@ -17,13 +17,14 @@ export default function Layout({ children }: LayoutProps) {
   }, []);
 
   return (
-    <div className="min-w-screen relative flex flex-col items-center">
-      <div
-        className={`relative flex h-full min-h-screen w-full max-w-[${windowWidth}px] flex-col items-center`}>
-        {children}
+    <>
+      <div className="relative flex flex-col items-center">
+        <div className={`relative flex h-full w-full flex-col items-center`}>
+          {children}
+        </div>
+        <Header />
+        <Footer />
       </div>
-      <Header />
-      <Footer />
-    </div>
+    </>
   );
 }

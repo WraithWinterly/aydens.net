@@ -10,10 +10,11 @@ import AnimationTextColor from "@/components/animations/animation-text-color";
 import AnimationBounceHover from "@/components/animations/animation-bounce-hover";
 import AnimationTextShowUp from "@/components/animations/animation-text-showup";
 import AnimationFadeIn from "@/components/animations/animation-fadein";
-import ProjectCard, { Project } from "@/components/ui/projectCard";
+import ProjectCard from "@/components/ui/projectCard";
 import Link from "next/link";
 import { useId } from "react";
-import { TopThreeProjects } from "./projects";
+
+import { TopThreeProjects } from "@/utils/projects";
 
 export default function Home() {
   return (
@@ -143,7 +144,7 @@ function PortfolioShowcase() {
           <h1 className="w-full bg-gradient-to-r from-purple-400 to-pink-800 bg-clip-text text-center text-xl font-extrabold text-transparent md:text-7xl lg:text-7xl">
             Portfolio Showcase
           </h1>
-          <div className="mx-auto grid w-full grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid w-full grid-cols-1 gap-12 py-8 md:grid-cols-2 lg:grid-cols-3">
             {TopThreeProjects.map((p, i) => (
               <ProjectCard project={p} purple key={`${id}-${i}`} />
             ))}

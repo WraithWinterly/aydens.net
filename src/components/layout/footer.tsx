@@ -18,10 +18,10 @@ const Socials = [
 
 export default function Footer() {
   const id = useId();
+
   return (
     <footer className="relative w-full bg-black text-gray-300 dark:border-slate-500">
-      <div className="flex w-full justify-center bg-bgPurple bg-opacity-70 p-7">
-        {" "}
+      <div className="flex justify-center bg-bgPurple bg-opacity-70 p-7">
         <div className="flex flex-col items-center gap-2">
           <p className="mx-auto flex flex-wrap items-center justify-center gap-2 text-center">
             <span>Designed and programmed with</span>

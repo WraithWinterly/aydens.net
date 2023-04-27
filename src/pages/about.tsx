@@ -67,13 +67,17 @@ export default function About() {
               <br />I also have a good understanding of{" "}
               <span className="text-accent">web3 and Solidity</span>,
               demonstrated by the{" "}
-              <a href="" className="cursor-pointer hover:underline">
+              <Link
+                href="/projects?proj=mothora"
+                className="cursor-pointer hover:underline">
                 nft-storage-contracts
-              </a>{" "}
+              </Link>{" "}
               , or{" "}
-              <a href="" className="cursor-pointer hover:underline">
+              <Link
+                href="/projects?proj=openseal"
+                className="cursor-pointer hover:underline">
                 openseal
-              </a>
+              </Link>
               .
             </p>
             <p className="pb-12 text-2xl">
