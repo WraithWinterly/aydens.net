@@ -4,15 +4,17 @@ import NoSSR from "react-no-ssr";
 
 export default function AnimationTextShowUp({
   children,
+  noScale = false,
 }: {
   children: ReactNode;
+  noScale?: boolean;
 }) {
   return (
     <NoSSR>
       <motion.div
         initial={{
           opacity: 0.5,
-          scale: 0.8,
+          scale: noScale ? 1 : 0.8,
           y: "100px",
         }}
         whileInView={{
