@@ -19,7 +19,9 @@ export function CloseButton({
   return (
     <button
       className="rounded-full bg-black/40 p-2 text-gray-200 transition-all hover:scale-105 hover:bg-black/80 hover:text-white"
-      onClick={() => setIsOpen(false)}>
+      onClick={() => {
+        setIsOpen(false);
+      }}>
       <IoClose size={32} />
     </button>
   );

@@ -13,7 +13,7 @@ import AnimationFadeIn from "@/components/animations/animation-fadein";
 import ProjectCard from "@/components/ui/projectCard";
 import Link from "next/link";
 import { useId } from "react";
-
+import { motion } from "framer-motion";
 import { TopThreeProjects } from "@/utils/projects";
 
 export default function Home() {
@@ -146,7 +146,19 @@ function PortfolioShowcase() {
           </h1>
           <div className="mx-auto grid w-full grid-cols-1 gap-12 py-8 md:grid-cols-2 lg:grid-cols-3">
             {TopThreeProjects.map((p, i) => (
-              <ProjectCard project={p} purple key={`${id}-${i}`} />
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: i * 0.15 + 0.1,
+                }}
+                key={`${id}-${i}`}>
+                <ProjectCard project={p} purple />
+              </motion.div>
             ))}
             <div className="m-auto md:inline-block lg:hidden">
               <Link href="/projects">

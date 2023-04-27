@@ -32,7 +32,9 @@ export default function HeroLayout({ children }: { children: ReactNode }) {
           <IoIosArrowDown className="inline-block animate-bounce" />
         </div>
       </div>
-      {scrollY < h + 400 && <ParticlesBG />}
+
+      {/* Absolute positioning fixes scroll bug */}
+      <div className="absolute">{scrollY < h + 400 && <ParticlesBG />}</div>
     </>
   );
 }

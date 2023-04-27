@@ -14,6 +14,7 @@ import unityPng from "@assets/tech-icons/unity.png";
 import solidityPng from "@assets/tech-icons/solidity.png";
 import unreal from "@assets/tech-icons/unreal.png";
 import aseprite from "@assets/tech-icons/aseprite.png";
+import steam from "@assets/tech-icons/steam.png";
 
 export interface TechIconInterface {
   name: string;
@@ -82,6 +83,11 @@ export const unrealIcon: TechIconInterface = {
 export const asepriteIcon: TechIconInterface = {
   name: "Aseprite",
   icon: aseprite,
+};
+
+export const steamIcon: TechIconInterface = {
+  name: "Steam",
+  icon: steam,
 };
 
 export default function TechIconInterface({

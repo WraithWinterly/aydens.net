@@ -8,6 +8,7 @@ import Link from "next/link";
 import aydenSpringer from "@assets/images/ayden-springer.jpeg";
 import AnimationHeroTwist from "@/components/animations/animation-hero-twist";
 import PageSection from "@/components/layout/page-section";
+import AnimationFadeIn from "@/components/animations/animation-fadein";
 
 export default function About() {
   return (
@@ -41,12 +42,14 @@ export default function About() {
               </AnimationBounceHover>
             </div>
           </div>
-          <Image
-            src={aydenSpringer.src}
-            height={700}
-            width={350}
-            alt="Ayden Springer"
-            className="hidden object-contain md:block"></Image>
+          <AnimationFadeIn>
+            <Image
+              src={aydenSpringer.src}
+              height={700}
+              width={350}
+              alt="Ayden Springer"
+              className="hidden object-contain md:block"></Image>
+          </AnimationFadeIn>
         </div>
       </HeroLayout>
       <PageSection color="blue" center>
@@ -87,11 +90,13 @@ export default function About() {
             <div className="my-4 flex flex-col gap-12">
               <i className="block text-3xl">
                 “You are way better than most mid-level developers I know.” -
-                Rocky
+                Rocky{" "}
+                <span className="text-base">(eCommerce Senior Developer)</span>
               </i>
               <i className="block text-3xl">
                 “I love seeing your 5 insane progress development skills in a
-                day.” - Watson
+                day.” - Watson{" "}
+                <span className="text-base">(Pigeon DAO CFO)</span>
               </i>
             </div>
           </div>
