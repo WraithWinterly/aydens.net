@@ -14,7 +14,7 @@ import ProjectCard from "@/components/ui/projectCard";
 import Link from "next/link";
 import { useId } from "react";
 import { motion } from "framer-motion";
-import { TopThreeProjects } from "@/utils/projects";
+import { TopThreeProjects } from "@/utils/projectsList";
 
 export default function Home() {
   return (
@@ -66,15 +66,15 @@ function HeroSection() {
               </p>
               <div className="w-fit">
                 <AnimationBounceHover>
-                  <a
-                    href="https://drive.google.com/file/d/1U2CQvKHGjSTPWMyYKGUyUxp31aZxFBEo/view"
+                  <Link
+                    href="/ayden-resume.pdf"
                     className="text-white"
                     target="_blank"
                     rel="noreferrer">
                     <button className="mt-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4">
                       View Resume
                     </button>
-                  </a>
+                  </Link>
                 </AnimationBounceHover>
               </div>
             </AnimationHeroTwist>

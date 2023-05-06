@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact - Ayden&#39;s Site</title>
+        <title>Contact - Ayden Springer - Portfolio</title>
         <meta
           name="description"
           content="The contact page for Ayden, such as LinkedIn and Github."

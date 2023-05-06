@@ -7,7 +7,7 @@ import ContactSection from "@/components/contact";
 import AnimationTextShowUp from "@/components/animations/animation-text-showup";
 import AnimationTextColor from "@/components/animations/animation-text-color";
 import AnimationFadeIn from "@/components/animations/animation-fadein";
-import { AllProjects } from "@/utils/projects";
+import { AllProjects } from "@/utils/projectsList";
 
 import { motion } from "framer-motion";
 
@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Games - Ayden&#39;s Site</title>
+        <title>Games - Ayden Springer - Portfolio</title>
         <meta
           name="description"
           content="View games such as Everplast, Blockhit and WraithFPS."

@@ -33,8 +33,11 @@ export default function Header() {
               <Link
                 href={"/"}
                 className="animate-in fade-in duration-300 md:slide-in-from-right-10">
-                <div className="py-2 pr-2 text-2xl text-white">
-                  <BiArrowBack size={30} />
+                <div className="py-1 pr-2 text-2xl text-white">
+                  <BiArrowBack
+                    size={30}
+                    className="transition-colors duration-300 hover:text-accent"
+                  />
                 </div>
               </Link>
             )}

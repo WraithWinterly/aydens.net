@@ -6,7 +6,7 @@ import { AiOutlineAppstore } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Project } from "@/utils/projects";
+import { Project } from "@/utils/projectsList";
 import { FiCameraOff } from "react-icons/fi";
 
 export default function ProjectCard({
@@ -142,7 +142,7 @@ export default function ProjectCard({
                 <span className="relative block w-fit cursor-auto text-base font-thin">
                   {project.description}
                 </span>{" "}
-                <div className="relative mt-6 flex w-fit cursor-auto flex-col justify-start text-base font-thin">
+                <div className="relative flex w-fit cursor-auto flex-col justify-start text-base font-thin">
                   {project.descriptionFull}
                 </div>
               </div>
