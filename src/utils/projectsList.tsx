@@ -9,6 +9,7 @@ import pigeon from "@assets/images/pigeon.jpeg";
 import mothora from "@assets/images/mothora.png";
 import proBarber from "@assets/images/probarber.png";
 import portfolio2022 from "@assets/images/2022portfolio.png";
+import openseal from "@assets/images/openseal.png";
 
 import {
   TechIconInterface,
@@ -46,7 +47,8 @@ export const TopThreeProjects: Project[] = [
   {
     title: "Openseal",
     type: "Web3 • Frontend",
-    description: "A fully on chain NFT marketplace with complete transparency.",
+    description:
+      "A fully on chain NFT marketplace with complete transparency. Say goodbye to fraud and manipulation and embrace the power of Openseal, the open-source NFT marketplace that puts security and transparency first!",
     descriptionFull: (
       <>
         <p className="text-base">
@@ -75,8 +77,8 @@ export const TopThreeProjects: Project[] = [
         </p>
       </>
     ),
-    image: undefined,
-    liveLink: "",
+    image: openseal,
+    liveLink: "https://openseal.aydens.net",
     sourceLink: "https://github.com/WraithWinterly/opensea-clone",
     techIcons: [solidityIcon, nextjsIcon, tailwindIcon],
   },
@@ -84,7 +86,7 @@ export const TopThreeProjects: Project[] = [
     title: "Mothora",
     type: "Web3 • Frontend • Backend",
     description:
-      "Frontend for a web3 sci-fi shooter. On chain storage contracts integrated with Unreal Engine.",
+      "Step into a sci-fi shooter like never before - with on-chain storage contracts integrated with Unreal Engine for a truly immersive experience! Frontend for a web3 sci-fi shooter. On chain storage contracts integrated with Unreal Engine.",
     descriptionFull: (
       <>
         <p className="text-base">
@@ -183,7 +185,7 @@ export const TopThreeProjects: Project[] = [
     title: "Pigeon Courier",
     type: "Web3 • Frontend • Backend",
     description:
-      "The world's first decentralized courier powered by blockchain and smart contracts.",
+      "We are revolutionizing the courier industry with Pigeon DAO - the world's first decentralized courier powered by blockchain and smart contracts. Simplifying the courier process with Pigeon DAO - enabling individual drivers and businesses to establish long-term contracts for hauling goods.",
     descriptionFull: (
       <>
         <span>
@@ -223,7 +225,25 @@ export const AllProjects: Project[] = [
     type: "Game • Steam",
     description:
       "Solo developed indie game based on Ruth, a platforming experience with game progression and a polished UI.",
-    descriptionFull: "",
+    descriptionFull: (
+      <>
+        <span>
+          Unleash your inner platformer pro with Everplast - the ultimate
+          adrenaline-fueled adventure!
+        </span>
+        <br />
+        <span>
+          Everplast is a unique platforming experience mixed with player freedom
+          to allow you to develop refreshing hand-eye-coordination and
+          platforming skills. Choose how you develop your profile be it by
+          obtaining many items and sprinting through levels at double the speed
+          while spraying down enemies with weapons, or by increasing your stats
+          to extremely high levels to be incredibly powerful. Take off with all
+          of your decisions - and get used to failure and falling. Take out all
+          of your built-up energy to knock out the enemies and levels.
+        </span>
+      </>
+    ),
     image: everplast,
     liveLink: "https://store.steampowered.com/app/1571000/Everplast/",
     sourceLink: "https://github.com/WraithWinterly/Everplast",
@@ -234,21 +254,34 @@ export const AllProjects: Project[] = [
     title: "Block Hit",
     type: "Game",
     description:
-      "Hit the blocks to get points, but be careful, the obstacles are coming.",
-    descriptionFull:
-      "This game is made with Godot Engine and C# and is open source. Made in a few days.",
+      "Experience the thrill of Block Hit - a fast paced game of blocks, obstacles, and strategic health management!",
+    descriptionFull: (
+      <>
+        <span>
+          This game is made with Godot Engine and C# and is open source. Made in
+          a few days.
+        </span>
+        <br />
+        <span>
+          Challenge your reflexes by scoring the highest possible while dodging
+          objects and strategically managing your health status, play in 3
+          levels for the highest score. This game is made with Godot Engine and
+          C# and is open source. Made in a few days.
+        </span>
+      </>
+    ),
     image: blockhit,
     coverTop: false,
     liveLink: "https://wraithwinterly.itch.io/blockhit",
     sourceLink: "https://github.com/WraithWinterly/BlockHit",
     techIcons: [godotIcon, csharpIcon, asepriteIcon],
   },
-  // Pro Barber Shop
+  // Pro Barber College
   {
-    title: "Pro Barber Shop",
+    title: "Pro Barber College",
     type: "Frontend",
     description:
-      "Start your barbering career today at this private institution.",
+      "Make your craft in the world of barbering with Pro Barber College. Creativity, skill, and professionalism come together! Start your barbering career today at this private institution.",
     descriptionFull: (
       <>
         <span>
@@ -260,29 +293,57 @@ export const AllProjects: Project[] = [
         <span>
           I finished this project within a few days. I was given the design by
           another senior developer and completed it in several days, much before
-          the due time. Working on this professional website for a college was
-          very meaningful to me.
+          the due time. Working on this professional website for a private
+          college was very meaningful to me.
         </span>
       </>
     ),
     image: proBarber,
-    liveLink: "https://next-probarbercollege.vercel.app",
+    liveLink: "https://www.probarbercollege.com/",
     techIcons: [nextjsIcon, tailwindIcon],
   },
   // Wraith FPS
   {
     title: "WraithFPS",
     type: "Game",
-    description: "An open-source documented Unity FPS/RTS feature-rich sample.",
+    description:
+      "An open-source documented Unity FPS/RTS feature-rich sample. Fully documented.",
     descriptionFull: (
       <>
         <Link
           href="/wraithfps-documentation.pdf"
           target="_blank"
           rel="noreferrer noopener"
-          className="btn">
+          className="btn mx-0">
           View Documentation
         </Link>
+        <span>
+          The Unity game project has several main top features, featuring an
+          accurate triple A recoil style, a expandable weapon system supporting
+          two guns and a knife. It also includes an FPS player controller and an
+          RTS manager. This game idea was originally inspired by RTS games. I
+          wanted to try something different.
+        </span>
+        <br />
+        <span>
+          Having a grand strategy aspect would follow like this: <br />{" "}
+          Conquering -&gt; Gaining Resources -&gt; Using those resources to
+          empower the player.
+          <br /> The core gameplay loop is not fully decided, but this can
+          reflect well on the RTS aspect of it. Keeping the core gameplay loop
+          interesting, maybe even a dramatic story. More Ideas would be having
+          multiple playable characters, forming divisions - you can assign a NPC
+          you select as a Commander for said division, and that would become a
+          playable character. You can use these to lead your other soldiers. The
+          player should not be limited to one army, so as not to limit the scope
+          of the world. The game could render beautiful graphics as well to keep
+          the experience immersive. Looking at games that have over promise, we
+          can draw a conclusion that under promising can give a lot of benefits
+          as a studio. If we over deliver more people could be likely to share
+          the game. Under promising and over delivering could possibly be the
+          best mindset to have from a psychological and marketing standpoint. It
+          may lead to long term revenue as well.
+        </span>
       </>
     ),
     image: wraithfps,

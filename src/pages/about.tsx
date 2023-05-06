@@ -14,8 +14,11 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Ayden&#39;s Site</title>
-        <meta name="description" content="About page for Ayden's site." />
+        <title>About - Ayden Springer - Portfolio</title>
+        <meta
+          name="description"
+          content="About page for Ayden Springers website."
+        />
       </Head>
       <HeroLayout>
         <div className="flex w-full justify-center md:justify-between md:pl-0 md:pr-8 lg:pl-14 lg:pr-36">
