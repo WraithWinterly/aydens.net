@@ -53,11 +53,23 @@ body {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 * {
   box-sizing: border-box;
+}
+
+.stripe {
+  background-color: #3d0f22;
+  opacity: 0.8;
+  background: repeating-linear-gradient(
+    -45deg,
+    #370c1e,
+    #370c1e 5px,
+    #3d0f22 5px,
+    #3d0f22 25px
+  );
 }
 
 @media (prefers-color-scheme: dark) {

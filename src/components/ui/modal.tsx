@@ -62,7 +62,7 @@ export default function Modal({
                 <Dialog.Panel
                   className={`transform overflow-hidden rounded-2xl text-left align-middle text-white shadow-xl backdrop-blur-md transition-all ${
                     borderless
-                      ? "m-0 w-full max-w-4xl bg-none p-0 backdrop-blur-none "
+                      ? "m-0 w-full max-w-4xl bg-none p-0"
                       : "w-fit bg-black/50 p-2"
                   }`}>
                   {/* Title */}
