@@ -23,7 +23,7 @@ export default function ContactSection() {
                 name="name"
                 id="name"
                 required
-                className="border-2 border-white/0 border-b-gray-400/60 bg-bgPurple px-4 py-4 outline-gray-400/70"
+                className="border-2 border-white/0 border-b-gray-400/60 bg-bgPurple/30 px-4 py-4 outline-gray-400/70"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -33,7 +33,7 @@ export default function ContactSection() {
                 name="email"
                 id="email"
                 required
-                className="border-2 border-white/0 border-b-gray-400/60 bg-bgPurple px-4 py-4 outline-gray-400/70"
+                className="border-2 border-white/0 border-b-gray-400/60 bg-bgPurple/30 px-4 py-4 outline-gray-400/70"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -44,7 +44,7 @@ export default function ContactSection() {
                 rows={5}
                 cols={33}
                 required
-                className="resize-none rounded-md border-2 border-gray-400/60 bg-bgPurple px-4 py-4 outline-gray-400/70 ring-0 focus:border-gray-300"
+                className="resize-none rounded-md border-2 border-gray-400/60 bg-bgPurple/30 px-4 py-4 outline-gray-400/70 ring-0 focus:border-gray-300"
               />
             </div>
 

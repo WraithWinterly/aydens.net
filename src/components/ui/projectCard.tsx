@@ -82,8 +82,10 @@ export default function ProjectCard({
         </div>
         <div
           onClick={() => setModalShown(true)}
-          className={`relative flex flex-1 cursor-pointer flex-col rounded-b-3xl px-6 pt-3 pb-6 text-start ${
-            purple ? "bg-[#370C1E]" : "bg-[#10273d]"
+          className={`relative flex flex-1 cursor-pointer flex-col rounded-b-3xl  bg-gradient-to-l px-6 pt-3 pb-6 text-start ${
+            purple
+              ? "from-[#3f0e23]/20 to-[#33091a]/20"
+              : "from-[#17334d]/20 to-[#091c2d]/20"
           }`}>
           <h4 className="w-fit">{project.title}</h4>
           <span className="mb-4 w-fit text-sm text-gray-400">
@@ -127,8 +129,8 @@ export default function ProjectCard({
             )}
           </div>
           <div
-            className={`relative flex flex-1 flex-col rounded-b-3xl px-6 pt-3 pb-6 text-start ${
-              purple ? "bg-[#370C1E]" : "bg-[#10273d]"
+            className={`backdrop-blur-4xl relative flex flex-1 cursor-pointer flex-col rounded-b-3xl px-6 pt-3 pb-6 text-start ${
+              purple ? "bg-[#3f0e23]/80" : "bg-[#17334d]/90"
             }`}>
             <div className="flex w-full flex-col md:flex-row">
               {/* Info */}
