@@ -130,7 +130,7 @@ export default function ProjectCard({
           </div>
           <div
             className={`backdrop-blur-4xl relative flex flex-1 cursor-pointer flex-col rounded-b-3xl px-6 pt-3 pb-6 text-start ${
-              purple ? "bg-[#3f0e23]/80" : "bg-[#17334d]/90"
+              purple ? "bg-[#3f0e23]/80" : "bg-[#17334d]/70"
             }`}>
             <div className="flex w-full flex-col md:flex-row">
               {/* Info */}

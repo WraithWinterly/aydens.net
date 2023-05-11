@@ -3,8 +3,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { BiArrowBack } from "react-icons/bi";
 import { RxHamburgerMenu } from "react-icons/rx";
-import Modal from "../ui/modal";
 import { MdOutlineDeveloperBoard } from "react-icons/md";
+
+import Modal from "../ui/modal";
 
 export default function Header() {
   const router = useRouter();
