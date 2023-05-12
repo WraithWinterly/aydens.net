@@ -1,7 +1,3 @@
-import Image from "next/image";
-import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
-import { IoRefreshCircleOutline } from "react-icons/io5";
-import Link from "next/link";
 import Head from "next/head";
 import ContactSection from "@/components/contact";
 
