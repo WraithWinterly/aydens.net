@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-46XMST9KKY"
       />
-      <Script>{`function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-46XMST9KKY");`}</Script>
+      <Script id="googletag">{`function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-46XMST9KKY");`}</Script>
     </Layout>
   );
 }
