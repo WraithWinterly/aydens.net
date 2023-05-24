@@ -10,7 +10,7 @@ import mothora from "@assets/images/mothora.png";
 import proBarber from "@assets/images/probarber.png";
 import portfolio2022 from "@assets/images/2022portfolio.png";
 import openseal from "@assets/images/openseal.png";
-
+import church from "@assets/images/church.jpeg";
 import {
   TechIconInterface,
   asepriteIcon,
@@ -43,44 +43,36 @@ export interface Project {
   techIcons: TechIconInterface[];
 }
 
-export const TopThreeProjects: Project[] = [
+export const TopThreeProjects: [Project, Project, Project] = [
   {
-    title: "Openseal",
-    type: "Web3 • Frontend",
+    title: "Church Chats",
+    type: "Frontend",
     description:
-      "A fully on chain NFT marketplace with complete transparency. Say goodbye to fraud and manipulation and embrace the power of Openseal, the open-source NFT marketplace that puts security and transparency first!",
+      "WINNER - Submission for the HackGPT 2023 Hackathon. New, revolutionizing AI chat bot for churches.",
     descriptionFull: (
       <>
         <p className="text-base">
-          <i>Simply simpler.</i> Completely on chain Opensea clone is more
-          secure since and 100% transparent.
+          Church Chats is a new service for churches, originally designed for
+          Catholic churches in Orange Country, California. It automatically
+          answers common questions for people who need assistance from the
+          church. It gives useful information to church members about hours,
+          events, and more! If the chatbot can{"'"}t answer a question, it will
+          connect the person to a real person who can help. Church Chats is easy
+          to put on any church website and is much cheaper than using
+          traditional phone operators. We care about churches and want to be
+          help the people who attend them.
         </p>
         <br />
         <p className="text-base">
-          There is no possibility of fraudulent activity, manipulation of data
-          which is a benefit for buyers and sellers.
-        </p>
-        <br />
-        <p className="text-base">
-          There are no restrictions. Any creator can sell whichever NFT without
-          any limits, making this a more inclusive platform for collectors.
-        </p>
-        <br />
-        <p className="text-base">
-          Because openseal is fully on chain, the infrastructure costs to manage
-          the platform are extremely low.
-        </p>
-        <br />
-        <p className="text-base">
-          Overall, openseal is a more secure, transparent and cost-effective
-          option for NFT sellers. It is fully open source and 100% transparent.
+          Please note my personal opinions / religion are not influenced by this
+          project.
         </p>
       </>
     ),
-    image: openseal,
-    liveLink: "https://openseal.aydens.net",
-    sourceLink: "https://github.com/WraithWinterly/opensea-clone",
-    techIcons: [solidityIcon, nextjsIcon, tailwindIcon],
+    image: church,
+    liveLink: "https://church.aydens.net",
+    sourceLink: "",
+    techIcons: [nextjsIcon, tailwindIcon],
   },
   {
     title: "Mothora",
@@ -185,7 +177,7 @@ export const TopThreeProjects: Project[] = [
     title: "Pigeon Courier",
     type: "Web3 • Frontend • Backend",
     description:
-      "We are revolutionizing the courier industry with Pigeon DAO - the world's first decentralized courier powered by blockchain and smart contracts. Simplifying the courier process with Pigeon DAO - enabling individual drivers and businesses to establish long-term contracts for hauling goods.",
+      "Pigeon DAO is revolutionizing the courier industry. The world's first decentralized courier powered by blockchain and smart contracts, enabling individual drivers and businesses to establish long-term contracts for hauling goods.",
     descriptionFull: (
       <>
         <span>
@@ -219,6 +211,44 @@ export const TopThreeProjects: Project[] = [
 
 export const AllProjects: Project[] = [
   ...TopThreeProjects,
+  {
+    title: "Openseal",
+    type: "Web3 • Frontend",
+    description:
+      "A fully on chain NFT marketplace with complete transparency. Say goodbye to fraud and manipulation and embrace the power of Openseal, the open-source NFT marketplace that puts security and transparency first!",
+    descriptionFull: (
+      <>
+        <p className="text-base">
+          <i>Simply simpler.</i> Completely on chain Opensea clone is more
+          secure since and 100% transparent.
+        </p>
+        <br />
+        <p className="text-base">
+          There is no possibility of fraudulent activity, manipulation of data
+          which is a benefit for buyers and sellers.
+        </p>
+        <br />
+        <p className="text-base">
+          There are no restrictions. Any creator can sell whichever NFT without
+          any limits, making this a more inclusive platform for collectors.
+        </p>
+        <br />
+        <p className="text-base">
+          Because openseal is fully on chain, the infrastructure costs to manage
+          the platform are extremely low.
+        </p>
+        <br />
+        <p className="text-base">
+          Overall, openseal is a more secure, transparent and cost-effective
+          option for NFT sellers. It is fully open source and 100% transparent.
+        </p>
+      </>
+    ),
+    image: openseal,
+    liveLink: "https://openseal.aydens.net",
+    sourceLink: "https://github.com/WraithWinterly/opensea-clone",
+    techIcons: [solidityIcon, nextjsIcon, tailwindIcon],
+  },
   // Everplast
   {
     title: "Everplast",

@@ -23,7 +23,7 @@ export default function Home() {
         <title>Ayden&apos;s Site</title>
         <meta
           name="description"
-          content="I am specialized in web development and web3 technologies. I released Everplast on Steam and participated in projects like Pigeon DAO, Mothora, and more. © Ayden Springer"
+          content="I am specialized in web development and web3 technologies. I released Everplast on Steam and participated in projects like Pigeon DAO, Mothora, and more. ©Ayden Springer"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

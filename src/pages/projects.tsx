@@ -16,10 +16,10 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Games - Ayden Springer - Portfolio</title>
+        <title>Prrojects - Ayden Springer | Portfolio</title>
         <meta
           name="description"
-          content="View games such as Everplast, Blockhit and WraithFPS."
+          content="Showcase of my latest works such as Church Chats, Mothora, as well as web3 and games by Ayden Springer."
         />
       </Head>
       <PageSection color="blue">
