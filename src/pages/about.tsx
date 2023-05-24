@@ -14,7 +14,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Ayden Springer - Portfolio</title>
+        <title>About - Ayden Springer | Portfolio</title>
         <meta
           name="description"
           content="About page for Ayden Springers website."
