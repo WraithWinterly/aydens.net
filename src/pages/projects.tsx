@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Prrojects - Ayden Springer | Portfolio</title>
+        <title>Projects - Ayden Springer | Portfolio</title>
         <meta
           name="description"
           content="Showcase of my latest works such as Church Chats, Mothora, as well as web3 and games by Ayden Springer."
