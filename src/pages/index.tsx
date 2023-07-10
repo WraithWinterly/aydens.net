@@ -105,18 +105,6 @@ function HeroSection() {
   );
 }
 
-// import react from "@assets/tech-icons/react.png";
-// import nextjs from "@assets/tech-icons/nextjs.png";
-// import reactNative from "@assets/tech-icons/react-native.png";
-// import solana from "@assets/tech-icons/solana.png";
-// import solidity from "@assets/tech-icons/solidity.png";
-// import tailwind from "@assets/tech-icons/tailwind.png";
-// import prisma from "@assets/tech-icons/prisma.png";
-// import tRPC from "@assets/tech-icons/trpc.png";
-// import typescript from "@assets/tech-icons/typescript.png";
-// import unity from "@assets/tech-icons/unity.png";
-// import unreal from "@assets/tech-icons/unreal.png";
-
 const TechIcons: Array<{
   name: string;
   icon: StaticImageData;
@@ -176,6 +164,8 @@ const TechIcons: Array<{
 ];
 
 function TechnologiesSection() {
+  const id = useId();
+
   return (
     <PageSection color="purple" center={true}>
       <AnimationFadeIn>
@@ -197,13 +187,14 @@ function TechnologiesSection() {
                 }}
                 transition={{
                   delay: i * 0.1 + 0.05,
-                }}>
+                }}
+                key={`${id}-${i}`}>
                 <div className="flex flex-col gap-1">
                   <Image
                     src={tech.icon}
                     alt={tech.name}
-                    width={56 + 16 + 16}
-                    height={56 + 16 + 16}
+                    width={88}
+                    height={88}
                     className="rounded-md"
                   />
                   <p className="text-center text-sm text-gray-300">
