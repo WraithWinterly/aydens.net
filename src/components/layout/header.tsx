@@ -5,7 +5,11 @@ import { BiArrowBack } from "react-icons/bi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineDeveloperBoard } from "react-icons/md";
 
+import { AiFillProject } from "react-icons/ai";
+import { RiContactsLine } from "react-icons/ri";
+
 import Modal from "../ui/modal";
+import { IconType } from "react-icons";
 
 export default function Header() {
   const router = useRouter();
@@ -15,7 +19,7 @@ export default function Header() {
   return (
     <>
       <Modal isOpen={menuOpen} setIsOpen={setMenuOpen} title="Menu">
-        <div className="mx-auto flex w-48 flex-col items-stretch gap-4">
+        <div className="mx-auto flex w-48 flex-col gap-4">
           <Links setMenuOpen={setMenuOpen} />
         </div>
       </Modal>
@@ -43,7 +47,7 @@ export default function Header() {
               </Link>
             )}
 
-            <div className="hidden shrink-0 items-center gap-2 py-1 md:flex">
+            <div className="hidden shrink-0 items-center gap-6 py-1 md:flex">
               <Links setMenuOpen={setMenuOpen} />
             </div>
             <div className="flex md:hidden">
@@ -68,9 +72,19 @@ function Links({
 }) {
   return (
     <>
-      <HeaderLink text="About" link="/about" setMenuOpen={setMenuOpen} />
-      <HeaderLink text="Projects" link="/projects" setMenuOpen={setMenuOpen} />
-      <HeaderLink text="Contact" link="/contact" setMenuOpen={setMenuOpen} />
+      {/* <HeaderLink text="About" link="/about" setMenuOpen={setMenuOpen} /> */}
+      <HeaderLink
+        text="Projects"
+        link="/projects"
+        HeaderIcon={AiFillProject}
+        setMenuOpen={setMenuOpen}
+      />
+      <HeaderLink
+        text="Contact"
+        link="/contact"
+        HeaderIcon={RiContactsLine}
+        setMenuOpen={setMenuOpen}
+      />
     </>
   );
 }
@@ -78,19 +92,22 @@ function Links({
 function HeaderLink({
   text,
   link,
+  HeaderIcon,
   setMenuOpen,
 }: {
   text: string;
   link: string;
+  HeaderIcon: IconType;
   setMenuOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
     <Link href={link}>
-      <span
-        className="w-full cursor-pointer rounded-full px-2 py-2 text-2xl text-slate-200 transition-colors hover:text-accent"
+      <div
+        className="flex w-full cursor-pointer gap-2 rounded-full px-2 text-2xl text-slate-200 transition-colors hover:text-accent"
         onClick={() => setMenuOpen(false)}>
+        <HeaderIcon size={30} />
         {text}
-      </span>
+      </div>
     </Link>
   );
 }

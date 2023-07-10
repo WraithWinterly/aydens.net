@@ -6,7 +6,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 import { FaDiscord, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { AES, enc } from "crypto-js";
-import { useState } from "react";
+import { useId, useState } from "react";
 
 const Links = [
   {
@@ -30,12 +30,16 @@ const Links = [
     link: "https://twitter.com/WraithWinterly",
   },
   {
-    name: "Ayden#8531",
+    name: "aydenss",
     icon: <FaDiscord size={24} />,
   },
 ];
 
-export default function ContactSection() {
+export default function ContactSection({
+  color = "purple",
+}: {
+  color?: "purple" | "blue";
+}) {
   const [displayText, setDisplayText] = useState("");
 
   const _F47CEE6C_FDA6_4769_815E_9B978A8D7AD4 =
@@ -50,9 +54,9 @@ export default function ContactSection() {
     const originalText = bytes.toString(enc.Utf8);
     setDisplayText(originalText);
   }
-
+  const id = useId();
   return (
-    <PageSection color="purple">
+    <PageSection color={color}>
       <div className="flex w-full flex-col lg:flex-row">
         <div className="flex-1 pb-24 pt-4 md:px-8 md:pt-20">
           <AnimationTextShowUp noScale>
@@ -72,7 +76,7 @@ export default function ContactSection() {
                   name="name"
                   id="name"
                   required
-                  className="border-2 border-white/0 border-b-gray-400/60 bg-bgPurple/30 px-4 py-4 outline-gray-400/70"
+                  className="border-2 border-white/0 border-b-gray-400/60 bg-black/10 px-4 py-4 outline-gray-400/70"
                 />
               </div>
               <div className="flex flex-col gap-1">
@@ -82,7 +86,7 @@ export default function ContactSection() {
                   name="email"
                   id="email"
                   required
-                  className="border-2 border-white/0 border-b-gray-400/60 bg-bgPurple/30 px-4 py-4 outline-gray-400/70"
+                  className="border-2 border-white/0 border-b-gray-400/60 bg-black/10 px-4 py-4 outline-gray-400/70"
                 />
               </div>
               <div className="flex flex-col gap-1">
@@ -93,7 +97,7 @@ export default function ContactSection() {
                   rows={5}
                   cols={33}
                   required
-                  className="resize-none rounded-md border-2 border-gray-400/60 bg-bgPurple/30 px-4 py-4 outline-gray-400/70 ring-0 focus:border-gray-300"
+                  className="resize-none rounded-md border-2 border-gray-400/60 bg-black/10 px-4 py-4 outline-gray-400/70 ring-0 focus:border-gray-300"
                 />
               </div>
 
@@ -113,7 +117,7 @@ export default function ContactSection() {
                 {!!link.link ? (
                   <Link
                     href={link.link}
-                    key={index}
+                    key={`${id}-${index}`}
                     target="_blank"
                     rel="noreferrer noopener">
                     <div className="flex items-center gap-3 text-xl text-gray-400 transition-colors duration-500 hover:text-white">

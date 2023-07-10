@@ -17,94 +17,84 @@ export default function About() {
         <title>About - Ayden Springer | Portfolio</title>
         <meta
           name="description"
-          content="About page for Ayden Springers website."
+          content="Discover who Ayden Springer is, and explore his programming journey with years of experience. Ayden has competed and won hackathons and bounties hosted by industry leaders and founders. He also released an indie game on Steam in 2022."
         />
       </Head>
-      <HeroLayout>
-        <div className="flex w-full justify-center md:justify-between md:pl-0 md:pr-8 lg:pl-14 lg:pr-36">
-          <div className="flex flex-col items-center justify-center">
-            <AnimationHeroTwist>
-              <h1 className="text-center">
-                <span>Learn</span>{" "}
-                <AnimationTextColor from="#ffffff" to="#a855f7">
-                  About{" "}
-                </AnimationTextColor>
-                <AnimationTextColor from="#ffffff" to="#56E2D6">
-                  Me
-                </AnimationTextColor>
-                <span>.</span>
-              </h1>
-            </AnimationHeroTwist>
-            <div className="w-fit">
-              <AnimationBounceHover>
-                <Link href="/contact" className="text-white">
-                  <button className="mt-8 whitespace-nowrap rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4">
-                    Contact Now!
-                  </button>
-                </Link>
-              </AnimationBounceHover>
-            </div>
-          </div>
-          <AnimationFadeIn>
-            <Image
-              src={aydenSpringer.src}
-              height={700}
-              width={350}
-              alt="Ayden Springer"
-              className="hidden object-contain md:block"></Image>
-          </AnimationFadeIn>
-        </div>
-      </HeroLayout>
-      <PageSection color="blue" center>
-        <div className="flex flex-col gap-2 py-8 md:px-4">
-          <h2 className="-mt-10">Who am I?</h2>
-          <div className="leading-10">
-            <p className="py-12 text-2xl leading-10">
-              I am a programmer with{" "}
-              <span className="text-accent">4 years of experience</span>.<br />{" "}
-              I developed an <span className="text-accent">indie game</span> as
-              a <span className="text-accent">solo developer</span> and released
-              it on <span className="text-accent">Steam in 2022</span>.<br />{" "}
-              Now, I am a full stack developer, working most commonly with{" "}
-              <b>
-                {" "}
-                <i> Next.js, React, Tailwind, Prisma, tRPC.</i>
-              </b>
-              <br />I also have a good understanding of{" "}
-              <span className="text-accent">web3 and Solidity</span>,
-              demonstrated by the{" "}
-              <Link
-                href="/projects?proj=mothora"
-                className="cursor-pointer hover:underline">
-                nft-storage-contracts
-              </Link>{" "}
-              , or{" "}
-              <Link
-                href="/projects?proj=openseal"
-                className="cursor-pointer hover:underline">
-                openseal
-              </Link>
-              .
-            </p>
-            <p className="pb-12 text-2xl">
-              {" "}
-              I am a quick worker and I stick to my word.{" "}
-            </p>
-            <div className="my-4 flex flex-col gap-12">
-              <i className="block text-3xl">
-                “You are way better than most mid-level developers I know.” -
-                Rocky{" "}
-                <span className="text-base">(eCommerce Senior Developer)</span>
-              </i>
-              <i className="block text-3xl">
-                “I love seeing your 5 insane progress development skills in a
-                day.” - Watson{" "}
-                <span className="text-base">(Pigeon DAO CFO)</span>
-              </i>
-            </div>
-          </div>
-        </div>
-      </PageSection>
+      <AboutSection color="blue" />
     </>
+  );
+}
+
+export function AboutSection({ color }: { color: "blue" | "purple" }) {
+  return (
+    <PageSection color={color} center>
+      <AnimationFadeIn>
+        <div className="flex flex-col gap-2 py-8 md:px-4">
+          <h2 className="mt-10">Who am I?</h2>
+          <p className="max-w-2xl text-gray-200">
+            Why not learn about me in simple terms, instead of reading AI
+            generated nonsense about striving to hone my development skills for
+            quality innovations. I am a real person that means business.
+          </p>
+          <div className="leading-10 text-gray-200">
+            <AnimationHeroTwist>
+              <p className="py-12 text-2xl leading-10">
+                <span>- I am a programmer with over </span>
+                <span className="text-accent">4 years of experience</span> with
+                a variety of fields and technologies.
+                <br className="md:hidden" />
+                <br />
+                <span>- I have </span>
+                <span className="text-accent">competed and won </span>
+                <span>in hackathons and bounties at hackgpt.tech with </span>
+                <span className="text-accent">industry leaders</span>{" "}
+                <span>and </span>
+                <span className="text-accent">founders.</span>
+                <br className="md:hidden" />
+                <br />
+                <span>- I developed an </span>
+                <span className="text-accent">indie game </span>
+                <span>as a </span>
+                <span className="text-accent">solo developer</span>
+                <span> and released it on </span>
+                <span className="text-accent">Steam in 2022.</span>
+                <br className="md:hidden" />
+                <br />
+                <span>
+                  - Currently, I am a full stack developer, working most
+                  commonly with{" "}
+                </span>
+                <b>
+                  <i> Next.js, React, Tailwind, Prisma, tRPC.</i>
+                </b>
+                <br className="md:hidden" />
+                <br />
+                <span>- I also have development experience with </span>
+                <span className="text-accent">web3 and Solidity</span>
+                <span>, demonstrated by </span>
+                <Link
+                  href="/projects?proj=mothora"
+                  className="cursor-pointer hover:underline">
+                  nft-storage-contracts
+                </Link>
+                <span> , or </span>
+                <Link
+                  href="/projects?proj=openseal"
+                  className="cursor-pointer hover:underline">
+                  openseal
+                </Link>
+                <span>.</span>
+              </p>
+            </AnimationHeroTwist>
+
+            <p className="max-w-2xl pb-12 leading-10">
+              When running into a problem, I don't know when to stop. I do not
+              give up, I find the solution to the problem. This is business,
+              let's build even when it's hard.
+            </p>
+          </div>
+        </div>
+      </AnimationFadeIn>
+    </PageSection>
   );
 }

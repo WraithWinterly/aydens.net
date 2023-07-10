@@ -553,7 +553,7 @@ export default function ParticlesBG() {
           links: {
             blink: false,
             color: {
-              value: "#b400e6",
+              value: "#5a0073",
             },
             consent: false,
             distance: 100,
@@ -618,7 +618,7 @@ export default function ParticlesBG() {
             y: 50,
           },
           spawnColor: {
-            value: "#c800ff",
+            value: "#8200a6",
             animation: {
               h: {
                 count: 0,
