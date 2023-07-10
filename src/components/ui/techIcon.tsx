@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 
-import godotPng from "@assets/tech-icons/godot.png";
 import javascriptPng from "@assets/tech-icons/javascript.png";
 import bootstrapPng from "@assets/tech-icons/bootstrap.png";
 import csharpPng from "@assets/tech-icons/csharp.png";
@@ -10,6 +9,7 @@ import prismaPng from "@assets/tech-icons/prisma.png";
 import reactPng from "@assets/tech-icons/react.png";
 import tailwindPng from "@assets/tech-icons/tailwind.png";
 import trpcPng from "@assets/tech-icons/trpc.png";
+import godotPng from "@assets/tech-icons/godot.png";
 import unityPng from "@assets/tech-icons/unity.png";
 import solidityPng from "@assets/tech-icons/solidity.png";
 import unreal from "@assets/tech-icons/unreal.png";
@@ -24,11 +24,6 @@ export interface TechIconInterface {
 export const javascriptIcon: TechIconInterface = {
   name: "JavaScript",
   icon: javascriptPng,
-};
-
-export const godotIcon: TechIconInterface = {
-  name: "Godot",
-  icon: godotPng,
 };
 
 export const bootstrapIcon: TechIconInterface = {
@@ -67,6 +62,10 @@ export const tailwindIcon: TechIconInterface = {
 export const trpcIcon: TechIconInterface = {
   name: "trpc",
   icon: trpcPng,
+};
+export const godotIcon: TechIconInterface = {
+  name: "Godot",
+  icon: godotPng,
 };
 export const unityIcon: TechIconInterface = {
   name: "Unity",

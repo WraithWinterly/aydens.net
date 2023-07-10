@@ -29,7 +29,7 @@ export default function Projects() {
           </AnimationFadeIn>
         </AnimationTextColor>
         <AnimationTextShowUp>
-          <div className="mx-auto grid w-full grid-cols-1 gap-12 py-8 pb-32 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 py-8 pb-32 md:grid-cols-2 lg:grid-cols-3">
             {AllProjects.map((p, i) => (
               <motion.div
                 initial={{

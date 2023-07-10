@@ -20,7 +20,7 @@ export default function PageSection({
 }) {
   return (
     <div
-      className={`relative h-fit min-h-[calc(100vh+100px)] w-full bg-cover bg-repeat-y`}
+      className={`relative h-fit min-h-[calc(100vh+100px)] w-full overflow-hidden bg-cover bg-repeat-y`}
       style={{
         backgroundImage: `url(${color === "blue" ? space2.src : space1.src})`,
       }}>

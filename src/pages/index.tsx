@@ -15,6 +15,28 @@ import Link from "next/link";
 import { useId } from "react";
 import { motion } from "framer-motion";
 import { TopThreeProjects } from "@/utils/projectsList";
+import { AboutSection } from "./about";
+
+import react from "@assets/tech-icons/react.png";
+import nextjs from "@assets/tech-icons/nextjs.png";
+
+import reactNative from "@assets/tech-icons/react-native.png";
+import solana from "@assets/tech-icons/solana.png";
+import solidity from "@assets/tech-icons/solidity.png";
+import tailwind from "@assets/tech-icons/tailwind.png";
+import prisma from "@assets/tech-icons/prisma.png";
+import tRPC from "@assets/tech-icons/trpc.png";
+import typescript from "@assets/tech-icons/typescript.png";
+import godot from "@assets/tech-icons/godot.png";
+import unity from "@assets/tech-icons/unity.png";
+import csharp from "@assets/tech-icons/csharp.png";
+import unreal from "@assets/tech-icons/unreal.png";
+
+import Image, { StaticImageData } from "next/image";
+
+import { IoFileTrayFullOutline } from "react-icons/io5";
+import { HiOutlineDocumentText } from "react-icons/hi";
+import { AiOutlineProject } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -29,10 +51,12 @@ export default function Home() {
       </Head>
 
       <HeroSection />
+      <TechnologiesSection />
       <HighlightingTextSection />
       <PortfolioShowcase />
       <SecondaryTextSection />
-      <ContactSection />
+      <AboutSection color="purple" />
+      <ContactSection color="blue" />
     </>
   );
 }
@@ -46,23 +70,18 @@ function HeroSection() {
             <AnimationHeroTwist>
               <p className="pl-1 text-2xl text-gray-400">I am Ayden,</p>
               <h1 className="w-full py-2 text-5xl md:max-w-2xl md:py-4 md:text-7xl lg:max-w-4xl">
-                <AnimationTextColor from="#ffffff" to="#a855f7">
-                  <span>Quality </span>
+                Need a{" "}
+                <AnimationTextColor from="#ffffff" to="#6366f1">
+                  <span>developer</span>
                 </AnimationTextColor>
-
-                <span> and </span>
-                <AnimationTextColor from="#ffffff" to="#a855f7">
-                  <span>dedication</span>
-                </AnimationTextColor>
-
-                <span> are my </span>
+                <span> who does it </span>
                 <AnimationTextColor from="#ffffff" to="#56E2D6">
-                  <span>excellence</span>
+                  <span>right?</span>
                 </AnimationTextColor>
               </h1>
 
               <p className="pl-1 text-3xl text-gray-400 animate-in fade-in duration-1000">
-                With integrity, exceptional results are achieved.
+                I get it done. That is what others say. <i>"Incredible."</i>
               </p>
               <div className="w-fit">
                 <AnimationBounceHover>
@@ -71,7 +90,8 @@ function HeroSection() {
                     className="text-white"
                     target="_blank"
                     rel="noreferrer">
-                    <button className="mt-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4">
+                    <button className="mt-8 flex items-center gap-1 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-10 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
+                      <HiOutlineDocumentText className="" size={30} />
                       View Resume
                     </button>
                   </Link>
@@ -85,51 +105,186 @@ function HeroSection() {
   );
 }
 
+const TechIcons: Array<{
+  name: string;
+  icon: StaticImageData;
+}> = [
+  {
+    name: "React",
+    icon: react,
+  },
+  {
+    name: "React Native",
+    icon: react,
+  },
+  {
+    name: "Next.js",
+    icon: nextjs,
+  },
+  {
+    name: "Prisma",
+    icon: prisma,
+  },
+  {
+    name: "tRPC",
+    icon: tRPC,
+  },
+  {
+    name: "Typescript",
+    icon: typescript,
+  },
+  {
+    name: "Tailwind",
+    icon: tailwind,
+  },
+  {
+    name: "Solana",
+    icon: solana,
+  },
+  {
+    name: "Solidity",
+    icon: solidity,
+  },
+  {
+    name: "Godot",
+    icon: godot,
+  },
+  {
+    name: "C#",
+    icon: csharp,
+  },
+  {
+    name: "Unity",
+    icon: unity,
+  },
+  {
+    name: "Unreal",
+    icon: unreal,
+  },
+];
+
+function TechnologiesSection() {
+  const id = useId();
+
+  return (
+    <PageSection color="purple" center={true}>
+      <AnimationFadeIn>
+        <div className="flex flex-col items-center">
+          <h2 className="bg-gradient-to-r from-violet-900 via-violet-500 to-violet-200 bg-clip-text pb-3 text-center text-5xl text-transparent">
+            Let's get right to it.
+          </h2>
+          <p className="pb-12 text-center text-sm text-gray-400">
+            <i>Not listed? Don't worry, I could learn it.</i>
+          </p>
+          <div className="mx-auto flex w-full max-w-xl flex-wrap justify-center gap-8">
+            {TechIcons.map((tech, i) => (
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: i * 0.1 + 0.05,
+                }}
+                key={`${id}-${i}`}>
+                <div className="flex flex-col gap-1">
+                  <Image
+                    src={tech.icon}
+                    alt={tech.name}
+                    width={88}
+                    height={88}
+                    className="rounded-md"
+                  />
+                  <p className="text-center text-sm text-gray-300">
+                    {tech.name}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <Link href="/projects" className="mt-12">
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: 1,
+              }}
+              transition={{
+                once: true,
+                delay: TechIcons.length * 0.09,
+              }}>
+              <span className="btn flex justify-center gap-2 py-2">
+                <AiOutlineProject size={28} />
+                <span className="text-xl">The Proof Is In The Projects</span>
+              </span>
+            </motion.div>
+          </Link>
+        </div>
+      </AnimationFadeIn>
+    </PageSection>
+  );
+}
+
 function HighlightingTextSection() {
   return (
     <PageSection color="blue" center={true}>
       <AnimationFadeIn>
-        <div className="w-full max-w-5xl break-after-all text-4xl leading-relaxed md:text-5xl">
-          <span>My </span>
-          <HighlightingText
-            text="passion for technology"
-            className="text-4xl leading-relaxed md:text-5xl md:leading-relaxed"
-          />
-          <span> is presented by my </span>
-          <HighlightingText
-            text="ambition"
-            className="text-4xl md:text-5xl md:leading-relaxed"
-          />
-          <span> as a </span>
-          <HighlightingText
-            text="Full Stack Developer"
-            className="text-4xl md:text-5xl md:leading-relaxed"
-          />
-          <span className="break-after-all">who seeks to create </span>
-          <HighlightingText
-            text="truly remarkable"
-            className="text-4xl md:text-5xl md:leading-relaxed"
-          />
-          <span>products.</span>
+        <div className="w-full break-after-all text-4xl leading-relaxed ">
+          {/* <p>Before you here what I see, here is what others say.</p> */}
+          <div className="my-4 flex w-full flex-col gap-12">
+            <div>
+              <h2 className="bg-gradient-to-r from-violet-900 via-violet-500 to-violet-200 bg-clip-text text-center text-transparent">
+                What Do Others Say About Me?
+              </h2>
+              <p className="pb-4 text-center text-base text-gray-400 ">
+                Don't just believe my own words. What others say is more
+                important.
+              </p>
+            </div>
+
+            <i className="flex flex-col text-3xl">
+              “That's what puts you in the top 10 percent. No one else I hired
+              could do it." <br />
+              <span className="text-2xl font-normal text-gray-200">
+                - Dr. Robert Whetsel{" "}
+              </span>
+              <span className="text-sm text-gray-400">
+                (FDA Associate Director for Data Architecture, CEO, Army
+                Contractor, Retired NSA Data Engineer)
+              </span>
+            </i>
+            <i className="flex flex-col text-3xl">
+              “If I could bet on you, I would." <br />
+              <span className="text-2xl font-normal text-gray-200">
+                {" "}
+                - Michael Jagdeo
+              </span>
+              <span className="text-sm text-gray-400">
+                (Unicorn Launching - Headhunter Launching Startups)
+              </span>
+            </i>
+            <i className="flex flex-col text-3xl">
+              “You are way better than most mid-level developers I know.”
+              <span className="text-2xl font-normal text-gray-200">
+                - Rocky Nguyen
+              </span>
+              <span className="text-sm text-gray-400">
+                (Senior Developer and Product Manager)
+              </span>
+            </i>
+            <i className="flex flex-col text-3xl">
+              “I love seeing your 5 insane progress development skills in a
+              day.”
+              <span className="text-2xl font-normal text-gray-200">
+                - Watson Lewis
+              </span>
+              <span className="text-sm text-gray-400">(CEO of Zirio DAO)</span>
+            </i>
+          </div>
         </div>
-      </AnimationFadeIn>
-      <br />
-      <br />
-      <br />
-      <AnimationFadeIn>
-        <span className="max-w-5xl text-4xl leading-relaxed md:text-5xl md:leading-relaxed">
-          I enjoy tackling{" "}
-          <HighlightingText
-            text="exciting"
-            className="text-4xl md:text-5xl md:leading-relaxed"
-          />{" "}
-          and{" "}
-          <HighlightingText
-            text="varied"
-            className="text-4xl md:text-5xl md:leading-relaxed"
-          />{" "}
-          projects.
-        </span>
       </AnimationFadeIn>
     </PageSection>
   );
@@ -144,7 +299,7 @@ function PortfolioShowcase() {
           <h1 className="w-full bg-gradient-to-r from-purple-400 to-pink-800 bg-clip-text text-center text-6xl font-extrabold text-transparent md:text-7xl lg:text-7xl">
             Portfolio Showcase
           </h1>
-          <div className="mx-auto grid w-full grid-cols-1 gap-12 py-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 py-8 md:grid-cols-2 lg:grid-cols-3">
             {TopThreeProjects.map((p, i) => (
               <motion.div
                 initial={{
@@ -162,16 +317,18 @@ function PortfolioShowcase() {
             ))}
             <div className="m-auto md:inline-block lg:hidden">
               <Link href="/projects">
-                <div className="btn rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4">
-                  View More!
+                <div className="btn flex justify-center gap-3 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
+                  <IoFileTrayFullOutline size={32} />
+                  <span className="pt-[1px]">View More</span>
                 </div>
               </Link>
             </div>
           </div>
           <div className="mt-6 hidden w-full justify-center lg:flex">
             <Link href="/projects">
-              <div className="btn rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4 text-xl">
-                View More!
+              <div className="btn flex justify-center gap-3 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
+                <IoFileTrayFullOutline size={32} className="" />
+                <span className="pt-[1px]">View More</span>
               </div>
             </Link>
           </div>
@@ -183,29 +340,61 @@ function PortfolioShowcase() {
 function SecondaryTextSection() {
   return (
     <PageSection color="blue" center={true}>
-      <div className="flex flex-col gap-14 pl-4 text-[#5293AF]">
-        <AnimationFadeIn>
-          <h2 className="md:text-7xl">
-            Driven by <span className="text-white">curiosity</span>
-          </h2>
-        </AnimationFadeIn>
-        <AnimationFadeIn>
-          <h2>
-            Motivated by <span className="text-white">progress</span>
-          </h2>
-        </AnimationFadeIn>
+      <AnimationFadeIn>
+        <div className="text-4xl">
+          <span>- I solve confusing problems </span>
+          <HighlightingText
+            text="daily."
+            className="text-4xl leading-relaxed md:leading-relaxed"
+          />
+          <br />
+          <br />
+          <span className="">- I adapt to </span>
+          <HighlightingText
+            text="any"
+            className="text-4xl md:leading-relaxed"
+          />
+          <span> technology for the </span>
 
-        <AnimationFadeIn>
-          <h2 className="md:text-7xl">
-            Embracing <span className="text-white">feedback</span>
-          </h2>
-        </AnimationFadeIn>
-        <AnimationFadeIn>
-          <h2>
-            Committed to <span className="text-white">learning</span>
-          </h2>
-        </AnimationFadeIn>
-      </div>
+          <HighlightingText
+            text="correct"
+            className="text-4xl md:leading-relaxed"
+          />
+          <span>solution.</span>
+
+          <br />
+          <br />
+          <span className="break-after-all">
+            - I think in terms of the product and business objectives{" "}
+          </span>
+
+          <HighlightingText
+            text="first."
+            className="text-4xl md:leading-relaxed"
+          />
+          <br />
+          <br />
+          <br />
+          <AnimationFadeIn>
+            <span className="max-w-5xl text-4xl leading-relaxed  md:leading-relaxed">
+              <span>Do you need someone who </span>
+              <br className="hidden md:block" />
+              <HighlightingText
+                text="doesn't"
+                className="text-4xl md:leading-relaxed"
+              />{" "}
+              waste your time?
+            </span>
+            <br />
+            <br />
+            <span className="break-after-all">Web development is my </span>
+            <HighlightingText
+              text="expertise."
+              className="text-4xl md:leading-relaxed"
+            />
+          </AnimationFadeIn>
+        </div>
+      </AnimationFadeIn>
     </PageSection>
   );
 }
