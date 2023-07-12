@@ -7,6 +7,7 @@ import graphqlPng from "@assets/tech-icons/graphql.png";
 import nextjsPng from "@assets/tech-icons/nextjs.png";
 import prismaPng from "@assets/tech-icons/prisma.png";
 import reactPng from "@assets/tech-icons/react.png";
+import flutterPng from "@assets/tech-icons/flutter.png";
 import tailwindPng from "@assets/tech-icons/tailwind.png";
 import trpcPng from "@assets/tech-icons/trpc.png";
 import godotPng from "@assets/tech-icons/godot.png";
@@ -54,6 +55,16 @@ export const prismaIcon: TechIconInterface = {
 export const reactIcon: TechIconInterface = {
   name: "React",
   icon: reactPng,
+};
+
+export const reactNativeIcon: TechIconInterface = {
+  name: "React Native",
+  icon: reactPng,
+};
+
+export const flutterIcon: TechIconInterface = {
+  name: "Flutter",
+  icon: flutterPng,
 };
 export const tailwindIcon: TechIconInterface = {
   name: "Tailwind",

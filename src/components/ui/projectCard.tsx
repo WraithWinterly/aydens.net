@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Project } from "@/utils/projectsList";
 import { FiCameraOff } from "react-icons/fi";
+import { AiOutlineDollarCircle } from "react-icons/ai";
 
 export default function ProjectCard({
   project,
@@ -61,18 +62,31 @@ export default function ProjectCard({
           className={`relative h-[250px] w-full cursor-pointer rounded-t-3xl ${
             purple ? "bg-[#370C1E]" : "bg-[#10273d]"
           } `}>
+          {!!project.paid && (
+            <div className="group absolute right-1 top-1 flex flex-col items-end">
+              <AiOutlineDollarCircle
+                size={48}
+                className="rounded-full bg-black/40 text-green-500 backdrop-blur-md"
+              />
+              <div className="rounded-md bg-black/80 p-2 opacity-0 backdrop-blur-md transition-opacity group-hover:opacity-100">
+                I was paid to do this project
+              </div>
+            </div>
+          )}
           {!!project.image ? (
-            <Image
-              src={project.image.src}
-              alt={`${project.title} image`}
-              width={project.image.width}
-              height={project.image.height}
-              className={`h-full w-full rounded-t-3xl object-cover ${
-                project.coverTop ? "object-top" : "object-center"
-              }`}
-            />
+            <>
+              <Image
+                src={project.image.src}
+                alt={`${project.title} image`}
+                width={project.image.width}
+                height={project.image.height}
+                className={`h-full w-full rounded-t-3xl object-cover ${
+                  project.coverTop ? "object-top" : "object-center"
+                }`}
+              />
+            </>
           ) : (
-            <div className="h-[350px] w-full rounded-t-3xl bg-gray-800 object-cover">
+            <div className="h-[250px] w-full rounded-t-3xl bg-gray-800 object-cover">
               <FiCameraOff
                 size={64}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-gray-500"
@@ -108,7 +122,17 @@ export default function ProjectCard({
             <div className="absolute right-2 top-1">
               <CloseButton setIsOpen={setModalShown} />
             </div>
-
+            {!!project.paid && (
+              <div className="group absolute left-2 top-1">
+                <AiOutlineDollarCircle
+                  size={48}
+                  className="backdrop-blur-m rounded-full bg-black/40 text-green-500"
+                />
+                <div className="rounded-md bg-black/80 p-2 opacity-0 backdrop-blur-md transition-opacity group-hover:opacity-100">
+                  I was paid to do this project
+                </div>
+              </div>
+            )}
             {!!project.image ? (
               <Image
                 src={project.image.src}
@@ -141,9 +165,9 @@ export default function ProjectCard({
                 <span className="relative mb-4 w-fit cursor-auto text-sm text-gray-400">
                   {project.type}
                 </span>
-                <span className="relative block w-fit cursor-auto text-base font-thin">
+                {/* <span className="relative block w-fit cursor-auto text-base font-thin">
                   {project.description}
-                </span>{" "}
+                </span>{" "} */}
                 <div className="relative flex w-fit cursor-auto flex-col justify-start text-base font-thin">
                   {project.descriptionFull}
                 </div>

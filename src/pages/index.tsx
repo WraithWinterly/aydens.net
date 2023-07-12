@@ -19,8 +19,7 @@ import { AboutSection } from "./about";
 
 import react from "@assets/tech-icons/react.png";
 import nextjs from "@assets/tech-icons/nextjs.png";
-
-import reactNative from "@assets/tech-icons/react-native.png";
+import flutter from "@assets/tech-icons/flutter.png";
 import solana from "@assets/tech-icons/solana.png";
 import solidity from "@assets/tech-icons/solidity.png";
 import tailwind from "@assets/tech-icons/tailwind.png";
@@ -52,7 +51,7 @@ export default function Home() {
 
       <HeroSection />
       <TechnologiesSection />
-      <HighlightingTextSection />
+      <QuotesSection />
       <PortfolioShowcase />
       <SecondaryTextSection />
       <AboutSection color="purple" />
@@ -116,6 +115,10 @@ const TechIcons: Array<{
   {
     name: "React Native",
     icon: react,
+  },
+  {
+    name: "Flutter",
+    icon: flutter,
   },
   {
     name: "Next.js",
@@ -228,7 +231,7 @@ function TechnologiesSection() {
   );
 }
 
-function HighlightingTextSection() {
+function QuotesSection() {
   return (
     <PageSection color="blue" center={true}>
       <AnimationFadeIn>
@@ -257,7 +260,10 @@ function HighlightingTextSection() {
               </span>
             </i>
             <i className="flex flex-col text-3xl">
-              “If I could bet on you, I would." <br />
+              “If you need a Dev who talks with their keyboard instead of
+              prolonging the Zoom call, Ayden will kick out your project faster
+              than 90% of the over-confident "code crafters" out there. Ayden
+              gets it DONE." <br />
               <span className="text-2xl font-normal text-gray-200">
                 {" "}
                 - Michael Jagdeo
@@ -275,13 +281,18 @@ function HighlightingTextSection() {
                 (Senior Developer and Product Manager)
               </span>
             </i>
+
             <i className="flex flex-col text-3xl">
-              “I love seeing your 5 insane progress development skills in a
-              day.”
+              “Ayden is amazingly talented developer. His contribution to the
+              project Avalanche from The New Dev Order, was crucial to
+              completing the most difficult task that saw the team home. He is
+              gonna be the best find for any Hiring Manager." <br />
               <span className="text-2xl font-normal text-gray-200">
-                - Watson Lewis
+                - Manish Andankar
               </span>
-              <span className="text-sm text-gray-400">(CEO of Zirio DAO)</span>
+              <span className="text-sm text-gray-400">
+                (Founder & CEO: WorthumFounder & CEO)
+              </span>
             </i>
           </div>
         </div>
