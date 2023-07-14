@@ -12,7 +12,7 @@ const Links = [
   {
     name: "Download Resume",
     icon: <HiOutlineDownload size={24} />,
-    link: "/ayden-resume.pdf",
+    link: "/resume.pdf",
   },
   {
     name: "LinkedIn",
@@ -126,7 +126,7 @@ export default function ContactSection({
                     </div>
                   </Link>
                 ) : (
-                  <div>
+                  <div key={`${id}-${index}-2`}>
                     <div className="flex items-center gap-3 text-xl text-gray-400">
                       {link.icon}
                       <span>{link.name}</span>

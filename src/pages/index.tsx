@@ -85,7 +85,7 @@ function HeroSection() {
               <div className="w-fit">
                 <AnimationBounceHover>
                   <Link
-                    href="/ayden-resume.pdf"
+                    href="/resume.pdf"
                     className="text-white"
                     target="_blank"
                     rel="noreferrer">
