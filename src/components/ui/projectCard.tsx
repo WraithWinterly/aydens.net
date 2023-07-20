@@ -65,11 +65,11 @@ export default function ProjectCard({
           {!!project.paid && (
             <div className="group absolute right-1 top-1 flex flex-col items-end">
               <AiOutlineDollarCircle
-                size={48}
+                size={38}
                 className="rounded-full bg-black/40 text-green-500 backdrop-blur-md"
               />
               <div className="rounded-md bg-black/80 p-2 opacity-0 backdrop-blur-md transition-opacity group-hover:opacity-100">
-                I was paid to do this project
+                I was paid for this project
               </div>
             </div>
           )}
@@ -129,7 +129,7 @@ export default function ProjectCard({
                   className="backdrop-blur-m rounded-full bg-black/40 text-green-500"
                 />
                 <div className="rounded-md bg-black/80 p-2 opacity-0 backdrop-blur-md transition-opacity group-hover:opacity-100">
-                  I was paid to do this project
+                  I was paid for this project
                 </div>
               </div>
             )}
