@@ -35,7 +35,7 @@ import Image, { StaticImageData } from "next/image";
 
 import { IoFileTrayFullOutline } from "react-icons/io5";
 import { HiOutlineDocumentText } from "react-icons/hi";
-import { AiOutlineProject } from "react-icons/ai";
+import { AiOutlineAppstore, AiOutlineProject } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -64,39 +64,78 @@ function HeroSection() {
   return (
     <>
       <HeroLayout>
-        <div className="w-full flex-col pt-8">
-          <div className="flex w-fit flex-col flex-wrap px-8 text-left fade-in duration-700 md:leading-relaxed md:animate-in md:slide-in-from-top-10">
-            <AnimationHeroTwist>
-              <p className="pl-1 text-2xl text-gray-400">I am Ayden,</p>
-              <h1 className="w-full py-2 text-5xl md:max-w-2xl md:py-4 md:text-7xl lg:max-w-4xl">
-                Need a{" "}
-                <AnimationTextColor from="#ffffff" to="#6366f1">
-                  <span>developer</span>
-                </AnimationTextColor>
-                <span> who does it </span>
-                <AnimationTextColor from="#ffffff" to="#56E2D6">
-                  <span>right?</span>
-                </AnimationTextColor>
-              </h1>
+        <div className="flex flex-col lg:flex-row">
+          <div className="w-full flex-col pt-8">
+            <div className="flex w-fit flex-col flex-wrap px-8 text-left fade-in duration-700 md:leading-relaxed md:animate-in md:slide-in-from-top-10">
+              <AnimationHeroTwist>
+                <p className="pl-1 text-2xl text-gray-400">I am Ayden,</p>
+                <h1 className="w-full py-2 text-5xl md:max-w-2xl md:py-4 md:text-7xl lg:max-w-4xl">
+                  Need a{" "}
+                  <AnimationTextColor from="#ffffff" to="#6366f1">
+                    <span>developer</span>
+                  </AnimationTextColor>
+                  <span> who does it </span>
+                  <AnimationTextColor from="#ffffff" to="#56E2D6">
+                    <span>right?</span>
+                  </AnimationTextColor>
+                </h1>
 
-              <p className="pl-1 text-3xl text-gray-400 animate-in fade-in duration-1000">
-                I get it done. That is what others say. <i>"Incredible."</i>
-              </p>
-              <div className="w-fit">
-                <AnimationBounceHover>
+                <p className="pl-1 text-3xl text-gray-400 animate-in fade-in duration-1000">
+                  I get it done. That is what others say. <i>"Incredible."</i>
+                </p>
+                <div className="w-fit">
+                  <AnimationBounceHover>
+                    <Link
+                      href="/resume.pdf"
+                      className="text-white"
+                      target="_blank"
+                      rel="noreferrer">
+                      <button className="mt-8 flex items-center gap-1 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-10 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
+                        <HiOutlineDocumentText className="" size={30} />
+                        View Resume
+                      </button>
+                    </Link>
+                  </AnimationBounceHover>
+                </div>
+              </AnimationHeroTwist>
+            </div>
+          </div>
+          <div className="hidden w-full flex-row justify-center rounded-xl bg-black/40 px-6 backdrop-blur-md lg:flex lg:max-w-[340px] lg:flex-col">
+            <AnimationFadeIn>
+              <>
+                <p className="text-end font-bold">Quick!</p>
+                <p className="text-end">Show me something cool!</p>
+                <div className="flex flex-row gap-8 lg:flex-col lg:gap-0">
                   <Link
-                    href="/resume.pdf"
-                    className="text-white"
+                    href="https://pigeondao.org/"
                     target="_blank"
-                    rel="noreferrer">
-                    <button className="mt-8 flex items-center gap-1 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-10 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
-                      <HiOutlineDocumentText className="" size={30} />
-                      View Resume
-                    </button>
+                    rel="noreferrer noopener">
+                    <div className="btn mx-0 flex items-center gap-2 py-4">
+                      <AiOutlineAppstore size={28} />
+                      <span>Pigeon DAO Landing Page</span>
+                    </div>
                   </Link>
-                </AnimationBounceHover>
-              </div>
-            </AnimationHeroTwist>
+                  <Link
+                    href="https://mothora.xyz/"
+                    target="_blank"
+                    rel="noreferrer noopener">
+                    <div className="btn mx-0 flex items-center gap-2 bg-yellow-700 py-4 hover:bg-yellow-800">
+                      <AiOutlineAppstore size={28} />
+                      <span>Mothora Landing Page</span>
+                    </div>
+                  </Link>
+                  <Link
+                    href="https://whitelabel.aydens.net/"
+                    target="_blank"
+                    rel="noreferrer noopener">
+                    <div className="btn mx-0 flex items-center gap-2 bg-purple-600 py-4 hover:bg-purple-700">
+                      <AiOutlineAppstore size={28} />
+                      <span>Solana Leads Landing Page</span>
+                    </div>
+                  </Link>
+                </div>
+              </>
+            </AnimationFadeIn>
           </div>
         </div>
       </HeroLayout>
@@ -173,12 +212,10 @@ function TechnologiesSection() {
     <PageSection color="purple" center={true}>
       <AnimationFadeIn>
         <div className="flex flex-col items-center">
-          <h2 className="bg-gradient-to-r from-violet-900 via-violet-500 to-violet-200 bg-clip-text pb-3 text-center text-5xl text-transparent">
+          <h2 className="mb-16 bg-gradient-to-r from-violet-900 via-violet-500 to-violet-200 bg-clip-text pb-3 text-center text-5xl text-transparent">
             Let's get right to it.
           </h2>
-          <p className="pb-12 text-center text-sm text-gray-400">
-            <i>Not listed? Don't worry, I could learn it.</i>
-          </p>
+
           <div className="mx-auto flex w-full max-w-xl flex-wrap justify-center gap-8">
             {TechIcons.map((tech, i) => (
               <motion.div
@@ -255,8 +292,8 @@ function QuotesSection() {
                 - Dr. Robert Whetsel{" "}
               </span>
               <span className="text-sm text-gray-400">
-                (FDA Associate Director for Data Architecture, CEO, Army
-                Contractor, Retired NSA Data Engineer)
+                (FDA Associate Director for Data Architecture, Former NSA Data
+                Engineer, CEO of CryptoVersus)
               </span>
             </i>
             <i className="flex flex-col text-3xl">
@@ -269,7 +306,8 @@ function QuotesSection() {
                 - Michael Jagdeo
               </span>
               <span className="text-sm text-gray-400">
-                (Unicorn Launching - Headhunter Launching Startups)
+                (Headhunter Launching Startups - Unicorn Launching - The
+                Syndicate, HackGPT)
               </span>
             </i>
             <i className="flex flex-col text-3xl">
@@ -278,7 +316,8 @@ function QuotesSection() {
                 - Rocky Nguyen
               </span>
               <span className="text-sm text-gray-400">
-                (Senior Developer and Product Manager)
+                (Lead Developer of Turtle Beach and Roccat, Senior Developer,
+                Product Manager)
               </span>
             </i>
 
@@ -291,7 +330,7 @@ function QuotesSection() {
                 - Manish Andankar
               </span>
               <span className="text-sm text-gray-400">
-                (Founder & CEO: WorthumFounder & CEO)
+                (Founder & CEO: Worthum, Bounty Map Designer)
               </span>
             </i>
           </div>

@@ -11,6 +11,10 @@ import proBarber from "@assets/images/probarber.jpeg";
 import portfolio2022 from "@assets/images/2022portfolio.jpeg";
 import openseal from "@assets/images/openseal.jpeg";
 import church from "@assets/images/church.jpeg";
+import phantomMobile from "@assets/images/phantom-mobile.jpeg";
+import solanaWhitelabel from "@assets/images/solana-whitelabel.jpeg";
+import dialFusionPng from "@assets/images/dialfusion.jpeg";
+
 import {
   TechIconInterface,
   asepriteIcon,
@@ -23,9 +27,12 @@ import {
   prismaIcon,
   reactIcon,
   reactNativeIcon,
+  solanaIcon,
   solidityIcon,
   steamIcon,
   tailwindIcon,
+  trpcIcon,
+  twilioIcon,
   unityIcon,
   unrealIcon,
 } from "@/components/ui/techIcon";
@@ -48,31 +55,81 @@ export interface Project {
 
 export const TopThreeProjects: [Project, Project, Project] = [
   {
-    title: "Church Chats",
-    type: "Frontend",
+    title: "Phantom Mobile Wallet Connect",
+    type: "Frontend • Android • iOS",
     description:
-      "Winning Submission for the HackGPT 2023 Hackathon. Build for Armando Cervantes, director of churches in Orange County. A new, revolutionizing AI chat bot for churches.",
+      "Sponsored by Dr. Robert Whetsel, Connect your mobile Phantom Solana wallet to a mobile web3 app on React Native and Flutter.",
     descriptionFull: (
       <>
         <p className="text-base">
-          My Responsibilities: Frontend Development, UI/UX Design
+          This project was sponsored by Dr. Robert Whetsel, FDA Associate
+          Director for Data Architecture.
         </p>
         <br />
         <p className="text-base">
-          This application was built for{" "}
-          <a href="https://www.linkedin.com/in/armando-cervantes-9b88199/">
-            Armando Cervantes
-          </a>
-          . I built the landing page for this application and helped design it.
-          This led to us winning the hackathon.
+          Because his previous developer team could not complete the project, I
+          was ultimately the only one who could complete it.
+          <i> He fired the other development team because of this.</i>
+        </p>
+        <br />
+        <p className="text-base">
+          Note that the React Native version uses Phantom's deep linking API,
+          while the Flutter version uses the Solana Mobile Adapter. The Flutter
+          version only works on Android, but the React Native version works on
+          both Android and iOS.
         </p>
       </>
     ),
     paid: true,
-    image: church,
-    liveLink: "https://church.aydens.net",
-    sourceLink: "https://github.com/WraithWinterly/church-chats",
-    techIcons: [nextjsIcon, tailwindIcon],
+    techIcons: [reactNativeIcon, flutterIcon, solanaIcon],
+    image: phantomMobile,
+    liveLink: undefined,
+
+    customLinks: [
+      {
+        name: "Source - Flutter with Solana Mobile Adapter",
+        link: "https://github.com/WraithWinterly/solana_mobile_wallet_connect_flutter",
+        type: "github",
+      },
+      {
+        name: "Source - React with Expo and Deeplinking",
+        link: "https://github.com/WraithWinterly/phantom-connect-react-native-expo",
+        type: "github",
+      },
+    ],
+  },
+
+  {
+    title: "Pigeon Courier",
+    type: "Web3 • Frontend • Backend",
+    description:
+      "Pigeon DAO is revolutionizing the courier industry. The world's first decentralized courier powered by blockchain and smart contracts, enabling individual drivers and businesses to establish long-term contracts for hauling goods.",
+    descriptionFull: (
+      <>
+        <p className="text-base">
+          My Responsibilities: Frontend Development, Backend Development, Smart
+          Contract Development
+        </p>
+        <br />
+        <p className="text-base">
+          I was the Core Contributor to Pigeon DAO. I built two MVP{"'"}s for
+          the decentralized courier in a short amount of time to display the
+          potential to investors.
+        </p>
+        <br />
+        <p className="text-base">
+          Pigeon was looking to solve global supply chain crises and logistical
+          nightmares by simplifying the courier process and enabling couriers to
+          drive from short distance to long distances - hauling individual
+          packages to commercial and industrial material goods, establishing
+          long term contracts between individual drivers and businesses.
+        </p>
+      </>
+    ),
+    paid: true,
+    image: pigeon,
+    liveLink: "https://pigeondao.org",
+    techIcons: [solidityIcon, nextjsIcon, prismaIcon, tailwindIcon],
   },
   {
     title: "Mothora",
@@ -145,109 +202,92 @@ export const TopThreeProjects: [Project, Project, Project] = [
       unrealIcon,
     ],
   },
-  {
-    title: "Pigeon Courier",
-    type: "Web3 • Frontend • Backend",
-    description:
-      "Pigeon DAO is revolutionizing the courier industry. The world's first decentralized courier powered by blockchain and smart contracts, enabling individual drivers and businesses to establish long-term contracts for hauling goods.",
-    descriptionFull: (
-      <>
-        <p className="text-base">
-          My Responsibilities: Frontend Development, Backend Development, Smart
-          Contract Development
-        </p>
-        <br />
-        <p className="text-base">
-          I was the Core Contributor to Pigeon DAO. I built two MVP{"'"}s for
-          the decentralized courier in a short amount of time to display the
-          potential to investors.
-        </p>
-        <br />
-        <p className="text-base">
-          Pigeon was looking to solve global supply chain crises and logistical
-          nightmares by simplifying the courier process and enabling couriers to
-          drive from short distance to long distances - hauling individual
-          packages to commercial and industrial material goods, establishing
-          long term contracts between individual drivers and businesses.
-        </p>
-      </>
-    ),
-    paid: true,
-    image: pigeon,
-    liveLink: "https://pigeondao.org",
-    techIcons: [solidityIcon, nextjsIcon, prismaIcon, tailwindIcon],
-  },
 ];
 
 export const AllProjects: Project[] = [
   ...TopThreeProjects,
   {
-    title: "Twilio Excel Auto Dialer",
-    type: "Frontend • Backend",
-    description: "A Twilio Excel Auto Dialer",
+    title: "Church Chats",
+    type: "Frontend",
+    description:
+      "Winning Submission for the HackGPT 2023 Hackathon. Build for Armando Cervantes, director of churches in Orange County. A new, revolutionizing AI chat bot for churches.",
     descriptionFull: (
       <>
-        <p className="text-base">Auto dialer for real estate agents</p>
+        <p className="text-base">
+          My Responsibilities: Frontend Development, UI/UX Design
+        </p>
+        <br />
+        <p className="text-base">
+          This application was built for{" "}
+          <a href="https://www.linkedin.com/in/armando-cervantes-9b88199/">
+            Armando Cervantes
+          </a>
+          . I built the landing page for this application and helped design it.
+          This led to us winning the hackathon.
+        </p>
       </>
     ),
     paid: true,
+    image: church,
+    liveLink: "https://church.aydens.net",
+    sourceLink: "https://github.com/WraithWinterly/church-chats",
     techIcons: [nextjsIcon, tailwindIcon],
-    image: undefined,
+  },
+  {
+    title: "Solana Lead Generator",
+    type: "Full Stack • Web3 • Android • iOS • Web",
+    description:
+      "This project was sponsored by Dr. Robert Whetsel; A Lead Generator that connects to your solana wallet to connect you to a lead.",
+    descriptionFull: (
+      <>
+        <p className="text-base">
+          This project is composed of the web app, and mobile app. I may not
+          share the mobile app, however, the web app is public. I built the web
+          app and the mobile app with React Native.
+        </p>
+      </>
+    ),
+    paid: true,
+    techIcons: [
+      flutterIcon,
+      reactNativeIcon,
+      solanaIcon,
+      nextjsIcon,
+      tailwindIcon,
+    ],
+    image: solanaWhitelabel,
+    liveLink: "https://whitelabel.aydens.net/",
+  },
+  {
+    title: "DialFusion",
+    type: "Frontend • Backend",
+    description:
+      "Part of the Ultimate Developer Championship that I won. Auto Dialer made for real estate agents.",
+    descriptionFull: (
+      <>
+        <p className="text-base">
+          My Responsibilities: Frontend Development and Backend Development
+        </p>
+        <br />
+        <p className="text-base">
+          This autodialer is made using Next.js, Tailwind CSS, tRPC and Twilio.
+          Note that this project was made for the first two rounds - it was
+          discontinued for a new private product bootstraped by me later, to be
+          developed by others.
+        </p>
+        <br />
+        <p className="text-base">
+          This was made for Joseph Chicas, who sponsored this project.
+        </p>
+      </>
+    ),
+    paid: true,
+    techIcons: [nextjsIcon, tailwindIcon, trpcIcon, twilioIcon],
+    image: dialFusionPng,
     liveLink: undefined,
     sourceLink: "https://github.com/WraithWinterly/twilio-excel-autodialer",
   },
-  {
-    title: "Solana Whitelabel Generator",
-    type: "Frontend • Android",
-    description: "Solana while label generator",
-    descriptionFull: (
-      <>
-        <p className="text-base"></p>
-      </>
-    ),
-    paid: true,
-    techIcons: [flutterIcon, nextjsIcon, tailwindIcon],
-    image: undefined,
-    customLinks: [
-      {
-        name: "Website",
-        link: "https://whitelabel.aydens.net/",
-        type: "live",
-      },
-    ],
-  },
-  {
-    title: "Flutter Phantom Mobile Wallet Connect",
-    type: "Frontend • Android",
-    description: "Phantom wallet connect with Solana SDK",
-    descriptionFull: (
-      <>
-        <p className="text-base"></p>
-      </>
-    ),
-    paid: true,
-    techIcons: [flutterIcon],
-    image: undefined,
-    liveLink: undefined,
-    sourceLink:
-      "https://github.com/WraithWinterly/solana_mobile_wallet_connect_flutter",
-  },
-  {
-    title: "React Native Expo Phantom Mobile Wallet Connect",
-    type: "Frontend • Android • iOS",
-    description: "Phantom wallet connect with Deep links",
-    descriptionFull: (
-      <>
-        <p className="text-base"></p>
-      </>
-    ),
-    paid: true,
-    techIcons: [reactNativeIcon],
-    image: undefined,
-    liveLink: undefined,
-    sourceLink:
-      "https://github.com/WraithWinterly/phantom-connect-react-native-expo",
-  },
+
   {
     title: "Openseal",
     type: "Web3 • Frontend",
@@ -295,6 +335,14 @@ export const AllProjects: Project[] = [
       "Solo developed indie game based on Ruth, a platforming experience with game progression and a polished UI.",
     descriptionFull: (
       <>
+        <p className="text-base">View the trailer here:</p>
+        <a
+          href="https://www.youtube.com/watch?v=ltIA51-tFIY"
+          target="_blank"
+          rel="noreferrer noopener">
+          https://www.youtube.com/watch?v=ltIA51-tFIY
+        </a>
+        <br />
         <span>
           Unleash your inner platformer pro with Everplast - the ultimate
           adrenaline-fueled adventure!
@@ -429,7 +477,8 @@ export const AllProjects: Project[] = [
     type: "Frontend",
     description:
       "Supporting advanced and simple arithmetic operations, this calculator is a must-have for every student.",
-    descriptionFull: "",
+    descriptionFull:
+      "I was getting annoyed of calculators that did not let me freely type in my equation. So I decided to make my own calculator with Javascript and use Tailwind for styling. This was one of my early projects.",
     paid: false,
     image: calculator,
     coverTop: true,
@@ -443,7 +492,8 @@ export const AllProjects: Project[] = [
     type: "Frontend",
     description:
       "The ultimate task management app, plan your day with this app and never miss a deadline.",
-    descriptionFull: "",
+    descriptionFull:
+      "This was my first app. It was built with Javascript using a MVC controller style. It was a good introduction to local CRUD operations.",
     paid: false,
     image: tasksultra,
     coverTop: true,
@@ -456,7 +506,8 @@ export const AllProjects: Project[] = [
     type: "Frontend",
     description:
       "My 2022 Portfolio website. It was my second web development project.",
-    descriptionFull: "",
+    descriptionFull:
+      "This was actually one of the first complete websites I made, after learning Javascript and React.",
     paid: false,
     image: portfolio2022,
     coverTop: true,

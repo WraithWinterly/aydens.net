@@ -10,12 +10,14 @@ import reactPng from "@assets/tech-icons/react.png";
 import flutterPng from "@assets/tech-icons/flutter.png";
 import tailwindPng from "@assets/tech-icons/tailwind.png";
 import trpcPng from "@assets/tech-icons/trpc.png";
+import twilioPng from "@assets/tech-icons/twilio.png";
 import godotPng from "@assets/tech-icons/godot.png";
 import unityPng from "@assets/tech-icons/unity.png";
 import solidityPng from "@assets/tech-icons/solidity.png";
 import unreal from "@assets/tech-icons/unreal.png";
 import aseprite from "@assets/tech-icons/aseprite.png";
 import steam from "@assets/tech-icons/steam.png";
+import solanaPng from "@assets/tech-icons/solana.png";
 
 export interface TechIconInterface {
   name: string;
@@ -47,6 +49,11 @@ export const nextjsIcon: TechIconInterface = {
   icon: nextjsPng,
 };
 
+export const solanaIcon: TechIconInterface = {
+  name: "Solana",
+  icon: solanaPng,
+};
+
 export const prismaIcon: TechIconInterface = {
   name: "Prisma",
   icon: prismaPng,
@@ -71,8 +78,12 @@ export const tailwindIcon: TechIconInterface = {
   icon: tailwindPng,
 };
 export const trpcIcon: TechIconInterface = {
-  name: "trpc",
+  name: "tRPC",
   icon: trpcPng,
+};
+export const twilioIcon: TechIconInterface = {
+  name: "Twilio",
+  icon: twilioPng,
 };
 export const godotIcon: TechIconInterface = {
   name: "Godot",
