@@ -55,48 +55,29 @@ export interface Project {
 
 export const TopThreeProjects: [Project, Project, Project] = [
   {
-    title: "Phantom Mobile Wallet Connect",
-    type: "Frontend • Android • iOS",
+    title: "Solana Lead Generator",
+    type: "Full Stack • Web3 • Android • iOS • Web",
     description:
-      "Sponsored by Dr. Robert Whetsel, Connect your mobile Phantom Solana wallet to a mobile web3 app on React Native and Flutter.",
+      "This project was sponsored by Dr. Robert Whetsel; A Lead Generator that connects to your solana wallet to connect you to a lead.",
     descriptionFull: (
       <>
         <p className="text-base">
-          This project was sponsored by Dr. Robert Whetsel, FDA Associate
-          Director for Data Architecture.
-        </p>
-        <br />
-        <p className="text-base">
-          Because his previous developer team could not complete the project, I
-          was ultimately the only one who could complete it.
-          <i> He fired the other development team because of this.</i>
-        </p>
-        <br />
-        <p className="text-base">
-          Note that the React Native version uses Phantom's deep linking API,
-          while the Flutter version uses the Solana Mobile Adapter. The Flutter
-          version only works on Android, but the React Native version works on
-          both Android and iOS.
+          This project is composed of the web app, and mobile app. I may not
+          share the mobile app, however, the web app is public. I built the web
+          app and the mobile app with React Native.
         </p>
       </>
     ),
     paid: true,
-    techIcons: [reactNativeIcon, flutterIcon, solanaIcon],
-    image: phantomMobile,
-    liveLink: undefined,
-
-    customLinks: [
-      {
-        name: "Source - Flutter with Solana Mobile Adapter",
-        link: "https://github.com/WraithWinterly/solana_mobile_wallet_connect_flutter",
-        type: "github",
-      },
-      {
-        name: "Source - React with Expo and Deeplinking",
-        link: "https://github.com/WraithWinterly/phantom-connect-react-native-expo",
-        type: "github",
-      },
+    techIcons: [
+      flutterIcon,
+      reactNativeIcon,
+      solanaIcon,
+      nextjsIcon,
+      tailwindIcon,
     ],
+    image: solanaWhitelabel,
+    liveLink: "https://whitelabel.aydens.net/",
   },
 
   {
@@ -207,56 +188,48 @@ export const TopThreeProjects: [Project, Project, Project] = [
 export const AllProjects: Project[] = [
   ...TopThreeProjects,
   {
-    title: "Church Chats",
-    type: "Frontend",
+    title: "Phantom Mobile Wallet Connect",
+    type: "Frontend • Android • iOS",
     description:
-      "Winning Submission for the HackGPT 2023 Hackathon. Build for Armando Cervantes, director of churches in Orange County. A new, revolutionizing AI chat bot for churches.",
+      "Sponsored by Dr. Robert Whetsel, Connect your mobile Phantom Solana wallet to a mobile web3 app on React Native and Flutter.",
     descriptionFull: (
       <>
         <p className="text-base">
-          My Responsibilities: Frontend Development, UI/UX Design
+          This project was sponsored by Dr. Robert Whetsel, FDA Associate
+          Director for Data Architecture.
         </p>
         <br />
         <p className="text-base">
-          This application was built for{" "}
-          <a href="https://www.linkedin.com/in/armando-cervantes-9b88199/">
-            Armando Cervantes
-          </a>
-          . I built the landing page for this application and helped design it.
-          This led to us winning the hackathon.
+          Because his previous developer team could not complete the project, I
+          was ultimately the only one who could complete it.
+          <i> He fired the other development team because of this.</i>
         </p>
-      </>
-    ),
-    paid: true,
-    image: church,
-    liveLink: "https://church.aydens.net",
-    sourceLink: "https://github.com/WraithWinterly/church-chats",
-    techIcons: [nextjsIcon, tailwindIcon],
-  },
-  {
-    title: "Solana Lead Generator",
-    type: "Full Stack • Web3 • Android • iOS • Web",
-    description:
-      "This project was sponsored by Dr. Robert Whetsel; A Lead Generator that connects to your solana wallet to connect you to a lead.",
-    descriptionFull: (
-      <>
+        <br />
         <p className="text-base">
-          This project is composed of the web app, and mobile app. I may not
-          share the mobile app, however, the web app is public. I built the web
-          app and the mobile app with React Native.
+          Note that the React Native version uses Phantom's deep linking API,
+          while the Flutter version uses the Solana Mobile Adapter. The Flutter
+          version only works on Android, but the React Native version works on
+          both Android and iOS.
         </p>
       </>
     ),
     paid: true,
-    techIcons: [
-      flutterIcon,
-      reactNativeIcon,
-      solanaIcon,
-      nextjsIcon,
-      tailwindIcon,
+    techIcons: [reactNativeIcon, flutterIcon, solanaIcon],
+    image: phantomMobile,
+    liveLink: undefined,
+
+    customLinks: [
+      {
+        name: "Source - Flutter with Solana Mobile Adapter",
+        link: "https://github.com/WraithWinterly/solana_mobile_wallet_connect_flutter",
+        type: "github",
+      },
+      {
+        name: "Source - React with Expo and Deeplinking",
+        link: "https://github.com/WraithWinterly/phantom-connect-react-native-expo",
+        type: "github",
+      },
     ],
-    image: solanaWhitelabel,
-    liveLink: "https://whitelabel.aydens.net/",
   },
   {
     title: "DialFusion",
@@ -287,7 +260,33 @@ export const AllProjects: Project[] = [
     liveLink: undefined,
     sourceLink: "https://github.com/WraithWinterly/twilio-excel-autodialer",
   },
-
+  {
+    title: "Church Chats",
+    type: "Frontend",
+    description:
+      "Winning Submission for the HackGPT 2023 Hackathon. Build for Armando Cervantes, director of churches in Orange County. A new, revolutionizing AI chat bot for churches.",
+    descriptionFull: (
+      <>
+        <p className="text-base">
+          My Responsibilities: Frontend Development, UI/UX Design
+        </p>
+        <br />
+        <p className="text-base">
+          This application was built for{" "}
+          <a href="https://www.linkedin.com/in/armando-cervantes-9b88199/">
+            Armando Cervantes
+          </a>
+          . I built the landing page for this application and helped design it.
+          This led to us winning the hackathon.
+        </p>
+      </>
+    ),
+    paid: true,
+    image: church,
+    liveLink: "https://church.aydens.net",
+    sourceLink: "https://github.com/WraithWinterly/church-chats",
+    techIcons: [nextjsIcon, tailwindIcon],
+  },
   {
     title: "Openseal",
     type: "Web3 • Frontend",
