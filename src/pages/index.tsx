@@ -64,78 +64,47 @@ function HeroSection() {
   return (
     <>
       <HeroLayout>
-        <div className="flex flex-col lg:flex-row">
-          <div className="w-full flex-col pt-8">
-            <div className="flex w-fit flex-col flex-wrap px-8 text-left fade-in duration-700 md:leading-relaxed md:animate-in md:slide-in-from-top-10">
-              <AnimationHeroTwist>
-                <p className="pl-1 text-2xl text-gray-400">I am Ayden,</p>
-                <h1 className="w-full py-2 text-5xl md:max-w-2xl md:py-4 md:text-7xl lg:max-w-4xl">
-                  Need a{" "}
-                  <AnimationTextColor from="#ffffff" to="#6366f1">
-                    <span>developer</span>
-                  </AnimationTextColor>
-                  <span> who does it </span>
-                  <AnimationTextColor from="#ffffff" to="#56E2D6">
-                    <span>right?</span>
-                  </AnimationTextColor>
-                </h1>
+        <div className="w-full flex-col pt-8">
+          <div className="flex w-fit flex-col flex-wrap px-8 text-left fade-in duration-700 md:leading-relaxed md:animate-in md:slide-in-from-top-10">
+            <AnimationHeroTwist>
+              <p className="pl-1 text-2xl text-gray-400">I am Ayden,</p>
+              <h1 className="w-full py-2 text-5xl md:max-w-2xl md:py-4 md:text-7xl lg:max-w-4xl">
+                Need a{" "}
+                <AnimationTextColor from="#ffffff" to="#6366f1">
+                  <span>developer</span>
+                </AnimationTextColor>
+                <span> who does it </span>
+                <AnimationTextColor from="#ffffff" to="#56E2D6">
+                  <span>right?</span>
+                </AnimationTextColor>
+              </h1>
 
-                <p className="pl-1 text-3xl text-gray-400 animate-in fade-in duration-1000">
-                  I get it done. That is what others say. <i>"Incredible."</i>
-                </p>
-                <div className="w-fit">
-                  <AnimationBounceHover>
-                    <Link
-                      href="/resume.pdf"
-                      className="text-white"
-                      target="_blank"
-                      rel="noreferrer">
-                      <button className="mt-8 flex items-center gap-1 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-10 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
-                        <HiOutlineDocumentText className="" size={30} />
-                        View Resume
-                      </button>
-                    </Link>
-                  </AnimationBounceHover>
-                </div>
-              </AnimationHeroTwist>
-            </div>
-          </div>
-          <div className="hidden w-full flex-row justify-center rounded-xl bg-black/40 px-6 backdrop-blur-md lg:flex lg:max-w-[340px] lg:flex-col">
-            <AnimationFadeIn>
-              <>
-                <p className="text-end font-bold">Quick!</p>
-                <p className="text-end">Show me something cool!</p>
-                <div className="flex flex-row gap-8 lg:flex-col lg:gap-0">
+              <p className="pl-1 text-3xl text-gray-400 animate-in fade-in duration-1000">
+                I get it done. That is what others say. <i>"Incredible."</i>
+              </p>
+              <div className="flex w-fit gap-8">
+                <AnimationBounceHover>
                   <Link
-                    href="https://pigeondao.org/"
+                    href="/resume.pdf"
+                    className="text-white"
                     target="_blank"
-                    rel="noreferrer noopener">
-                    <div className="btn mx-0 flex items-center gap-2 py-4">
-                      <AiOutlineAppstore size={28} />
-                      <span>Pigeon DAO Landing Page</span>
-                    </div>
+                    rel="noreferrer">
+                    <button className="mt-8 flex items-center gap-1 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-10 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
+                      <HiOutlineDocumentText className="" size={30} />
+                      View Resume
+                    </button>
                   </Link>
-                  <Link
-                    href="https://mothora.xyz/"
-                    target="_blank"
-                    rel="noreferrer noopener">
-                    <div className="btn mx-0 flex items-center gap-2 bg-yellow-700 py-4 hover:bg-yellow-800">
-                      <AiOutlineAppstore size={28} />
-                      <span>Mothora Landing Page</span>
-                    </div>
+                </AnimationBounceHover>
+                <AnimationBounceHover>
+                  <Link href="#projects" className=" text-white">
+                    <button className="mt-8 flex items-center gap-1 rounded-full bg-gradient-to-br from-blue-400 to-blue-900 px-10 py-4 text-xl hover:from-blue-500 hover:to-blue-900">
+                      <AiOutlineAppstore className="" size={30} />
+                      View Projects
+                    </button>
                   </Link>
-                  <Link
-                    href="https://whitelabel.aydens.net/"
-                    target="_blank"
-                    rel="noreferrer noopener">
-                    <div className="btn mx-0 flex items-center gap-2 bg-purple-600 py-4 hover:bg-purple-700">
-                      <AiOutlineAppstore size={28} />
-                      <span>Solana Leads Landing Page</span>
-                    </div>
-                  </Link>
-                </div>
-              </>
-            </AnimationFadeIn>
+                </AnimationBounceHover>
+              </div>
+            </AnimationHeroTwist>
           </div>
         </div>
       </HeroLayout>
@@ -345,7 +314,7 @@ function PortfolioShowcase() {
   return (
     <PageSection color="purple">
       <AnimationTextShowUp>
-        <div className="md:py-2">
+        <div className="scroll-mt-48 md:py-2" id="projects">
           <h1 className="w-full bg-gradient-to-r from-purple-400 to-pink-800 bg-clip-text text-center text-6xl font-extrabold text-transparent md:text-7xl lg:text-7xl">
             Portfolio Showcase
           </h1>
@@ -437,7 +406,9 @@ function SecondaryTextSection() {
             </span>
             <br />
             <br />
-            <span className="break-after-all">Web development is my </span>
+            <span className="break-after-all">
+              Frontend web development is my{" "}
+            </span>
             <HighlightingText
               text="expertise."
               className="text-4xl md:leading-relaxed"
