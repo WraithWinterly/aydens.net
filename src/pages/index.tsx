@@ -261,7 +261,7 @@ function QuotesSection() {
                 - Dr. Robert Whetsel{" "}
               </span>
               <span className="text-sm text-gray-400">
-                (FDA Associate Director for Data Architecture, Former NSA Data
+                (FDA Associate Director for Data Architecture, Former Chief NSA Data
                 Engineer, CEO of CryptoVersus)
               </span>
             </i>
