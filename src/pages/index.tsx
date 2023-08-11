@@ -82,7 +82,7 @@ function HeroSection() {
               <p className="pl-1 text-3xl text-gray-400 animate-in fade-in duration-1000">
                 I get it done. That is what others say. <i>"Incredible."</i>
               </p>
-              <div className="flex w-fit gap-8">
+              <div className="flex w-fit flex-col md:flex-row md:gap-8">
                 <AnimationBounceHover>
                   <Link
                     href="/resume.pdf"
@@ -261,8 +261,8 @@ function QuotesSection() {
                 - Dr. Robert Whetsel{" "}
               </span>
               <span className="text-sm text-gray-400">
-                (FDA Associate Director for Data Architecture, Former Chief NSA Data
-                Engineer, CEO of CryptoVersus)
+                (FDA Associate Director for Data Architecture, Former Chief NSA
+                Data Engineer, CEO of CryptoVersus)
               </span>
             </i>
             <i className="flex flex-col text-3xl">
