@@ -1,6 +1,5 @@
 import { ReactNode, useEffect, useState } from "react";
 
-import ParticlesBG from "../particles-bg";
 import { IoIosArrowDown } from "react-icons/io";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import useScrollPosition from "@/hooks/useScrollPosition";
@@ -32,9 +31,6 @@ export default function HeroLayout({ children }: { children: ReactNode }) {
           <IoIosArrowDown className="inline-block animate-bounce" />
         </div>
       </div>
-
-      {/* Absolute positioning fixes scroll bug */}
-      <div className="absolute">{scrollY < h + 400 && <ParticlesBG />}</div>
     </>
   );
 }

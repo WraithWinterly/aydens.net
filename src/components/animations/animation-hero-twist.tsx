@@ -11,10 +11,10 @@ export default function AnimationHeroTwist({
   return (
     <motion.div
       className={className}
-      initial={{ rotate: -10, scale: 0 }}
+      initial={{ rotate: -4, scale: 0 }}
       animate={{ rotate: 0, scale: 1 }}
       // whileHover={{ scale: 1.025 }}
-      whileTap={{ scale: 1.05 }}
+      whileTap={{ scale: 1.02 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{
         type: "spring",

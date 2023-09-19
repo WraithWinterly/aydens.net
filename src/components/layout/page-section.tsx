@@ -20,11 +20,8 @@ export default function PageSection({
 }) {
   return (
     <div
-      className={`relative h-fit min-h-[calc(100vh+100px)] w-full overflow-hidden bg-cover bg-repeat-y`}
-      style={{
-        backgroundImage: `url(${color === "blue" ? space2.src : space1.src})`,
-      }}>
-      <div
+      className={`relative h-fit min-h-[calc(100vh+100px)] w-full overflow-hidden bg-cover bg-repeat-y`}>
+      {/* <div
         className={`pointer-events-none absolute select-none ${
           color === "blue" ? "right-0 bottom-0" : "left-0 bottom-0"
         }`}>
@@ -34,8 +31,8 @@ export default function PageSection({
           width={800}
           height={800}
         />
-      </div>
-      <div
+      </div> */}
+      {/* <div
         className={`pointer-events-none absolute select-none ${
           color === "blue" ? "-top-80 -left-20" : "right-0 bottom-0"
         }`}>
@@ -45,10 +42,10 @@ export default function PageSection({
           width={800}
           height={800}
         />
-      </div>
+      </div> */}
       <div
         className={`min-h-[calc(100vh+100px)] w-full ${
-          color === "blue" ? "bg-bgBlue/90" : "bg-bgPurple/90"
+          color === "blue" ? "bg-white" : "bg-white"
         } `}>
         <div
           className={`flex min-h-[calc(100vh+100px)] flex-col py-16 px-6 md:px-8 ${

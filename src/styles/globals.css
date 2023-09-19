@@ -4,16 +4,16 @@
 
 @layer components {
   h1 {
-    @apply py-6 text-6xl font-bold;
+    @apply py-6 text-6xl font-bold text-gray-800;
   }
   h2 {
-    @apply py-4 text-5xl font-bold;
+    @apply py-4 text-5xl font-bold text-gray-700;
   }
   h3 {
-    @apply py-2 text-4xl font-bold;
+    @apply py-2 text-4xl font-bold text-gray-600;
   }
   h4 {
-    @apply py-1 text-3xl font-bold;
+    @apply py-1 text-3xl font-bold text-gray-500;
   }
   p,
   li {
@@ -29,7 +29,7 @@
   }
 
   .btn {
-    @apply mx-2 my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold text-white transition-colors duration-300 hover:bg-blue-600;
+    @apply mx-2 my-2 rounded-lg bg-gray-200 py-2 px-4 font-bold text-black transition-colors duration-300 hover:bg-gray-300;
   }
 
   .btn-github {
@@ -77,8 +77,8 @@ body {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
   }
 }
 

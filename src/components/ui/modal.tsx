@@ -18,7 +18,7 @@ export function CloseButton({
 }) {
   return (
     <button
-      className="rounded-full bg-black/40 p-2 text-gray-200 transition-all hover:scale-105 hover:bg-black/80 hover:text-white"
+      className="hover:bg-gray/20 rounded-full bg-black/40 p-2 text-gray-800 transition-all hover:scale-105 hover:text-gray-600"
       onClick={() => {
         setIsOpen(false);
       }}>
@@ -63,12 +63,12 @@ export default function Modal({
                   className={`transform overflow-hidden rounded-2xl text-left align-middle text-white shadow-xl backdrop-blur-md transition-all ${
                     borderless
                       ? "m-0 w-full max-w-4xl bg-none p-0"
-                      : "w-fit bg-black/50 p-2"
+                      : "bg-gray/50 w-fit p-2"
                   }`}>
                   {/* Title */}
                   {!borderless && (
-                    <Dialog.Title as="h4" className="leading-6 text-white">
-                      <div className="flex items-center justify-between text-white">
+                    <Dialog.Title as="h4" className="leading-6 text-black">
+                      <div className="flex items-center justify-between text-black">
                         <h4 className="px-4">{title}</h4>
                         <div className="mr-2">
                           <CloseButton setIsOpen={setIsOpen} />

@@ -54,14 +54,12 @@ export default function ProjectCard({
   return (
     <>
       <div
-        className="mx-auto flex h-full w-full max-w-[400px] scroll-m-32 flex-col bg-opacity-70 text-gray-300 shadow-lg transition-transform duration-500 hover:scale-105"
+        className="mx-auto flex w-full scroll-m-32 rounded-3xl text-gray-300 shadow-lg transition-transform duration-500 hover:scale-105"
         ref={ref}
         onClick={() => setModalShown(true)}>
         {/* image */}
         <div
-          className={`relative h-[250px] w-full cursor-pointer rounded-t-3xl ${
-            purple ? "bg-[#370C1E]" : "bg-[#10273d]"
-          } `}>
+          className={`relative h-[300px] w-full max-w-[450px] cursor-pointer rounded-l-2xl bg-transparent`}>
           {!!project.paid && (
             <div className="group absolute right-1 top-1 flex flex-col items-end">
               <AiOutlineDollarCircle
@@ -80,13 +78,13 @@ export default function ProjectCard({
                 alt={`${project.title} image`}
                 width={project.image.width}
                 height={project.image.height}
-                className={`h-full w-full rounded-t-3xl object-cover ${
+                className={`h-full w-full rounded-l-2xl object-cover ${
                   project.coverTop ? "object-top" : "object-center"
                 }`}
               />
             </>
           ) : (
-            <div className="h-[250px] w-full rounded-t-3xl bg-gray-800 object-cover">
+            <div className="h-[250px] w-full rounded-t-3xl bg-gray-800 bg-transparent object-cover">
               <FiCameraOff
                 size={64}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-gray-500"
@@ -96,16 +94,14 @@ export default function ProjectCard({
         </div>
         <div
           onClick={() => setModalShown(true)}
-          className={`relative flex flex-1 cursor-pointer flex-col rounded-b-3xl  bg-gradient-to-l px-6 pt-3 pb-6 text-start ${
-            purple
-              ? "from-[#3f0e23]/20 to-[#33091a]/20"
-              : "from-[#17334d]/20 to-[#091c2d]/20"
-          }`}>
+          className={`relative flex flex-1 cursor-pointer flex-col rounded-b-2xl bg-gradient-to-l px-6 pt-3 pb-6 text-start`}>
           <h4 className="w-fit">{project.title}</h4>
           <span className="mb-4 w-fit text-sm text-gray-400">
             {project.type}
           </span>
-          <span className="w-fit font-thin">{project.description}</span>
+          <span className="w-fit font-thin text-gray-500">
+            {project.description}
+          </span>
         </div>
       </div>
       <Modal
@@ -168,7 +164,7 @@ export default function ProjectCard({
                 {/* <span className="relative block w-fit cursor-auto text-base font-thin">
                   {project.description}
                 </span>{" "} */}
-                <div className="relative flex w-fit cursor-auto flex-col justify-start text-base font-thin">
+                <div className="relative flex w-fit cursor-auto flex-col justify-start font-thin text-gray-400">
                   {project.descriptionFull}
                 </div>
               </div>

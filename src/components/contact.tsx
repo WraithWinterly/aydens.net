@@ -120,7 +120,7 @@ export default function ContactSection({
                     key={`${id}-${index}`}
                     target="_blank"
                     rel="noreferrer noopener">
-                    <div className="flex items-center gap-3 text-xl text-gray-400 transition-colors duration-500 hover:text-white">
+                    <div className="flex items-center gap-3 text-xl text-gray-400 transition-colors duration-500 hover:text-black">
                       {link.icon}
                       <span>{link.name}</span>
                     </div>

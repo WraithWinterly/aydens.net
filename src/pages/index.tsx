@@ -67,37 +67,40 @@ function HeroSection() {
         <div className="w-full flex-col pt-8">
           <div className="flex w-fit flex-col flex-wrap px-8 text-left fade-in duration-700 md:leading-relaxed md:animate-in md:slide-in-from-top-10">
             <AnimationHeroTwist>
-              <p className="pl-1 text-2xl text-gray-400">I am Ayden,</p>
-              <h1 className="w-full py-2 text-5xl md:max-w-2xl md:py-4 md:text-7xl lg:max-w-4xl">
-                Need a{" "}
-                <AnimationTextColor from="#ffffff" to="#6366f1">
-                  <span>developer</span>
+              <p className="pl-1 text-2xl text-gray-700">I am Ayden,</p>
+              <h1 className="w-full py-4 text-5xl md:max-w-2xl md:py-4 md:text-7xl lg:max-w-4xl">
+                <AnimationTextColor from="#000000" to="#6366f1">
+                  <span>Building</span>
                 </AnimationTextColor>
-                <span> who does it </span>
-                <AnimationTextColor from="#ffffff" to="#56E2D6">
-                  <span>right?</span>
+                <span> and </span>
+                <AnimationTextColor from="#000000" to="#56E2D6">
+                  <span>Delivering </span>
+                </AnimationTextColor>
+                <span>with </span>
+                <AnimationTextColor from="#000000" to="#6366f1">
+                  <span>Quality</span>
                 </AnimationTextColor>
               </h1>
 
-              <p className="pl-1 text-3xl text-gray-400 animate-in fade-in duration-1000">
+              <p className="pl-1 text-3xl text-gray-800 animate-in fade-in duration-1000">
                 I get it done. That is what others say. <i>"Incredible."</i>
               </p>
               <div className="flex w-fit flex-col md:flex-row md:gap-8">
                 <AnimationBounceHover>
                   <Link
                     href="/resume.pdf"
-                    className="text-white"
+                    className="text-black"
                     target="_blank"
                     rel="noreferrer">
-                    <button className="mt-8 flex items-center gap-1 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-10 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
+                    <button className="mt-8 flex items-center gap-1 rounded-xl bg-purple-100 bg-gradient-to-br px-10 py-4 text-xl hover:to-purple-200">
                       <HiOutlineDocumentText className="" size={30} />
                       View Resume
                     </button>
                   </Link>
                 </AnimationBounceHover>
                 <AnimationBounceHover>
-                  <Link href="#projects" className=" text-white">
-                    <button className="mt-8 flex items-center gap-1 rounded-full bg-gradient-to-br from-blue-400 to-blue-900 px-10 py-4 text-xl hover:from-blue-500 hover:to-blue-900">
+                  <Link href="#projects" className=" text-black">
+                    <button className="mt-8 flex items-center gap-1 rounded-xl bg-blue-200 bg-gradient-to-br px-10 py-4 text-xl hover:bg-blue-300">
                       <AiOutlineAppstore className="" size={30} />
                       View Projects
                     </button>
@@ -181,7 +184,7 @@ function TechnologiesSection() {
     <PageSection color="purple" center={true}>
       <AnimationFadeIn>
         <div className="flex flex-col items-center">
-          <h2 className="mb-16 bg-gradient-to-r from-violet-900 via-violet-500 to-violet-200 bg-clip-text pb-3 text-center text-5xl text-transparent">
+          <h2 className="mb-16 bg-violet-700 bg-gradient-to-r bg-clip-text pb-3 text-center text-5xl text-transparent">
             Let's get right to it.
           </h2>
 
@@ -206,7 +209,7 @@ function TechnologiesSection() {
                     height={88}
                     className="rounded-md"
                   />
-                  <p className="text-center text-sm text-gray-300">
+                  <p className="text-center text-sm text-gray-800">
                     {tech.name}
                   </p>
                 </div>
@@ -243,64 +246,20 @@ function QuotesSection() {
       <AnimationFadeIn>
         <div className="w-full break-after-all text-4xl leading-relaxed ">
           {/* <p>Before you here what I see, here is what others say.</p> */}
-          <div className="my-4 flex w-full flex-col gap-12">
-            <div>
-              <h2 className="bg-gradient-to-r from-violet-900 via-violet-500 to-violet-200 bg-clip-text text-center text-transparent">
-                What Do Others Say About Me?
-              </h2>
-              <p className="pb-4 text-center text-base text-gray-400 ">
-                Don't just believe my own words. What others say is more
-                important.
-              </p>
-            </div>
-
-            <i className="flex flex-col text-3xl">
-              “That's what puts you in the top 10 percent. No one else I hired
-              could do it." <br />
-              <span className="text-2xl font-normal text-gray-200">
-                - Dr. Robert Whetsel{" "}
-              </span>
-              <span className="text-sm text-gray-400">
-                (FDA Associate Director for Data Architecture, Former Chief NSA
-                Data Engineer, CEO of CryptoVersus)
-              </span>
-            </i>
-            <i className="flex flex-col text-3xl">
+          <div className="my-4 flex w-full flex-col items-center gap-12">
+            <i className="flex max-w-2xl flex-col text-3xl">
               “If you need a Dev who talks with their keyboard instead of
               prolonging the Zoom call, Ayden will kick out your project faster
               than 90% of the over-confident "code crafters" out there. Ayden
               gets it DONE." <br />
-              <span className="text-2xl font-normal text-gray-200">
+              <span className="text-2xl font-normal text-gray-500">
                 {" "}
                 - Michael Jagdeo
               </span>
-              <span className="text-sm text-gray-400">
+              {/* <span className="text-sm text-gray-400">
                 (Headhunter Launching Startups - Unicorn Launching - The
                 Syndicate, HackGPT)
-              </span>
-            </i>
-            <i className="flex flex-col text-3xl">
-              “You are way better than most mid-level developers I know.”
-              <span className="text-2xl font-normal text-gray-200">
-                - Rocky Nguyen
-              </span>
-              <span className="text-sm text-gray-400">
-                (Lead Developer of Turtle Beach and Roccat, Senior Developer,
-                Product Manager)
-              </span>
-            </i>
-
-            <i className="flex flex-col text-3xl">
-              “Ayden is amazingly talented developer. His contribution to the
-              project Avalanche from The New Dev Order, was crucial to
-              completing the most difficult task that saw the team home. He is
-              gonna be the best find for any Hiring Manager." <br />
-              <span className="text-2xl font-normal text-gray-200">
-                - Manish Andankar
-              </span>
-              <span className="text-sm text-gray-400">
-                (Founder & CEO: Worthum, Bounty Map Designer)
-              </span>
+              </span> */}
             </i>
           </div>
         </div>
@@ -318,7 +277,7 @@ function PortfolioShowcase() {
           <h1 className="w-full bg-gradient-to-r from-purple-400 to-pink-800 bg-clip-text text-center text-6xl font-extrabold text-transparent md:text-7xl lg:text-7xl">
             Portfolio Showcase
           </h1>
-          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 py-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 py-8">
             {TopThreeProjects.map((p, i) => (
               <motion.div
                 initial={{
@@ -345,7 +304,7 @@ function PortfolioShowcase() {
           </div>
           <div className="mt-6 hidden w-full justify-center lg:flex">
             <Link href="/projects">
-              <div className="btn flex justify-center gap-3 rounded-full bg-gradient-to-br from-purple-400 to-purple-900 px-12 py-4 text-xl hover:from-purple-500 hover:to-purple-900">
+              <div className="btn flex justify-center gap-3 rounded-2xl bg-purple-200 bg-gradient-to-br px-12 py-4 text-xl hover:bg-purple-300">
                 <IoFileTrayFullOutline size={32} className="" />
                 <span className="pt-[1px]">View More</span>
               </div>
